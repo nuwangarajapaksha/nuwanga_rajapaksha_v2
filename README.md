@@ -19,8 +19,8 @@ Follow these steps to get the project up and running on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/nuwangarajapaksha/nuwanga_rajapaksha_v1.git
-cd nuwanga_rajapaksha_v1
+git clone https://github.com/nuwangarajapaksha/nuwanga_rajapaksha_v2.git
+cd nuwanga_rajapaksha_v2
 ```
 
 

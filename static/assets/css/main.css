@@ -1,42 +1,76 @@
-/*@keyframes heroFade {*/
-/*  from {*/
-/*    opacity: 0;*/
-/*    transform: translateY(30px);*/
-/*  }*/
-/*  to {*/
-/*    opacity: 1;*/
-/*    transform: translateY(0);*/
-/*  }*/
-/*}*/
+/* ═══════════════════════════════════════════════════════════════
+   KEYFRAMES & HERO SECTION ANIMATIONS
+   Smooth entrance animations used throughout the hero section.
+═══════════════════════════════════════════════════════════════ */
 
-/*.animate-hero {*/
-/*  animation: heroFade 0.8s ease-out forwards;*/
-/*}*/
-
-/*<!-- ═══════════════════════════════════════════════════════════════*/
-/*     KEYFRAMES & HERO ANIMATIONS (inline style block)*/
-/*═══════════════════════════════════════════════════════════════ -->*/
-
-  @keyframes heroFadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0);    }
+/* Fade up animation for hero text and content */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
   }
-
-  @keyframes heroImageReveal {
-    from { opacity: 0; transform: translateY(20px) scale(0.97); filter: blur(6px); }
-    to   { opacity: 1; transform: translateY(0)    scale(1);    filter: blur(0);   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Image reveal animation with fade, blur, and scale effect */
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
 
 
 
-/* ── Google Translate overrides ── */
-  .goog-te-banner-frame,
-  .goog-te-balloon-frame { display: none !important; }
-  body                   { top: 0 !important; }
-  #google_translate_element { display: none !important; }
-  .goog-tooltip,
-  .goog-tooltip:hover    { display: none !important; }
-  .goog-text-highlight   { background: none !important; box-shadow: none !important; }
+/* ═══════════════════════════════════════════════════════════════
+   GOOGLE TRANSLATE OVERRIDES
+   Hides the default Google Translate UI and prevents layout shifts
+   after a language is selected.
+═══════════════════════════════════════════════════════════════ */
+
+/* Hide Google Translate banner and floating tooltip frames */
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+/* Prevent page from being pushed down by the translate banner */
+body {
+  top: 0 !important;
+}
+
+/* Hide the default Google Translate widget */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide translation tooltips */
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+/* Remove Google's yellow text highlight effect */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LANGUAGE SELECTOR - NAVBAR TRIGGER
+   Small flag displayed in the desktop navbar trigger and
+   mobile active language badge.
+═══════════════════════════════════════════════════════════════ */
 
   /* ── Flag icon sizing ── */
   .fi {
