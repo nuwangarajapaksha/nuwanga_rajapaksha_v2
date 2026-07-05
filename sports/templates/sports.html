@@ -1,0 +1,965 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block wrapper %}
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO / BREADCRUMB
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
+
+        <div class="absolute inset-0 bg-[url('/static/images/sports/sports-main.png')] bg-cover bg-center opacity-25"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/75 to-gray-950"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+        <!-- Geometric rings -->
+        <div class="absolute right-8 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-amber-400/10 hidden lg:block"></div>
+        <div class="absolute right-16 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-amber-400/10 hidden lg:block"></div>
+
+        <!-- Pulse rings bottom-left -->
+        <div class="absolute left-10 bottom-10 hidden lg:block select-none">
+            <div class="relative w-20 h-20">
+                <div class="absolute inset-0 rounded-full border border-amber-400/10 animate-ping"
+                     style="animation-duration:3s;"></div>
+                <div class="absolute inset-3 rounded-full border border-amber-400/10 animate-ping"
+                     style="animation-duration:3s;animation-delay:.5s;"></div>
+                <div class="absolute inset-6 rounded-full border border-amber-400/15"></div>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-24 w-full">
+
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-xs text-white/40 mb-8 tracking-widest uppercase">
+                <a href="{% url 'index' %}" class="hover:text-amber-400 transition-colors duration-200">Home</a>
+                <span class="text-amber-400/60">/</span>
+                <span class="text-amber-400">Sports</span>
+            </nav>
+
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-px bg-amber-400 block"></span>
+                        <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Body &amp; Mind</span>
+                    </div>
+                    <h1 class="font-[Playfair_Display] text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                        Strength &amp; <span class="text-amber-400 italic">Spirit</span>
+                    </h1>
+                    <p class="mt-4 text-white/50 text-sm md:text-base max-w-xl leading-relaxed">
+                        Sport has always been a cornerstone of who I am—shaping my discipline, resilience,
+                        determination, and passion for pushing beyond my limits.
+                    </p>
+                </div>
+
+                <!-- Quick-jump sport pills -->
+                <div class="flex flex-wrap gap-2 lg:flex-col lg:items-end">
+                    <a href="#enthusiasm"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Enthusiasm</a>
+                    <button onclick="switchTab('gym')"
+                            class="sport-pill text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">
+                        <i class="fa-solid fa-dumbbell mr-1.5"></i>Gym
+                    </button>
+                    {#        <button onclick="switchTab('swimming')"#}
+                    {#                class="sport-pill text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">#}
+                    {#          <i class="fa-solid fa-person-swimming mr-1.5"></i>Swimming#}
+                    {#        </button>#}
+                    {#        <button onclick="switchTab('archery')"#}
+                    {#                class="sport-pill text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">#}
+                    {#          <i class="fa-solid fa-bullseye mr-1.5"></i>Archery#}
+                    {#        </button>#}
+                    {#        <button onclick="switchTab('parachuting')"#}
+                    {#                class="sport-pill text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">#}
+                    {#          <i class="fa-solid fa-parachute-box mr-1.5"></i>Parachuting#}
+                    {#        </button>#}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         ENTHUSIASM — INTRO
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="enthusiasm" class="relative bg-gray-950 py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+            <div class="mb-14">
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">What drives me</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    The <span class="text-amber-400 italic">Enthusiasm</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row gap-12 items-start">
+                <div class="flex-1">
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        I have loved sports since my childhood. During my school years, I actively participated in
+                        various sports,
+                        which helped me build a strong foundation in physical fitness and teamwork. After finishing
+                        school,
+                        I started going to the gym, and it has now become my main sport and daily routine.
+                    </p>
+                    <p class="text-white/65 text-base leading-8">
+                        Through sports and fitness,
+                        I have developed important qualities such as <span class="text-amber-400 font-medium">discipline, consistency, patience, and mental strength.</span>
+                        It has also taught me how to set goals, work hard to achieve them, and maintain a healthy
+                        balance in life.
+                        This passion for fitness has shaped my mindset, improved my confidence, and continues to
+                        positively influence
+                        both my personal growth and professional journey.
+                    </p>
+
+                    <!-- Stat strip -->
+                    <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 text-center hover:border-amber-400/30 transition-all duration-300">
+                            <i class="fa-solid fa-dumbbell text-amber-400 text-2xl mb-3 block"></i>
+                            <p class="text-white font-semibold text-sm">Gym</p>
+                            <p class="text-white/40 text-[11px] mt-1">Strength &amp; Conditioning</p>
+                        </div>
+                        {#          <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 text-center hover:border-amber-400/30 transition-all duration-300">#}
+                        {#            <i class="fa-solid fa-person-swimming text-amber-400 text-2xl mb-3 block"></i>#}
+                        {#            <p class="text-white font-semibold text-sm">Swimming</p>#}
+                        {#            <p class="text-white/40 text-[11px] mt-1">Endurance &amp; Flow</p>#}
+                        {#          </div>#}
+                        {#          <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 text-center hover:border-amber-400/30 transition-all duration-300">#}
+                        {#            <i class="fa-solid fa-bullseye text-amber-400 text-2xl mb-3 block"></i>#}
+                        {#            <p class="text-white font-semibold text-sm">Archery</p>#}
+                        {#            <p class="text-white/40 text-[11px] mt-1">Focus &amp; Precision</p>#}
+                        {#          </div>#}
+                        {#          <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 text-center hover:border-amber-400/30 transition-all duration-300">#}
+                        {#            <i class="fa-solid fa-parachute-box text-amber-400 text-2xl mb-3 block"></i>#}
+                        {#            <p class="text-white font-semibold text-sm">Parachuting</p>#}
+                        {#            <p class="text-white/40 text-[11px] mt-1">Courage &amp; Freedom</p>#}
+                        {#          </div>#}
+                    </div>
+                </div>
+
+                <!-- Hero collage -->
+                <div class="xl:w-80 shrink-0">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative rounded-2xl overflow-hidden aspect-square group/img">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80"
+                                 alt="Gym"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 to-transparent"></div>
+                            <div class="absolute bottom-2 left-2"><p class="text-white/70 text-[10px]">Discipline</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-square group/img">
+                            <img src="https://img.magnific.com/free-photo/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club_637285-2497.jpg?semt=ais_hybrid&w=740&q=80"
+                                 alt="Gym"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 to-transparent"></div>
+                            <div class="absolute bottom-2 left-2"><p class="text-white/70 text-[10px]">Consistency</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-square group/img">
+                            <img src="https://gymgear.com/cdn/shop/articles/AdobeStock_317724775-scaled-1-3050369_21f7ab10-0502-4944-8fd5-8a89f3d73a59-4378325.jpg?v=1767911049"
+                                 alt="Gym"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 to-transparent"></div>
+                            <div class="absolute bottom-2 left-2"><p class="text-white/70 text-[10px]">Patience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SPORTS TABS
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+            <!-- Tab bar -->
+            <div class="flex flex-wrap gap-2 mb-12" id="sport-tabs">
+
+                <button onclick="switchTab('gym')" id="tab-gym"
+                        class="sport-tab active-tab flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200
+                     bg-amber-400 text-gray-950 border border-amber-400">
+                    <i class="fa-solid fa-dumbbell"></i> Gym
+                </button>
+
+                {#      <button onclick="switchTab('swimming')" id="tab-swimming"#}
+                {#              class="sport-tab flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200#}
+                {#                     border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400">#}
+                {#        <i class="fa-solid fa-person-swimming"></i> Swimming#}
+                {#      </button>#}
+                {##}
+                {#      <button onclick="switchTab('archery')" id="tab-archery"#}
+                {#              class="sport-tab flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200#}
+                {#                     border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400">#}
+                {#        <i class="fa-solid fa-bullseye"></i> Archery#}
+                {#      </button>#}
+                {##}
+                {#      <button onclick="switchTab('parachuting')" id="tab-parachuting"#}
+                {#              class="sport-tab flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200#}
+                {#                     border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400">#}
+                {#        <i class="fa-solid fa-parachute-box"></i> Parachuting#}
+                {#      </button>#}
+
+            </div>
+
+
+            <!-- ══ GYM PANEL ══ -->
+            <div id="panel-gym" class="sport-panel">
+                <div class="flex flex-col xl:flex-row gap-12 items-start mb-14">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-dumbbell text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-[Playfair_Display] text-3xl font-bold text-white">Gym <span
+                                        class="text-amber-400 italic">&amp; Strength</span></h3>
+                                <p class="text-white/40 text-xs mt-0.5 tracking-widest uppercase">Strength Training
+                                    &amp; Conditioning</p>
+                            </div>
+                        </div>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            After my school journey, I began my gym journey with a deep passion and commitment to
+                            <span class="text-amber-400 font-medium">building a stronger and healthier version of myself.</span>
+                            Rather than jumping
+                            straight into intense workouts, I dedicated the first two years purely to research and
+                            understanding
+                            the science behind fitness, nutrition, and bodybuilding. I studied different training
+                            methods, muscle groups, recovery
+                            techniques, and how the body responds to specific types of exercises. Over time, I developed
+                            my own personalized
+                            approach, based on how my physique responds best to training — a method that I continuously
+                            refine and improve.
+                        </p>
+
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            Today, my gym routine is not just about lifting weights; it’s about precision, form, and
+                            progress.
+                            Some of my favorite exercises include the dumbbell bench press for building chest strength
+                            and stability,
+                            lat pull-downs and pull-ups to develop a strong and wide back, and seated dumbbell curls to
+                            isolate and grow
+                            the biceps. I also enjoy dumbbell lateral raises, which help shape the shoulders and enhance
+                            upper body symmetry.
+                            These exercises not only contribute to physical development but also teach me
+                            <span class="text-amber-400 font-medium">discipline, focus, and the importance of consistent effort.</span>
+                            My gym journey has become a lifestyle — one that empowers me mentally and physically,
+                            and constantly pushes me to become the best version of myself.
+                        </p>
+
+
+                        <div class="mt-8 grid grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-arrow-trend-up text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Progressive Overload</p>
+                                    <p class="text-white/45 text-xs mt-1">Structured weekly progression</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-rotate text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Chest & Triceps / Back & Biceps /
+                                        Shoulders / Legs</p>
+                                    <p class="text-white/45 text-xs mt-1">Full split training cycle</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-bolt text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Compound Lifts</p>
+                                    <p class="text-white/45 text-xs mt-1">Squat, deadlift, bench, row</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-heart-pulse text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Cardio &amp; Mobility</p>
+                                    <p class="text-white/45 text-xs mt-1">HIIT &amp; recovery work</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-80 shrink-0">
+                        <div class="relative rounded-2xl overflow-hidden group/fi">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8zZK-HRt96bpnJ81LGKrBdZ7HWkdEE7ujnJ9HqYlFA&s=10"
+                                 alt="Gym"
+                                 class="w-full object-cover transition-transform duration-500 group-hover/fi:scale-105"
+                                 style="height:420px;"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <p class="text-white font-semibold text-sm">Strength Training</p>
+                                <p class="text-white/50 text-xs mt-1">Consistency · Discipline · Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-5">Gallery — Gym</p>
+                    <div class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4">
+                        {% for photo in gym_gallery %}
+                            <div class="gallery-item break-inside-avoid"
+                                 data-sport="gym"
+                                 data-title="{{ photo.title }}"
+                                 data-desc="Gym">
+
+                                <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                    <img src="{{ photo.url }}"
+                                         alt="{{ photo.title }}"
+                                         class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+
+                                    <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">
+                        Gym
+                    </span>
+                                        <p class="text-white text-xs font-medium mt-1">{{ photo.title }}</p>
+                                    </div>
+
+                                    <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                        <i class="fa-solid fa-expand text-white text-xs"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ══ SWIMMING PANEL ══ -->
+            <div id="panel-swimming" class="sport-panel hidden">
+                <div class="flex flex-col xl:flex-row gap-12 items-start mb-14">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-person-swimming text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-[Playfair_Display] text-3xl font-bold text-white">Swimming <span
+                                        class="text-amber-400 italic">&amp; Flow</span></h3>
+                                <p class="text-white/40 text-xs mt-0.5 tracking-widest uppercase">Endurance · Technique
+                                    · Breath</p>
+                            </div>
+                        </div>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            Swimming is my meditation in motion. The moment I enter the water, the world above the
+                            surface fades away —
+                            replaced by the rhythmic sound of breath, stroke, and the gentle resistance of the pool.
+                            It is where I find <span class="text-amber-400 font-medium">complete mental clarity</span>.
+                        </p>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            I focus on freestyle and backstroke, training with an emphasis on technique and efficiency
+                            rather than
+                            brute effort. Swimming has deepened my understanding of breathing — how controlling it under
+                            physical
+                            stress translates directly into performance, composure, and focus in every area of life.
+                        </p>
+                        <p class="text-white/65 text-base leading-8">
+                            The full-body nature of swimming, combined with its low-impact profile, makes it the perfect
+                            counterbalance
+                            to the heavy loads of the gym. It recovers the muscles while simultaneously building
+                            cardiovascular
+                            endurance and lung capacity.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-wind text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Breath Control</p>
+                                    <p class="text-white/45 text-xs mt-1">Rhythmic breathing techniques</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-water text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Freestyle &amp; Backstroke</p>
+                                    <p class="text-white/45 text-xs mt-1">Primary stroke disciplines</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-heart-pulse text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Cardio Endurance</p>
+                                    <p class="text-white/45 text-xs mt-1">Sustained aerobic capacity</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-spa text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Active Recovery</p>
+                                    <p class="text-white/45 text-xs mt-1">Low-impact full-body reset</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-80 shrink-0">
+                        <div class="relative rounded-2xl overflow-hidden group/fi">
+                            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=700&q=80"
+                                 alt="Swimming"
+                                 class="w-full object-cover transition-transform duration-500 group-hover/fi:scale-105"
+                                 style="height:420px;"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <p class="text-white font-semibold text-sm">In the Water</p>
+                                <p class="text-white/50 text-xs mt-1">Flow · Rhythm · Clarity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div>
+                    <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-5">Gallery — Swimming</p>
+                    <div class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4">
+                        <div class="gallery-item break-inside-avoid" data-sport="swimming" data-title="Freestyle Lap"
+                             data-desc="Swimming · Freestyle Stroke">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&q=80"
+                                     alt="Swim 1"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Swimming</span>
+                                    <p class="text-white text-xs font-medium mt-1">Freestyle Lap</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="swimming" data-title="Pool at Dawn"
+                             data-desc="Swimming · Morning Training">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?w=600&q=80"
+                                     alt="Swim 2"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Swimming</span>
+                                    <p class="text-white text-xs font-medium mt-1">Pool at Dawn</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="swimming" data-title="Underwater Flow"
+                             data-desc="Swimming · Underwater">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?w=600&q=80"
+                                     alt="Swim 3"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Swimming</span>
+                                    <p class="text-white text-xs font-medium mt-1">Underwater Flow</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="swimming" data-title="Open Water"
+                             data-desc="Swimming · Open Water">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&q=80"
+                                     alt="Swim 4"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Swimming</span>
+                                    <p class="text-white text-xs font-medium mt-1">Open Water</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ══ ARCHERY PANEL ══ -->
+            <div id="panel-archery" class="sport-panel hidden">
+                <div class="flex flex-col xl:flex-row gap-12 items-start mb-14">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bullseye text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-[Playfair_Display] text-3xl font-bold text-white">Archery <span
+                                        class="text-amber-400 italic">&amp; Precision</span></h3>
+                                <p class="text-white/40 text-xs mt-0.5 tracking-widest uppercase">Focus · Stillness ·
+                                    Accuracy</p>
+                            </div>
+                        </div>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            Archery is the sport of absolute stillness within motion. To release an arrow truly well,
+                            every external
+                            variable must be controlled — breathing, posture, grip, anchor point, and release must fuse
+                            into a single
+                            <span class="text-amber-400 font-medium">moment of perfect alignment</span>. There are no
+                            second chances;
+                            the arrow reveals everything.
+                        </p>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            What drew me to archery was how profoundly it develops mental discipline. The act of drawing
+                            the bow,
+                            finding stillness amidst the tension, and committing fully to the release is a powerful
+                            metaphor for
+                            decision-making and execution under pressure — skills that translate far beyond the range.
+                        </p>
+                        <p class="text-white/65 text-base leading-8">
+                            I practice recurve archery, working on improving my groupings at various distances. Each
+                            session is a
+                            practice in mindfulness — a sport where the mind is as trained as the body.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-crosshairs text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Recurve Archery</p>
+                                    <p class="text-white/45 text-xs mt-1">Traditional recurve bow form</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-brain text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Mental Focus</p>
+                                    <p class="text-white/45 text-xs mt-1">Mindfulness &amp; pressure handling</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-ruler-combined text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Distance Training</p>
+                                    <p class="text-white/45 text-xs mt-1">Varied range distances</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-feather text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Form &amp; Technique</p>
+                                    <p class="text-white/45 text-xs mt-1">Posture, grip, anchor, release</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-80 shrink-0">
+                        <div class="relative rounded-2xl overflow-hidden group/fi">
+                            <img src="https://images.unsplash.com/photo-1601520493893-23c0e82c0ab6?w=700&q=80"
+                                 alt="Archery"
+                                 class="w-full object-cover transition-transform duration-500 group-hover/fi:scale-105"
+                                 style="height:420px;"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <p class="text-white font-semibold text-sm">On the Range</p>
+                                <p class="text-white/50 text-xs mt-1">Stillness · Precision · Release</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-5">Gallery — Archery</p>
+                    <div class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4">
+                        <div class="gallery-item break-inside-avoid" data-sport="archery" data-title="Full Draw"
+                             data-desc="Archery · Recurve · Full Draw">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1601520493893-23c0e82c0ab6?w=600&q=80"
+                                     alt="Arch 1"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Archery</span>
+                                    <p class="text-white text-xs font-medium mt-1">Full Draw</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="archery" data-title="Target Shot"
+                             data-desc="Archery · Target Practice">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80"
+                                     alt="Arch 2"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Archery</span>
+                                    <p class="text-white text-xs font-medium mt-1">Target Shot</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="archery" data-title="Arrow Grouping"
+                             data-desc="Archery · Precision Grouping">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1542041430296-6c889b988f8e?w=600&q=80"
+                                     alt="Arch 3"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Archery</span>
+                                    <p class="text-white text-xs font-medium mt-1">Arrow Grouping</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="archery" data-title="Outdoor Range"
+                             data-desc="Archery · Outdoor Field">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80"
+                                     alt="Arch 4"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Archery</span>
+                                    <p class="text-white text-xs font-medium mt-1">Outdoor Range</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ══ PARACHUTING PANEL ══ -->
+            <div id="panel-parachuting" class="sport-panel hidden">
+                <div class="flex flex-col xl:flex-row gap-12 items-start mb-14">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-parachute-box text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-[Playfair_Display] text-3xl font-bold text-white">Parachuting <span
+                                        class="text-amber-400 italic">&amp; Freedom</span></h3>
+                                <p class="text-white/40 text-xs mt-0.5 tracking-widest uppercase">Courage · Trust ·
+                                    Euphoria</p>
+                            </div>
+                        </div>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            If the gym builds the body and archery sharpens the mind, parachuting tests the soul. The
+                            moment you
+                            stand at the open door of an aircraft, everything becomes crystalline — fear, exhilaration,
+                            and absolute
+                            presence merge into a single, <span class="text-amber-400 font-medium">irreversible commitment</span>.
+                            There is no hesitation at that doorway.
+                        </p>
+                        <p class="text-white/65 text-base leading-8 mb-5">
+                            Parachuting has profoundly shaped how I approach risk. In engineering, in life, and in
+                            sport,
+                            we often face moments where hesitation is more dangerous than action. The sky teaches you to
+                            trust your
+                            training, your preparation, and your gear — and then to <span
+                                class="text-amber-400 font-medium">commit fully</span>.
+                        </p>
+                        <p class="text-white/65 text-base leading-8">
+                            The freefall is approximately 60 seconds of unfiltered reality — wind, silence, speed, and
+                            an indescribable
+                            feeling of freedom. Under the canopy, the world returns slowly, quietly, and beautifully. It
+                            is the most
+                            alive I ever feel.
+                        </p>
+
+                        <!-- Risk callout -->
+                        <div class="mt-8 bg-amber-400/5 border border-amber-400/20 rounded-2xl p-5 mb-6">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-shield-halved text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium mb-1">Safety First, Always</p>
+                                    <p class="text-white/55 text-sm leading-relaxed">
+                                        Every jump is performed under certified instruction with full equipment checks,
+                                        proper training,
+                                        and within established safety protocols. The thrill of parachuting is
+                                        inseparable from the
+                                        discipline of doing it right.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-plane-departure text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Jump Altitude</p>
+                                    <p class="text-white/45 text-xs mt-1">High-altitude exits</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-wind text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Freefall</p>
+                                    <p class="text-white/45 text-xs mt-1">~60 seconds of pure speed</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-parachute-box text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Canopy Control</p>
+                                    <p class="text-white/45 text-xs mt-1">Guided descent &amp; landing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 transition-all duration-300">
+                                <i class="fa-solid fa-certificate text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Certified Training</p>
+                                    <p class="text-white/45 text-xs mt-1">Qualified instructors &amp; gear</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xl:w-80 shrink-0">
+                        <div class="relative rounded-2xl overflow-hidden group/fi">
+                            <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=700&q=80"
+                                 alt="Parachuting"
+                                 class="w-full object-cover transition-transform duration-500 group-hover/fi:scale-105"
+                                 style="height:420px;"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <p class="text-white font-semibold text-sm">Above the Clouds</p>
+                                <p class="text-white/50 text-xs mt-1">Commitment · Freedom · Euphoria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-5">Gallery — Parachuting</p>
+                    <div class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4">
+                        <div class="gallery-item break-inside-avoid" data-sport="parachuting" data-title="The Exit"
+                             data-desc="Parachuting · Aircraft Exit">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=600&q=80"
+                                     alt="Para 1"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Parachuting</span>
+                                    <p class="text-white text-xs font-medium mt-1">The Exit</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="parachuting" data-title="Freefall"
+                             data-desc="Parachuting · Freefall Speed">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1601024445121-e5b82438f2b1?w=600&q=80"
+                                     alt="Para 2"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Parachuting</span>
+                                    <p class="text-white text-xs font-medium mt-1">Freefall</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="parachuting" data-title="Canopy Open"
+                             data-desc="Parachuting · Canopy Deployed">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1521673461164-de300ebcfb17?w=600&q=80"
+                                     alt="Para 3"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Parachuting</span>
+                                    <p class="text-white text-xs font-medium mt-1">Canopy Open</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item break-inside-avoid" data-sport="parachuting"
+                             data-title="Bird's Eye View" data-desc="Parachuting · Aerial View">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80"
+                                     alt="Para 4"
+                                     class="w-full block object-cover transition-transform duration-500 group-hover/gi:scale-110"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">Parachuting</span>
+                                    <p class="text-white text-xs font-medium mt-1">Bird's Eye View</p>
+                                </div>
+                                <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         LIGHTBOX
+    ═══════════════════════════════════════════════════════════════ -->
+    <div id="lightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center"
+         style="background:rgba(3,7,18,0.96);">
+        <button id="lb-close"
+                class="absolute top-4 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-xmark text-white text-lg"></i>
+        </button>
+        <button id="lb-prev"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-amber-400/80 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-chevron-left text-white"></i>
+        </button>
+        <button id="lb-next"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-amber-400/80 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-chevron-right text-white"></i>
+        </button>
+        <div class="flex flex-col items-center px-16 max-w-5xl w-full mx-auto">
+            <img id="lb-img" src="" alt=""
+                 class="max-h-[75vh] max-w-full rounded-2xl object-contain shadow-2xl transition-opacity duration-300"/>
+            <div class="mt-5 text-center">
+                <p id="lb-title" class="text-white font-semibold text-base font-[Playfair_Display]"></p>
+                <p id="lb-desc" class="text-white/50 text-xs mt-1 tracking-wide"></p>
+            </div>
+            <p id="lb-counter" class="text-white/30 text-xs mt-3"></p>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         JAVASCRIPT
+    ═══════════════════════════════════════════════════════════════ -->
+    <script>
+        /* ── Tab switching ── */
+        const TABS = ['gym', 'swimming', 'archery', 'parachuting'];
+
+        function switchTab(sport) {
+            TABS.forEach(t => {
+                const panel = document.getElementById('panel-' + t);
+                const tab = document.getElementById('tab-' + t);
+                if (t === sport) {
+                    panel.classList.remove('hidden');
+                    tab.classList.add('active-tab', 'bg-amber-400', 'text-gray-950', 'border-amber-400', 'font-semibold');
+                    tab.classList.remove('border-white/15', 'text-white/60', 'font-medium');
+                } else {
+                    panel.classList.add('hidden');
+                    tab.classList.remove('active-tab', 'bg-amber-400', 'text-gray-950', 'border-amber-400', 'font-semibold');
+                    tab.classList.add('border-white/15', 'text-white/60', 'font-medium');
+                }
+            });
+            currentSport = sport;
+            // scroll to tabs
+            document.getElementById('sport-tabs').scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+
+        /* ── Lightbox ── */
+        let currentSport = 'gym';
+        let currentIdx = 0;
+
+        function getVisibleItems() {
+            return Array.from(document.querySelectorAll(
+                '#panel-' + currentSport + ' .gallery-item'
+            ));
+        }
+
+        function openLightbox(idx) {
+            const items = getVisibleItems();
+            currentIdx = idx;
+            const item = items[idx];
+            const img = item.querySelector('img');
+            document.getElementById('lb-img').src = img.src;
+            document.getElementById('lb-img').alt = item.dataset.title;
+            document.getElementById('lb-title').textContent = item.dataset.title;
+            document.getElementById('lb-desc').textContent = item.dataset.desc;
+            document.getElementById('lb-counter').textContent = (idx + 1) + ' / ' + items.length;
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function navigate(dir) {
+            const items = getVisibleItems();
+            currentIdx = (currentIdx + dir + items.length) % items.length;
+            const lbImg = document.getElementById('lb-img');
+            lbImg.style.opacity = '0';
+            setTimeout(() => {
+                openLightbox(currentIdx);
+                lbImg.style.opacity = '1';
+            }, 150);
+        }
+
+        /* Attach click listeners */
+        document.querySelectorAll('.gallery-item').forEach((item, _) => {
+            item.querySelector('.group\\/gi').addEventListener('click', () => {
+                const panelItems = getVisibleItems();
+                const idx = panelItems.indexOf(item);
+                if (idx !== -1) openLightbox(idx);
+            });
+        });
+
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+        document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+        document.getElementById('lightbox').addEventListener('click', e => {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        });
+
+        document.addEventListener('keydown', e => {
+            const lb = document.getElementById('lightbox');
+            if (lb.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') navigate(1);
+            if (e.key === 'ArrowLeft') navigate(-1);
+        });
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .sport-panel {
+            animation: fadeIn 0.3s ease forwards;
+        }
+    </style>
+
+{% endblock %}

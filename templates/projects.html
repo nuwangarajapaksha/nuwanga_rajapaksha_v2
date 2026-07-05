@@ -1,0 +1,1507 @@
+{% load static %}
+<section id="projects" class="relative bg-gray-950 py-24 overflow-hidden">
+
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">What I've built</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    Featured <span class="text-amber-400 italic">Projects</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+        </div>
+
+        <!-- Project grid -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+            <!-- ── CARD 1 — Melioraa ── -->
+            <div onclick="openProject('melioraa')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-industry text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/melioraa/melioraa01.png' %}"
+                             alt="Melioraa"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Industry 4.0 Machine Monitoring</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">XdotO</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Melioraa</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        An <span class="text-white/70 font-semibold">Industry 4.0 Machine Monitoring System</span>
+                        developed by <span class="text-white/70 font-semibold">XdotO Concepts Pte Limited.</span>
+                        Designed to enhance industrial
+                        efficiency and real-time visibility, Melioraa leverages advanced technologies to <span
+                            class="text-white/60 font-semibold">monitor, analyze, and optimize
+              machine performance</span> across manufacturing environments. This innovative solution empowers factories
+                        with
+                        <span class="text-white/60 font-semibold">data-driven insights, predictive maintenance capabilities, and seamless integration with existing systems,
+                  helping businesses improve productivity and reduce downtime.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Spring Boot</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">ReactJS</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">AWS</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">Professional Project</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 2 — Dialog Power App ── -->
+            <div onclick="openProject('dialog')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-mobile-screen text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/dialog_power_app/dialog-power-app01.png' %}"
+                             alt="Dialog Power App"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Alarms and Notification</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">XdotO</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Dialog Power App</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        An <span class="text-white/70 font-semibold">Alarms and Notification Mobile Application</span>
+                        developed by <span class="text-white/70 font-semibold">XdotO Concepts Pte Limited in collaboration with Dialog Axiata PLC.</span>
+                        The app is designed to <span class="text-white/60 font-semibold">deliver real-time alerts and critical notifications, enabling efficient monitoring and quick response
+              to system events.</span> Tailored for enterprise use, the solution enhances operational awareness and
+                        ensures seamless communication
+                        within the <span class="text-white/60 font-semibold">Dialog Axiata infrastructure.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Spring Boot</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">ReactJS</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Flutter</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">Professional Project</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 3 — Morex ── -->
+            <div onclick="openProject('morex')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-flask text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/morex/morex01.png' %}"
+                             alt="Morex"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Process Monitoring</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">XdotO</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Morex</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A <span class="text-white/70 font-semibold">Process Monitoring System</span> developed by <span
+                            class="text-white/70 font-semibold">XdotO Concepts Pte Limited</span> as a subproject for
+                        <span class="text-white/70 font-semibold">Morex Industries.</span>
+                        Designed to enhance operational visibility, the system enables <span
+                            class="text-white/60 font-semibold">real-time monitoring and analysis of
+              production processes, ensuring improved efficiency, reduced downtime, and data-driven decision-making
+              within the manufacturing environment.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">PHP</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">VueJS</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Grafana</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">Professional Project</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 4 — NDCamera ── -->
+            <div onclick="openProject('ndcamera')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-camera text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/ndcamera/ndcamera01.png' %}"
+                             alt="NDCamera"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">E & M-Commerce</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        NDCamera</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A fully functional <span class="text-white/70 font-semibold">E-Commerce and M-Commerce applications,</span>
+                        individually developed as my final year university project.
+                        Designed as an <span class="text-white/70 font-semibold">online camera shop,</span> the project
+                        enables users to <span class="text-white/60 font-semibold">browse, purchase, and tracking products</span>
+                        through both
+                        web and mobile platforms. NDCamera showcases my end-to-end development skills, from UI/UX design
+                        to backend integration
+                        and payment processing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java EE</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Android</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Firebase</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic flex items-center gap-1.5">University Final Project</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 5 — PAMUNUWILA HARDWARE ── -->
+            <div onclick="openProject('pamunuwila')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-screwdriver-wrench text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/pamunuwila_hardware/pamunuwila-hardware01.png' %}"
+                             alt="PAMUNUWILA HARDWARE (Pvt) Ltd"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Hardware Shop management</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">Real Client</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        PAMUNUWILA HARDWARE (Pvt) Ltd</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A <span class="text-white/70 font-semibold">fully functional desktop application</span>
+                        developed as my first-year final project at university. Designed for <span
+                            class="text-white/70 font-semibold">Hardware Shop Management,</span>
+                        the system includes features such as <span class="text-white/60 font-semibold">inventory control, sales tracking, customer management, billing, and other
+              essential business operations.</span> This project demonstrates my early experience in building practical
+                        software solutions
+                        with a focus on real-world business needs.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java Swing</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Jasper Reports</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 1</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 6 — ADYAPANA ── -->
+            <div onclick="openProject('adyapana')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-graduation-cap text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/adyapana/adyapana01.png' %}"
+                             alt="Adyapana"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Education Center</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Adyapana</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A <span class="text-white/70 font-semibold">simple Desktop Application</span> developed as a
+                        first-year university assignment, aimed at
+                        <span class="text-white/70 font-semibold">Managing Educational Centers</span> efficiently. The
+                        system includes key features such as <span class="text-white/60 font-semibold">student management,
+              teacher management, subject management, class management, and payment management.</span> This project
+                        reflects
+                        my foundational skills in designing structured and user-friendly desktop software for
+                        administrative purposes.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Java Swing</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Jasper Reports</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 1</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 7 — OPD Channeling ── -->
+            <div onclick="openProject('opd')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-hospital text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/opd_channeling/opd-channeling01.png' %}"
+                             alt="OPD Channeling"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">E-Channeling</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        OPD Channeling</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A fully functional <span class="text-white/70 font-semibold">E-Channeling Web Platform</span>
+                        developed as a second-year university assignment.
+                        The main focus of the application is to manage e-channeling operations, including <span
+                            class="text-white/60 font-semibold">patient handling,
+              doctor handling, and hospital handling.</span> This project demonstrates my foundational skills in
+                        developing
+                        real-world healthcare solutions using web technologies with a focus on usability and efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">PHP</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">JavaScript</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Bootstrap</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 2</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 8 — ImagesCave ── -->
+            <div onclick="openProject('imagescave')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-image text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/imagescave/imagescave01.png' %}"
+                             alt="ImagesCave"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Image Selling</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        ImagesCave</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A fully functional <span class="text-white/70 font-semibold">Image Selling Web Platform</span>
+                        developed as a main project during my second year at university.
+                        The platform supports <span
+                            class="text-white/60 font-semibold">both image buying and selling,</span> allowing <span
+                            class="text-white/60 font-semibold">photographers and graphic designers
+              to upload and sell their work while customers can browse, purchase, and download high-quality images.</span>
+                        This project highlights my skills in building complete e-commerce solutions with user roles,
+                        secure transactions, and media handling capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">PHP</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">PayHere</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Bootstrap</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 2</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 9 — Election Sri Lanka ── -->
+            <div onclick="openProject('election')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-ballot-check text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/election_sri_lanka/election-sri-lanka01.png' %}"
+                             alt="Election Sri Lanka"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Online Voting</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Election Sri Lanka</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A fully functional <span class="text-white/70 font-semibold">Online Election Platform</span>
+                        developed as a second-year university assignment.
+                        The system is designed to manage the complete election process digitally, <span
+                            class="text-white/60 font-semibold">including voter management,
+              candidate management, secure voting, and result generation.</span> This project demonstrates my ability to
+                        develop secure and efficient web-based applications for real-world use cases.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">PHP</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">MySQL</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">JavaScript</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Bootstrap</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 2</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 10 — Health First ── -->
+            <div onclick="openProject('healthfirst')"
+                 class="project-card group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-amber-400/40 hover:bg-white/[0.06] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col hover:shadow-2xl hover:shadow-amber-400/10">
+                <div class="relative h-44 bg-gradient-to-br from-amber-500/10 to-gray-900 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        {#            <i class="fa-solid fa-dumbbell text-amber-400/20 text-8xl group-hover:text-amber-400/30 group-hover:scale-110 transition-all duration-500"></i>#}
+                        <img src="{% static 'images/programming/health_first/health-first01.png' %}"
+                             alt="Health First"
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500"/>
+
+                    </div>
+                    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black via-black/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span class="text-[10px] px-2.5 py-1 bg-amber-400/15 border border-amber-400/50 text-amber-300 rounded-full font-semibold backdrop-blur-md shadow-sm">Fitness Center</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-black/50 border border-white/15 text-white/90 rounded-full font-medium backdrop-blur-md">University</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center text-white text-[10px]"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-white font-semibold text-lg group-hover:text-amber-400 transition-colors duration-300">
+                        Health First</h3>
+                    <p class="text-white/50 text-sm mt-2 leading-relaxed flex-1">
+                        A <span class="text-white/70 font-semibold">simple website</span> developed for a <span
+                            class="text-white/70 font-semibold">Fitness Center</span> as my first university web
+                        project.
+                        The site features a <span class="text-white/60 font-semibold">gallery, class schedules, upcoming events, and contact information,</span>
+                        providing
+                        visitors with essential details and an engaging online presence. This project laid the
+                        foundation
+                        for my skills in web development and user experience design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-5">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">HTML</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">CSS</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">JavaScript</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10 group-hover:border-amber-400/20 transition-colors duration-300">
+                        <span class="text-xs text-white/30 italic">University · Year 1</span>
+                        <span class="text-[11px] text-amber-400/70 flex items-center gap-1">View details <i
+                                class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJECT DETAIL MODAL
+═══════════════════════════════════════════════════════════════ -->
+<div id="project-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-4"
+     style="background:rgba(3,7,18,0.92);">
+
+    <!-- Modal panel -->
+    <div id="modal-panel"
+         class="relative bg-gray-950 border border-white/10 rounded-3xl w-full max-w-5xl max-h-[92vh] overflow-y-auto shadow-2xl shadow-black/80 transition-all duration-300 scale-95 opacity-0">
+
+        <!-- Close button -->
+        <button onclick="closeProject()"
+                class="sticky top-4 float-right mr-4 z-20 w-10 h-10 rounded-full bg-white/10 hover:bg-amber-400 hover:text-gray-950 text-white flex items-center justify-center transition-all duration-200">
+            <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+
+        <!-- Modal content injected by JS -->
+        <div id="modal-body" class="clear-both"></div>
+
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJECT DATA & MODAL LOGIC
+═══════════════════════════════════════════════════════════════ -->
+<script>
+    /* ─────────────────────────────────────────
+       Project data store
+    ───────────────────────────────────────── */
+    const STATIC_BASE = "{% get_static_prefix %}";
+
+    function makeImages(fullPathPrefix, count, altText) {
+        return Array.from({length: count}, (_, i) => ({
+            src: `${STATIC_BASE}${fullPathPrefix}${String(i + 1).padStart(2, '0')}.png`,
+            alt: altText,
+        }));
+    }
+
+    const PROJECTS = {
+
+        melioraa: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-industry',
+            cardImage: '{% static "images/programming/melioraa/melioraa01.png" %}',
+            title: 'Melioraa — Industry 4.0 Machine Monitoring System',
+            role: 'Software Engineer – Full-Stack',
+            type: 'Professional · XdotO Concepts Pte Limited',
+            github: null, demo: null,
+            overview: `Melioraa is the flagship software solution developed by XdotO Concepts Pte Limited as part of a comprehensive Industry 4.0 Machine Monitoring System. Tailored primarily for apparel and garment factories, this solution has also been successfully adapted for industries including tea production, railway operations, power generation, and weather monitoring.<br/><br/>
+    Melioraa provides a web-based real-time monitoring and analytics dashboards for industrial machines. It tracks critical metrics such as machine state (active/idle), temperature, production rate, efficiency, accuracy, and more, across a wide range of machines — from sewing, knitting, and weaving equipment to large-scale machinery in tea factories, power stations, and weather stations. It delivers data-driven insights, predictive maintenance capabilities, and seamless integration with existing systems, helping businesses improve productivity and reduce downtime.`,
+            architecture: `The system architecture is divided into two major components:<br/>
+    <strong class="text-white">Aurigaa (Hardware &amp; Embedded Layer)</strong> — Responsible for interfacing with physical machines through various sensors. Developed by the electrical engineering team, it utilizes GO to collect real-time machine data and transmit it to the backend servers over a dedicated networking layer.<br/><br/>
+    <strong class="text-white">Melioraa (Software Platform)</strong> — Developed by the software engineering team, this is the user-facing platform that processes, analyzes, visualizes, and reports the data gathered from Aurigaa. Built using Java with Spring Boot for the backend, MySQL as the database, Hibernate and JPA for ORM, and a frontend stack comprising ReactJS, JavaScript, HTML, CSS, Material-UI, and Bootstrap — with Axios and JSON used for data communication. The solution follows a microservices backend and micro-frontend architecture for scalability and modularity.`,
+            contributions: [
+                'Developed and maintained RESTful APIs for data processing, reporting, and business logic using Java and Spring Boot.',
+                'Developed dynamic UI components — dashboards, machine layouts, and visualizations — using ReactJS, JavaScript, HTML, CSS, Material-UI, and Bootstrap.',
+                'Optimized MySQL queries and utilized Hibernate and JPA for efficient ORM mapping and database interactions.',
+                'Utilized Axios for client-server communication and JSON for structured data handling.',
+                'Designed and implemented automated and on-demand Jasper reports, including the complete backend data generation and formatting processes to ensure accurate and insightful reporting.',
+                'Managed deployment configurations and releases for both frontend and backend across AWS, Azure, DigitalOcean, and client-specific on-premise servers.',
+                'Used Git and GitLab for version control and CI/CD pipeline integration.',
+                'Followed Agile methodology while actively collaborating with cross-functional teams — including hardware, networking, and product — using Jira for task tracking and coordination.',
+                'Documented APIs using Swagger, implemented unit tests with JUnit, and thoroughly tested APIs with Postman to ensure reliability.',
+                'Contributed significantly to leadership, critical thinking, problem-solving, and communication, ensuring scalable, maintainable, and user-friendly software delivery.',
+            ],
+            clients: ['Stretchline', 'MAS Holdings', 'Teejay Lanka', 'Trischel', 'Dilmah', 'Kelanitissa Power Station', 'Lakvijaya Power Station'],
+            features: [
+                'User management with Sign-In, Sign-Up, and role-based access control',
+                'Real-time machine data monitoring (status, temperature, output, efficiency, etc.)',
+                'Factory-specific machine floor and line mapping and workflow setup',
+                'Roster planning and task assignments',
+                'Data analytics with graphical dashboards',
+                'Jasper-based PDF reporting',
+                'Workflow automation and alert systems',
+                'Company-based specific components',
+                'MySQL database for efficient and scalable data storage',
+                'Centralized logging',
+                'Deployed on AWS, Azure, DigitalOcean, and client-specific on-premise servers as needed',
+            ],
+            images: makeImages('images/programming/melioraa/melioraa', 9, 'Melioraa'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+                    name: 'Spring Boot'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'ReactJS'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg',
+                    name: 'Material-UI'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg', name: 'Axios'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', name: 'Docker'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
+                    name: 'AWS'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg', name: 'Azure'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg', name: 'GO'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg',
+                    name: 'Hibernate'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',
+                    name: 'Postman'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg',
+                    name: 'Swagger'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg', name: 'GitLab'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg', name: 'Jira'},
+            ],
+        },
+
+        dialog: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-mobile-screen',
+            cardImage: '{% static "images/programming/dialog_power_app/dialog-power-app01.png" %}',
+            title: 'Dialog Power App — Alarm & Notification Management System',
+            role: 'Software Engineer – Full-Stack',
+            type: 'Professional · XdotO Concepts Pte Limited',
+            github: null, demo: null,
+            overview: `Dialog Power App is a mission-critical mobile and web-based application developed by XdotO Concepts Pte Limited in collaboration with Dialog Axiata PLC, Sri Lanka's leading telecom provider. This system was designed to modernize the alarm and notification management process across Dialog's extensive infrastructure — including signal towers, distribution centers, maintenance sites, and more.<br/><br/>
+    The application enables field officers, such as site managers and regional managers, to receive, track, and respond to various real-time alarms and notifications — including theft alerts, low battery warnings, and maintenance requests. It improves operational responsiveness, facilitates task coordination, and generates actionable insights for management.`,
+            architecture: `The system architecture consists of three main components:<br/>
+    <strong class="text-white">Mobile App</strong> — Deployed to officers in the field for real-time alarm monitoring, acknowledgment, and task processing. Built with Flutter for cross-platform support and Native Android for optimized performance.<br/><br/>
+    <strong class="text-white">Admin Web Panel</strong> — Used by administrators to manage users, monitor site-level activities, generate reports, and review performance analytics. Developed with ReactJS and Redux, styled using HTML, CSS, Material-UI, and Bootstrap.<br/><br/>
+    <strong class="text-white">Backend Platform</strong> — Built using a microservices architecture, the backend handles alarm processing, user and role management, workflow handling, and analytics. Implemented with Java and Spring Boot, using MySQL as the database, with JPA and Hibernate for ORM, and JSON for data communication between services and the frontend.`,
+            contributions: [
+                'Developed and maintained RESTful APIs for alarm lifecycle management, analytics, and system administration using Java and Spring Boot.',
+                'Designed and implemented UI components, user management, site management, and reporting views for the admin dashboard using ReactJS, JavaScript, HTML, CSS, Material-UI, and Bootstrap.',
+                'Utilized Redux for state management and JSON for structured data handling.',
+                'Built automated daily analysis reports, supporting informed decision-making.',
+                'Created and optimized MySQL queries and applied Hibernate and JPA ORM for scalable database access.',
+                'Used Postman for API testing, Swagger for documentation, and JUnit for backend unit testing.',
+                'Designed and managed Docker images for backend services and deployed to AWS.',
+                'Used Git and GitLab for version control and CI/CD workflows.',
+                'Performed day-to-day activities such as diagnostics, debugging, and user management.',
+                'Collaborated in an Agile development environment with the Dialog tech team, actively using Jira for task management.',
+                'Provided leadership, critical thinking, problem-solving, communication, and architectural insights to ensure a reliable, maintainable, and user-focused application.',
+            ],
+            clients: ['Dialog Axiata PLC'],
+            features: [
+                'Real-time alarm creation and notification handling (manual and automated via sensors and machines)',
+                'Alarm types include theft, intrusion, battery low, maintenance requests, and more',
+                'Enabling efficient monitoring and quick response to system events',
+                'Role-based task routing for efficient response workflows',
+                'Admin dashboard with activity logs, performance tracking, and reporting',
+                'User authentication, authorization, and role-based access control',
+                'Automated daily and historical analysis reports',
+                'Robust error handling, diagnostics, and system monitoring',
+                'Cloud deployment via Docker and AWS for scalability and availability',
+            ],
+            images: makeImages('images/programming/dialog_power_app/dialog-power-app', 10, 'Dialog Power App'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+                    name: 'Spring Boot'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'ReactJS'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg', name: 'Redux'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg',
+                    name: 'Material-UI'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+                    name: 'Flutter'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+                    name: 'Android'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg',
+                    name: 'Hibernate'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', name: 'Docker'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
+                    name: 'AWS'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',
+                    name: 'Postman'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg',
+                    name: 'Swagger'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg', name: 'GitLab'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg', name: 'Jira'},
+            ],
+        },
+
+        morex: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-flask',
+            cardImage: '{% static "images/programming/morex/morex01.png" %}',
+            title: 'Morex — Industrial Process Monitoring System',
+            role: 'Software Engineer – Full-Stack (Project Lead)',
+            type: 'Professional · XdotO Concepts Pte Limited',
+            github: null, demo: null,
+            overview: `Morex is a comprehensive Process Monitoring System developed by XdotO Concepts Pte Limited as a sub-project for Morex Industries. Designed as a web-based application, it streamlines and digitizes the production workflows and operational monitoring of industrial chemical and material processing. The system enables users to manage end-to-end production workflows and sub-production workflows, inventory, error corrections, history tracking, alarms, reporting, real-time monitoring, and graphical visualizations through a role-based interface.<br/><br/>
+    The application supports five parallel production workflows, referred to as "Reactors." Each reactor represents a complete production line involving multiple steps — such as machine status checks, material and chemical addition, and data logging — with predefined templates to simplify execution. Users can interact with each workflow in real time, monitor progress, and handle deviations or alarms as needed.<br/><br/>
+    To enhance operational visibility, the system enables real-time analysis of production processes, ensuring improved efficiency, reduced downtime, and data-driven decision-making within the manufacturing environment.`,
+            architecture: `The application is built on a monolithic <strong class="text-white">PHP backend</strong> with <strong class="text-white">VueJS</strong>, JavaScript, HTML, CSS, and Bootstrap for the frontend. <strong class="text-white">MySQL</strong> is used as the relational database to store production data, templates, inventory logs, and more. <strong class="text-white">Grafana</strong> was integrated into the system to visualize live sensor data such as machine temperature, thresholds, and other key metrics. The entire application is deployed on a Linux-based on-premise server.`,
+            contributions: [
+                'Diagnosed and resolved existing issues to make the application stable and production-ready.',
+                'Designed the full system architecture including database schema and frontend-backend structure.',
+                'Developed web application components and interfaces using VueJS, JavaScript, HTML, CSS, and Bootstrap, along with PHP-based backend APIs.',
+                'Created dynamic Grafana dashboards for real-time sensor visualizations.',
+                'Negotiated and gathered requirements directly from the client for iterative improvements.',
+                'Handled deployment on the client\'s Linux server environment.',
+                'Provided ongoing client support, bug fixing, and error handling.',
+                'Led the development team, assigned tasks, and mentored junior developers.',
+                'Used Git and GitLab for version control and CI/CD processes.',
+                'Managed tasks and sprint planning using Jira and followed Agile methodology to ensure iterative delivery and client feedback integration.',
+                'Ensured that the application aligned with client expectations and maintained high usability.',
+                'Applied leadership, critical thinking, communication, and problem-solving skills to successfully manage and deliver the project.',
+            ],
+            clients: ['Morex Industries'],
+            features: [
+                'Role-based sign-in and access control for secure multi-user operations',
+                'Production section featuring five parallel workflow reactors with real-time progress indicators',
+                'Predefined templates to standardize production processes and improve usability',
+                'Inventory module to track availability and usage of materials and chemicals',
+                'History section with searchable logs and summary reports of completed productions',
+                'Real-time machine and reactor monitoring, including temperature and operational status',
+                'Job sheet module for sub-production documentation and tracking',
+                'Datalogger status monitoring with live sensor data visualized via Grafana',
+                'Error correction module for resolving workflow issues post-execution',
+                'Alarms and notifications system with escalation handling and response management',
+                'Reporting section with multiple report types including production, inventory, and job sheets',
+                'Admin panel for managing users, templates, materials, and chemicals',
+            ],
+            images: [
+                {src: '{% static "images/programming/morex/morex01.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex02.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex03.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex04.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex05.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex06.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex07.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex08.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex09.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex10.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex12.png" %}', alt: 'Morex'},
+                {src: '{% static "images/programming/morex/morex11.png" %}', alt: 'Morex'},
+
+            ],
+            images: makeImages('images/programming/morex/morex', 11, 'Morex'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', name: 'PHP'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg', name: 'VueJS'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg',
+                    name: 'Grafana'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg', name: 'GitLab'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg', name: 'Jira'},
+            ],
+        },
+
+        ndcamera: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-camera',
+            cardImage: '{% static "images/programming/ndcamera/ndcamera01.png" %}',
+            title: 'NDCamera — E-Commerce & M-Commerce Camera Platform',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic · Birmingham City University (Final Year)',
+            github: 'https://github.com/nuwangarajapaksha/NDCamera-Web-Application', demo: null,
+            overview: `NDCamera is a comprehensive camera-selling platform developed as a final year university project. The solution consists of two integrated components: a web-based e-commerce application and a mobile m-commerce Android application, both designed to deliver a user-friendly and feature-rich online shopping experience for camera products.<br/><br/>
+    The platform includes a customer-facing interface with modern shopping functionalities as well as an admin panel for complete store management. The solution provides real-time product search, order tracking, secure checkout, and personalized user experiences. Both the web and mobile apps are developed independently and function as complementary systems.`,
+            architecture: `The system is designed with two separate components:<br/>
+    <strong class="text-white">E-Commerce Web Application</strong> — Built using Java EE with a JSP/Servlet-based MVC architecture for backend services, MySQL for database operations, and Hibernate and JPA for ORM. The frontend is built using HTML, CSS, JavaScript, and Bootstrap for responsiveness, while JSON and Axios enable efficient client–server communication. Includes a built-in mail sender service for order confirmations and admin notifications, along with PayHere Payment Gateway integration for secure online transactions.<br/><br/>
+    <strong class="text-white">M-Commerce Mobile Application</strong> — Developed using Android (Java) and integrated with Firebase Realtime Database. Google Authentication Services enable quick and secure login functionality, and PayHere Payment Gateway is integrated to support secure in-app payments.`,
+            contributions: [
+                'Designed and architected the entire system structure and data flow for both web and mobile components.',
+                'Developed the E-Commerce Web Application using Java EE (JSP/Servlets) for backend logic, HTML, CSS, JavaScript, and Bootstrap for the frontend, and MySQL with Hibernate and JPA for efficient ORM and database interactions.',
+                'Built the M-Commerce Android Mobile Application using Java (Android SDK), with Firebase Realtime Database and Firebase Authentication for real-time user and product data management.',
+                'Integrated PayHere Payment Gateway into both platforms for secure checkout flow.',
+                'Implemented Google Authentication on the mobile app for enhanced login and user experience.',
+                'Used JSON as the data format and Axios for structured and efficient client-server communication in the web application.',
+                'Developed a Mail Sender Service to send order confirmations and admin notifications via email.',
+                'Ensured responsive UI/UX and optimized database queries for better performance.',
+                'Configured admin and user access controls along with email notification systems.',
+                'Applied JUnit to test business logic and validate database interactions, ensuring application robustness.',
+                'Documented the system thoroughly for academic evaluation, including architecture diagrams and code walkthrough.',
+                'Presented the project during the final viva with a live demo, demonstrating real-world problem-solving, full-stack development, and software engineering principles.',
+                'Demonstrated strong soft skills including self-motivation, planning, adaptability, critical thinking, and effective presentation.',
+            ],
+            clients: [],
+            features: [
+                'User registration and login (manual & Google sign-in for mobile) with profile management',
+                'Product search and category-wise filtering',
+                'Product view with details and images',
+                'Add to cart and wishlist functionality',
+                'Secure checkout with PayHere Payment Gateway and email confirmation',
+                'Order history tracking',
+                'Blog access and contact details',
+                'Admin product and brand management',
+                'Order management with automated email notifications',
+                'User management and business settings configuration',
+            ],
+            images: makeImages('images/programming/ndcamera/ndcamera', 26, 'NDCamera'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg',
+                    name: 'Hibernate'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+                    name: 'Android'
+                },
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+                    name: 'Firebase'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg', name: 'Axios'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        pamunuwila: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-screwdriver-wrench',
+            cardImage: '{% static "images/programming/pamunuwila_hardware/pamunuwila-hardware01.png" %}',
+            title: 'PAMUNUWILA HARDWARE (Pvt) Ltd — Hardware Shop Management System',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic & Real Client · Year 1 Final Project',
+            github: 'https://github.com/nuwangarajapaksha/Pamunuwila-Hardware', demo: null,
+            overview: `PAMUNUWILA HARDWARE is a comprehensive desktop-based hardware shop management system developed for PAMUNUWILA HARDWARE (Pvt) Ltd. This was an individual project undertaken as my 1st-year final project at university. The system was designed to digitize and streamline all operational activities of the hardware business, from user and inventory management to sales, delivery, and financial reporting.<br/><br/>
+    The solution serves as an all-in-one tool for the daily operations of the business, providing seamless management of products, stock levels, purchases, sales, deliveries, and customer interactions, while maintaining a centralized, secure database. It replaces manual recordkeeping with a highly organized, automated, and scalable system — generating detailed reports and professional invoices to help businesses make informed decisions and maintain smooth financial operations.`,
+            architecture: `This desktop-based application is built using <strong class="text-white">Java and Java Swing</strong> for the frontend user interface, backed by <strong class="text-white">MySQL</strong> for structured data storage. <strong class="text-white">Jasper Reports</strong> is used for generating invoices, bills, and all historical reports — including daily, monthly, and yearly summaries. The system is modularly designed, allowing each functional domain to operate independently yet cohesively as part of the overall system.`,
+            contributions: [
+                'Conducted requirement analysis, created the database schema, and defined the modular architecture.',
+                'Built the complete desktop UI using Java Swing, focusing on user experience and ease of use.',
+                'Developed all business logic, database interaction modules, and integrated MySQL for persistent data storage.',
+                'Created dynamic, printable invoices and reports using Jasper Reports for sales, inventory, deliveries, and backups.',
+                'Used JUnit for unit testing and ensured robustness through extensive debugging and validation.',
+                'Delivered the project with full technical documentation and a deployment-ready setup.',
+                'Utilized leadership, critical thinking, problem-solving, and situation-handling skills to manage the entire development process efficiently, overcome challenges, and deliver a fully functional, professional-grade solution.',
+            ],
+            clients: ['PAMUNUWILA HARDWARE (Pvt) Ltd'],
+            features: [
+                'Login, registration, and secure user management',
+                'Create and manage user roles and access levels',
+                'Store and manage supplier details and associated companies',
+                'Add and track items with real-time stock updates and low stock alerts',
+                'Manage incoming goods and update stock accordingly',
+                'Handle transactions, customer records, and purchase history',
+                'Track delivery orders and manage transportation logistics',
+                'Secure data backup and restoration for disaster recovery',
+                'Generate and print all necessary documents using Jasper Reports',
+                'Access past transactions and analytics for business insights',
+            ],
+            images: makeImages('images/programming/pamunuwila_hardware/pamunuwila-hardware', 50, 'PAMUNUWILA HARDWARE (Pvt) Ltd'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        adyapana: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-graduation-cap',
+            cardImage: '{% static "images/programming/adyapana/adyapana01.png" %}',
+            title: 'Adyapana — Educational Center Management System',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic · Year 1 Assignment',
+            github: 'https://github.com/nuwangarajapaksha/Adyapana', demo: null,
+            overview: `ADYAPANA is a simple yet comprehensive desktop application developed as part of my first-year university assignment. Designed for educational centers, the system streamlines administrative processes by offering centralized management of students, teachers, subjects, classes, and payments.<br/><br/>
+    The system is designed to be simple, intuitive, and efficient — helping educational centers streamline their day-to-day management while ensuring accurate record keeping and generating clear payment invoices for students.`,
+            architecture: `<strong class="text-white">UI Layer</strong> — Java Swing provides a clean, easy-to-use desktop experience.<br/>
+    <strong class="text-white">Business Logic Layer</strong> — Java handles core processing, data management, and validation.<br/>
+    <strong class="text-white">Database Layer</strong> — MySQL for reliable and scalable data storage.<br/>
+    <strong class="text-white">Reporting Layer</strong> — Jasper Reports generates well-formatted PDF payment invoices.`,
+            contributions: [
+                'Designed and implemented the full application from scratch, including all user interface layouts.',
+                'Created and optimized the database schema using MySQL to ensure efficient, reliable, and scalable data storage.',
+                'Developed all functional modules — student, teacher, subject, class, and payment management — in Java and Java Swing.',
+                'Designed and integrated Jasper Reports for professional PDF invoice output.',
+                'Wrote and executed JUnit test cases to validate key functions and ensure quality.',
+                'Created a distributable .exe setup using Launch4j for seamless installation and execution on Windows systems.',
+                'Delivered the project with full technical documentation.',
+                'Applied creative thinking to design a logical, efficient workflow for managing educational center operations.',
+                'Solved implementation challenges and handled unforeseen situations independently, ensuring timely delivery of the project.',
+            ],
+            clients: [],
+            features: [
+                'Add, edit, search, and maintain detailed student profiles',
+                'Manage teacher information and assigned subjects and classes',
+                'Maintain subject catalogs and related details',
+                'Organize classes with schedules, subjects, and assigned teachers',
+                'Record, track, and report on student payments',
+                'Automated Jasper Reports for professional PDF payment receipts',
+                'Distributable Windows .exe installer via Launch4j',
+            ],
+            images: makeImages('images/programming/adyapana/adyapana', 14, 'Adyapana'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        opd: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-hospital',
+            cardImage: '{% static "images/programming/opd_channeling/opd-channeling01.png" %}',
+            title: 'OPD Channeling — E-Channeling Web Platform',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic · Year 2 Assignment · Birmingham City University',
+            github: 'https://github.com/nuwangarajapaksha/Opd-Channeling', demo: null,
+            overview: `OPD Channeling is a fully functional E-Channeling Web Platform developed as a solo second-year university assignment. The system is designed to digitize and streamline outpatient department (OPD) appointment management by connecting patients, doctors, and hospitals in a single online platform.<br/><br/>
+    The main focus of the application is to manage e-channeling operations, including patient handling, doctor handling, and hospital handling. Patients can register and book appointments with available doctors. Doctors can register to offer their consultation services, manage their channels, and view upcoming appointments. Hospitals can pre-register in the system, allowing their doctors and services to be listed. An integrated admin panel allows administrators to manage patients, doctors, hospitals, and all appointment-related operations, ensuring smooth coordination between stakeholders.`,
+            architecture: `The application is built using a <strong class="text-white">PHP backend</strong> for server-side logic, combined with <strong class="text-white">HTML, CSS, JavaScript, and Bootstrap</strong> for a responsive and intuitive frontend. <strong class="text-white">MySQL</strong> serves as the relational database, storing user profiles, hospital details, appointment records, and administrative data. The application follows a modular structure to separate concerns between the core functionalities of patients, doctors, hospitals, and the admin panel.`,
+            contributions: [
+                'Designed and implemented the complete system architecture, including database schema and user interface.',
+                'Developed all backend functionalities in PHP and integrated them with the MySQL database.',
+                'Built a responsive frontend using HTML, CSS, JavaScript, and Bootstrap.',
+                'Implemented secure login and registration for patients and doctors.',
+                'Created the admin panel for centralized management of all entities.',
+                'Applied creative thinking, problem-solving, and situation-handling skills to address challenges during development.',
+                'Documented the entire project and successfully demonstrated it at the university.',
+            ],
+            clients: [],
+            features: [
+                'Patient registration, secure login, profile, and e-channeling appointment booking',
+                'View appointment history and details',
+                'Doctor registration, secure login, profile, and dashboard to manage booked appointments',
+                'Doctor availability management for patient bookings',
+                'Hospital pre-registration and listing in the system',
+                'Admin panel for managing patients, doctors, hospitals, and appointment schedules',
+                'Secure admin registration, login, and profile management',
+            ],
+            images: makeImages('images/programming/opd_channeling/opd-channeling', 25, 'OPD Channeling'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', name: 'PHP'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        imagescave: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-image',
+            cardImage: '{% static "images/programming/imagescave/imagescave01.png" %}',
+            title: 'ImagesCave — Online Image Selling Platform',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic · Year 2 Main Project',
+            github: 'https://github.com/nuwangarajapaksha/ImagesCave', demo: null,
+            overview: `ImagesCave is a fully functional image selling web platform developed as my main second-year project. The platform provides an integrated marketplace for photographers and graphic designers to upload and sell their work, while customers can browse, purchase, and download high-quality images. The solution is designed with two main interfaces: a contributor-facing portal for image management and sales, and a customer-facing interface for browsing and purchasing, supported by a robust admin panel for full platform management.<br/><br/>
+    The system supports secure user authentication, streamlined image review and pricing workflows, automated invoicing, and detailed sales reporting. Its architecture emphasizes ease of use, transaction security, and scalability for future enhancements.`,
+            architecture: `The <strong class="text-white">PHP backend</strong> handles all core business logic, authentication, and request processing, while integrating with a <strong class="text-white">MySQL database</strong> to store and manage user accounts, product details, transactions, and system records. The frontend, built with <strong class="text-white">HTML, CSS, JavaScript, and Bootstrap</strong>, delivers a responsive and user-friendly experience for buyers, contributors, and admins. The platform is further enhanced with <strong class="text-white">PayHere Payment Gateway</strong> integration for secure online payments and an email notification service to automatically send invoices and updates to users. The system is hosted on a shared hosting server with a purchased domain, managed via cPanel.`,
+            contributions: [
+                'Designed and implemented the full application, from database schema to UI design.',
+                'Developed all frontend pages with HTML, CSS, JavaScript, and Bootstrap.',
+                'Implemented backend functionality in PHP, integrating MySQL for data persistence.',
+                'Built contributor and buyer workflows, including image upload, search, cart, and purchase.',
+                'Integrated PayHere Payment Gateway for secure online transactions.',
+                'Created automated email notifications for invoices and updates.',
+                'Implemented an admin review system for product approval and pricing.',
+                'Designed responsive layouts and optimized database queries for performance.',
+                'Deployed the platform to a shared hosting server, managed cPanel settings, configured the database, and maintained the live site using a purchased domain.',
+                'Conducted thorough testing to ensure reliability and usability.',
+                'Documented the system for academic submission and delivered a live demonstration.',
+            ],
+            clients: [],
+            features: [
+                'Contributor registration, login, profile, image upload with metadata and categorization',
+                'Contributor dashboard to manage uploaded images and track sales',
+                'Buyer registration, login, profile, advanced search, and category-wise filtering',
+                'Product detail view with image previews',
+                'Add to cart, checkout, and PayHere-powered secure payment',
+                'Automated email invoice after purchase',
+                'Ability for buyers to submit suggestions and complaints',
+                'Admin management of buyer and contributor accounts',
+                'Product review system — approve, reject submissions, and set prices',
+                'Sales insights with recent product sales and detailed reporting',
+                'Admin review and response to complaints and suggestions',
+                'Live deployment on shared hosting with a custom purchased domain',
+            ],
+            images: makeImages('images/programming/imagescave/imagescave', 15, 'ImagesCave'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', name: 'PHP'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        election: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-ballot-check',
+            cardImage: '{% static "images/programming/election_sri_lanka/election-sri-lanka01.png" %}',
+            title: 'Election Sri Lanka — Online Election Platform',
+            role: 'Software Engineer – Full-Stack (Solo Project)',
+            type: 'Academic · Year 2 Assignment',
+            github: 'https://github.com/nuwangarajapaksha/Election-Sri-Lanka', demo: null,
+            overview: `Election Sri Lanka is a fully functional Online Election Management Platform developed as a solo second-year university assignment. The system is designed to digitize and streamline the entire election process — from voter registration to secure voting and automatic result generation.<br/><br/>
+    The platform enables voter management, candidate management, party management, and position handling, ensuring a smooth and transparent election workflow. Voters can register and login using their National Identity Card (NIC) number and cast votes for their preferred parties and candidates. The system also features an integrated guideline page to assist users.<br/><br/>
+    On the administrative side, admins can register and log in to manage all aspects of the election, including administrators, candidates, parties, positions, voters, and results. The result computation process is automated, eliminating the possibility of human error and increasing election credibility.`,
+            architecture: `The application is built using a <strong class="text-white">PHP backend</strong> for server-side processing, integrated with <strong class="text-white">MySQL</strong> as the relational database to store voter records, election data, and results. The frontend leverages <strong class="text-white">HTML, CSS, JavaScript, and Bootstrap</strong> to provide a responsive, user-friendly interface. The system follows a modular approach to separate core functionalities for voters and administrators, ensuring maintainability and scalability.`,
+            contributions: [
+                'Designed the complete system architecture and database schema.',
+                'Implemented backend logic in PHP and integrated it with the MySQL database.',
+                'Developed a fully responsive frontend using HTML, CSS, JavaScript, and Bootstrap.',
+                'Implemented secure login and registration processes for voters and admins.',
+                'Built automated result calculation logic for election outcomes.',
+                'Applied critical thinking and problem-solving skills to overcome development challenges.',
+                'Fully documented the project and successfully demonstrated it at the university.',
+            ],
+            clients: [],
+            features: [
+                'NIC-validated voter registration and secure login with user profile',
+                'Cast votes for parties and candidates',
+                'Access to a guideline page for election instructions',
+                'Admin registration, secure login, and profile management',
+                'Manage administrators, candidates, parties, positions, and voters',
+                'Add candidates and parties to the system',
+                'Automatic result generation after voting ends',
+            ],
+            images: makeImages('images/programming/election_sri_lanka/election-sri-lanka', 24, 'Election'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', name: 'PHP'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', name: 'MySQL'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+                    name: 'Bootstrap'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+        healthfirst: {
+            accent: 'amber',
+            badge1: null, badge2: null,
+            icon: 'fa-solid fa-dumbbell',
+            cardImage: '{% static "images/programming/health_first/health-first01.png" %}',
+            title: 'Health First — Fitness Center Website',
+            role: 'Front-End Web Developer (Solo Project)',
+            type: 'Academic · Year 1 Web Project',
+            github: 'https://github.com/nuwangarajapaksha/Health-First', demo: null,
+            overview: `Health First is a simple yet engaging website developed for a local fitness center as my very first university web development project. The platform serves as an online presence for the fitness center, featuring essential information such as a gallery, class schedules, upcoming events, and contact details. Designed to be visually appealing and easy to navigate, the site enables visitors to explore the center's offerings and stay informed about activities and programs.<br/><br/>
+    The project was developed entirely using foundational front-end development knowledge, focusing on clean structure, intuitive navigation, and clear presentation of content. It marked my initial step into practical web design and development, serving as a strong foundation for later, more complex projects.`,
+            architecture: `The website is built entirely with static front-end technologies — <strong class="text-white">HTML</strong> for structure, <strong class="text-white">CSS</strong> for styling and layout, and <strong class="text-white">JavaScript</strong> for interactivity. All content is displayed directly in the pages without backend integration or databases, ensuring quick load times and straightforward deployment. JavaScript enhances the user experience through simple interactive elements, while CSS ensures a visually consistent and responsive design across devices.`,
+            contributions: [
+                'Designed the overall website layout and navigation flow.',
+                'Developed all pages using HTML, CSS, and JavaScript.',
+                'Created the gallery and events sections for visual engagement.',
+                'Implemented responsive design principles for multi-device compatibility.',
+                'Ensured cross-browser compatibility and basic accessibility.',
+                'Documented the project and delivered a live demonstration at the university.',
+            ],
+            clients: [],
+            features: [
+                'Showcase of fitness center facilities and activity gallery',
+                'Overview of available fitness classes and their timings',
+                'Listing of special programs, workshops, and promotional events',
+                'Contact details including address, phone number, and email',
+                'Responsive design optimized for desktops, tablets, and mobile devices',
+                'Cross-browser compatible static frontend',
+            ],
+            images: makeImages('images/programming/health_first/health-first', 17, 'Health First Home'),
+            tech: [
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML5'},
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', name: 'CSS3'},
+                {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    name: 'JavaScript'
+                },
+                {icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', name: 'Git'},
+            ],
+        },
+
+    };
+
+    /* ─────────────────────────────────────────
+       Accent colour maps
+    ───────────────────────────────────────── */
+    const ACCENT = {
+        blue: {
+            border: 'border-blue-400/30',
+            bg: 'bg-blue-400/10',
+            text: 'text-blue-400',
+            badge: 'bg-blue-400/20 border-blue-400/30 text-blue-400',
+            from: 'from-blue-500/20'
+        },
+        purple: {
+            border: 'border-purple-400/30',
+            bg: 'bg-purple-400/10',
+            text: 'text-purple-400',
+            badge: 'bg-purple-400/20 border-purple-400/30 text-purple-400',
+            from: 'from-purple-500/20'
+        },
+        teal: {
+            border: 'border-teal-400/30',
+            bg: 'bg-teal-400/10',
+            text: 'text-teal-400',
+            badge: 'bg-teal-400/20 border-teal-400/30 text-teal-400',
+            from: 'from-teal-500/20'
+        },
+        amber: {
+            border: 'border-amber-400/30',
+            bg: 'bg-amber-400/10',
+            text: 'text-amber-400',
+            badge: 'bg-amber-400/20 border-amber-400/30 text-amber-400',
+            from: 'from-amber-400/20'
+        },
+        rose: {
+            border: 'border-rose-400/30',
+            bg: 'bg-rose-400/10',
+            text: 'text-rose-400',
+            badge: 'bg-rose-400/20 border-rose-400/30 text-rose-400',
+            from: 'from-rose-500/20'
+        },
+        indigo: {
+            border: 'border-indigo-400/30',
+            bg: 'bg-indigo-400/10',
+            text: 'text-indigo-400',
+            badge: 'bg-indigo-400/20 border-indigo-400/30 text-indigo-400',
+            from: 'from-indigo-500/20'
+        },
+        emerald: {
+            border: 'border-emerald-400/30',
+            bg: 'bg-emerald-400/10',
+            text: 'text-emerald-400',
+            badge: 'bg-emerald-400/20 border-emerald-400/30 text-emerald-400',
+            from: 'from-emerald-500/20'
+        },
+        pink: {
+            border: 'border-pink-400/30',
+            bg: 'bg-pink-400/10',
+            text: 'text-pink-400',
+            badge: 'bg-pink-400/20 border-pink-400/30 text-pink-400',
+            from: 'from-pink-500/20'
+        },
+        orange: {
+            border: 'border-orange-400/30',
+            bg: 'bg-orange-400/10',
+            text: 'text-orange-400',
+            badge: 'bg-orange-400/20 border-orange-400/30 text-orange-400',
+            from: 'from-orange-500/20'
+        },
+        cyan: {
+            border: 'border-cyan-400/30',
+            bg: 'bg-cyan-400/10',
+            text: 'text-cyan-400',
+            badge: 'bg-cyan-400/20 border-cyan-400/30 text-cyan-400',
+            from: 'from-cyan-500/20'
+        },
+    };
+
+    /* ─────────────────────────────────────────
+       Slider state
+    ───────────────────────────────────────── */
+    let sliderIdx = 0;
+    let sliderTotal = 0;
+
+    function goToSlide(idx) {
+        const images = window._currentImages;
+        if (!images || !images.length) return;
+        sliderIdx = (idx + images.length) % images.length;
+
+        const hero = document.getElementById('hero-img');
+        const heroAlt = document.getElementById('hero-alt');
+        hero.style.opacity = '0';
+        setTimeout(() => {
+            hero.src = images[sliderIdx].src;
+            hero.alt = images[sliderIdx].alt;
+            heroAlt.textContent = images[sliderIdx].alt;
+            hero.style.opacity = '1';
+        }, 120);
+
+        document.getElementById('slide-counter').textContent = (sliderIdx + 1) + ' / ' + images.length;
+
+        document.querySelectorAll('.thumb-item').forEach((t, i) => {
+            t.classList.toggle('ring-2', i === sliderIdx);
+            t.classList.toggle('ring-amber-400', i === sliderIdx);
+            t.classList.toggle('opacity-100', i === sliderIdx);
+            t.classList.toggle('opacity-50', i !== sliderIdx);
+        });
+
+        const strip = document.getElementById('thumb-strip');
+        const active = strip.querySelector('.thumb-item:nth-child(' + (sliderIdx + 1) + ')');
+        if (active) {
+            const stripRect = strip.getBoundingClientRect();
+            const thumbRect = active.getBoundingClientRect();
+            const scrollLeft = strip.scrollLeft + (thumbRect.left - stripRect.left) - (stripRect.width / 2) + (thumbRect.width / 2);
+            strip.scrollTo({left: scrollLeft, behavior: 'smooth'});
+        }
+    }
+
+    function slideImg(dir) {
+        goToSlide(sliderIdx + dir);
+    }
+
+    function scrollThumbs(dir) {
+        const strip = document.getElementById('thumb-strip');
+        strip.scrollBy({left: dir * 220, behavior: 'smooth'});
+    }
+
+    /* ─────────────────────────────────────────
+       Build & open modal
+    ───────────────────────────────────────── */
+    function openProject(key) {
+        const p = PROJECTS[key];
+        const a = ACCENT[p.accent];
+        sliderIdx = 0;
+        sliderTotal = p.images.length;
+        window._currentImages = p.images;
+
+        const firstSrc = p.images.length ? p.images[0].src : '';
+        const firstAlt = p.images.length ? p.images[0].alt : '';
+
+        const heroSliderHTML = p.images.length ? `
+    <div class="relative w-full h-64 md:h-80 overflow-hidden rounded-2xl bg-gray-900">
+      <img id="hero-img" src="${firstSrc}" alt="${firstAlt}"
+           class="w-full h-full object-cover transition-opacity duration-150"
+           style="opacity:1;"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-3 left-4 right-16">
+        <p id="hero-alt" class="text-white/70 text-xs truncate">${firstAlt}</p>
+      </div>
+      <div class="absolute bottom-3 right-4 bg-black/50 backdrop-blur rounded-full px-2.5 py-0.5">
+        <span id="slide-counter" class="text-white/70 text-[10px]">1 / ${p.images.length}</span>
+      </div>
+      ${p.images.length > 1 ? `
+      <button onclick="slideImg(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur hover:bg-amber-400 hover:text-gray-950 text-white flex items-center justify-center transition-all duration-200 z-10">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+      </button>
+      <button onclick="slideImg(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur hover:bg-amber-400 hover:text-gray-950 text-white flex items-center justify-center transition-all duration-200 z-10">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>` : ''}
+    </div>
+  ` : '';
+
+        const thumbsHTML = p.images.length > 1 ? `
+    <div class="relative mt-3">
+      <button onclick="scrollThumbs(-1)"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-gray-950/80 border border-white/15 hover:border-amber-400/50 hover:bg-amber-400/10 flex items-center justify-center transition-all duration-200 shadow-lg">
+        <i class="fa-solid fa-chevron-left text-white/60 text-[9px]"></i>
+      </button>
+      <div id="thumb-strip"
+           class="flex gap-2 overflow-x-auto mx-9 pb-1 scroll-smooth"
+           style="scrollbar-width:none;-ms-overflow-style:none;">
+        ${p.images.map((img, i) => `
+          <button onclick="goToSlide(${i})"
+                  class="thumb-item shrink-0 w-16 h-12 rounded-xl overflow-hidden border-2 border-transparent transition-all duration-200 ${i === 0 ? 'ring-2 ring-amber-400 opacity-100' : 'opacity-50'} hover:opacity-100 focus:outline-none">
+            <img src="${img.src}" alt="${img.alt}"
+                 class="w-full h-full object-cover pointer-events-none" loading="lazy"/>
+          </button>
+        `).join('')}
+      </div>
+      <button onclick="scrollThumbs(1)"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-gray-950/80 border border-white/15 hover:border-amber-400/50 hover:bg-amber-400/10 flex items-center justify-center transition-all duration-200 shadow-lg">
+        <i class="fa-solid fa-chevron-right text-white/60 text-[9px]"></i>
+      </button>
+    </div>
+  ` : '';
+
+        const techHTML = p.tech.map(t => `
+    <div class="flex flex-col items-center gap-1.5 bg-white/[0.03] border border-white/10 rounded-xl px-3 py-3 hover:border-amber-400/30 hover:bg-white/[0.06] transition-all duration-200">
+      <img src="${t.icon}" class="w-7 h-7" alt="${t.name}" loading="lazy"/>
+      <span class="text-white/50 text-[10px]">${t.name}</span>
+    </div>
+  `).join('');
+
+        const contribHTML = p.contributions.map(c => `
+    <li class="flex gap-2.5 text-sm text-white/60 leading-relaxed">
+      <span class="${a.text} mt-0.5 shrink-0">▸</span>${c}
+    </li>
+  `).join('');
+
+        const featHTML = p.features.map(f => `
+    <div class="flex items-start gap-2.5 bg-white/[0.03] border border-white/10 rounded-xl px-3 py-2.5 hover:border-amber-400/20 transition-all duration-200">
+      <i class="fa-solid fa-check ${a.text} text-xs mt-0.5 shrink-0"></i>
+      <span class="text-white/60 text-xs leading-relaxed">${f}</span>
+    </div>
+  `).join('');
+
+        const clientHTML = p.clients.length ? `
+    <div class="mb-8">
+      <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">Clients &amp; Deployments</p>
+      <div class="flex flex-wrap gap-2">
+        ${p.clients.map(c => `<span class="text-xs px-3 py-1.5 ${a.bg} border ${a.border} ${a.text} rounded-full font-medium">${c}</span>`).join('')}
+      </div>
+    </div>
+  ` : '';
+
+        const linksHTML = (p.github || p.demo) ? `
+    <div class="flex gap-3 mt-4">
+      ${p.github ? `<a href="${p.github}" target="_blank" class="inline-flex items-center gap-2 text-xs px-4 py-2 bg-white/5 border border-white/15 text-white/70 hover:text-white hover:border-white/30 rounded-full transition-all duration-200"><i class="fa-brands fa-github"></i> GitHub</a>` : ''}
+      ${p.demo ? `<a href="${p.demo}" target="_blank" class="inline-flex items-center gap-2 text-xs px-4 py-2 ${a.bg} border ${a.border} ${a.text} hover:opacity-80 rounded-full transition-all duration-200"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Live Demo</a>` : ''}
+    </div>
+  ` : '';
+
+        const badges = (p.badge1 || p.badge2) ? `
+    <div class="flex flex-wrap items-start gap-2 mb-2">
+        ${p.badge1 ? `<span class="text-[10px] px-2.5 py-0.5 ${a.badge || ''} border rounded-full font-medium">${p.badge1}</span>` : ''}
+        ${p.badge2 ? `<span class="text-[10px] px-2.5 py-0.5 bg-white/10 text-white/70 border border-white/15 rounded-full">${p.badge2}</span>` : ''}
+    </div>
+` : '';
+
+        const archHTML = p.architecture ? `
+    <div class="mb-8">
+      <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">Architecture</p>
+      <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
+        <p class="text-white/60 text-sm leading-7">${p.architecture}</p>
+      </div>
+    </div>
+  ` : '';
+
+        document.getElementById('modal-body').innerHTML = `
+    <!-- Header banner: project card image -->
+    <div class="relative h-24 md:h-24 overflow-hidden rounded-t-3xl">
+      <img src="${p.cardImage}" alt="${p.title}"
+           class="absolute inset-0 w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-gray-950/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-amber-400/15 to-transparent mix-blend-overlay"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"></div>
+    </div>
+
+    {#<div class="relative h-24 bg-gradient-to-br ${a.from} to-gray-950 flex items-end px-8 pb-0 overflow-hidden rounded-t-3xl">#}
+    {#      <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:24px 24px;"></div>#}
+    {#      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-${p.accent}-400/40 to-transparent"></div>#}
+    {#      <i class="${p.icon} ${a.text} opacity-10 absolute right-8 top-1/2 -translate-y-1/2 text-[120px]"></i>#}
+    {#    </div>#}
+
+    <div class="px-6 md:px-10 pb-10 pt-6">
+
+      ${badges}
+      <h2 class="font-[Playfair_Display] text-2xl md:text-3xl font-bold text-white leading-snug mb-1">${p.title}</h2>
+      <p class="${a.text} text-xs font-medium mb-0.5">${p.role}</p>
+      <p class="text-white/35 text-xs mb-4">${p.type}</p>
+      ${linksHTML}
+
+      <div class="w-full h-px bg-white/[0.08] my-6"></div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+
+        <!-- LEFT COLUMN -->
+        <div>
+          <div class="mb-8">
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">Project Overview</p>
+            <p class="text-white/65 text-sm leading-7">${p.overview}</p>
+          </div>
+          ${archHTML}
+          ${clientHTML}
+          <div>
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">Key Features</p>
+            <div class="grid grid-cols-1 gap-2">${featHTML}</div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+          <div class="mb-6">
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">
+              Project Screenshots
+              <span class="ml-2 text-white/20 normal-case tracking-normal">(${p.images.length} images)</span>
+            </p>
+            ${heroSliderHTML}
+            ${thumbsHTML}
+          </div>
+
+          <div class="mb-6">
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">My Role &amp; Contributions</p>
+            <ul class="space-y-2">${contribHTML}</ul>
+          </div>
+
+          <div>
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3 font-medium">Technology Stack</p>
+            <div class="flex flex-wrap gap-2">${techHTML}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+        window._modalKeyHandler = (e) => {
+            if (e.key === 'ArrowRight') slideImg(1);
+            if (e.key === 'ArrowLeft') slideImg(-1);
+        };
+        document.addEventListener('keydown', window._modalKeyHandler);
+
+        const modal = document.getElementById('project-modal');
+        const panel = document.getElementById('modal-panel');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => {
+            panel.classList.remove('scale-95', 'opacity-0');
+            panel.classList.add('scale-100', 'opacity-100');
+        });
+    }
+
+    function closeProject() {
+        const modal = document.getElementById('project-modal');
+        const panel = document.getElementById('modal-panel');
+        panel.classList.add('scale-95', 'opacity-0');
+        panel.classList.remove('scale-100', 'opacity-100');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }, 200);
+    }
+
+    document.getElementById('project-modal').addEventListener('click', function (e) {
+        if (e.target === this) closeProject();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !document.getElementById('project-modal').classList.contains('hidden')) {
+            closeProject();
+        }
+    });
+</script>
+
+<style>
+    #modal-panel {
+        transition: transform 0.25s cubic-bezier(.4, 0, .2, 1), opacity 0.25s ease;
+    }
+</style>

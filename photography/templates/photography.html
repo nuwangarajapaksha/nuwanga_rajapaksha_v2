@@ -1,0 +1,1050 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block wrapper %}
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO / BREADCRUMB SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
+
+        <div class="absolute inset-0 bg-[url('/static/images/photography/photography-main.png')] bg-cover bg-center opacity-25"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/75 to-gray-950"></div>
+
+        <!-- Decorative amber line -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+        <!-- Geometric accent rings -->
+        <div class="absolute right-8 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-amber-400/10 hidden lg:block"></div>
+        <div class="absolute right-16 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-amber-400/10 hidden lg:block"></div>
+
+        <!-- Aperture watermark -->
+        <div class="absolute left-8 bottom-8 hidden lg:flex items-center gap-3 select-none">
+            <div class="w-16 h-16 rounded-full border-2 border-white/5 flex items-center justify-center">
+                <div class="w-10 h-10 rounded-full border-2 border-white/5 flex items-center justify-center">
+                    <div class="w-4 h-4 rounded-full bg-white/5"></div>
+                </div>
+            </div>
+            <span class="text-white/5 font-mono text-xs tracking-widest uppercase">f/1.8 · 1/200s · ISO 100</span>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-24 w-full">
+
+            <!-- Breadcrumb nav -->
+            <nav class="flex items-center gap-2 text-xs text-white/40 mb-8 tracking-widest uppercase">
+                <a href="{% url 'index' %}" class="hover:text-amber-400 transition-colors duration-200">Home</a>
+                <span class="text-amber-400/60">/</span>
+                <span class="text-amber-400">Photography</span>
+            </nav>
+
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-px bg-amber-400 block"></span>
+                        <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Through My Lens</span>
+                    </div>
+                    <h1 class="font-[Playfair_Display] text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                        Light &amp; <span class="text-amber-400 italic">Frame</span>
+                    </h1>
+                    <p class="mt-4 text-white/50 text-sm md:text-base max-w-xl leading-relaxed">
+                        From childhood wonder with a mobile phone to professional shoots across wildlife, landscape,
+                        fashion,
+                        and events — a lifelong love affair with the art of seeing.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 lg:flex-col lg:items-end">
+                    <a href="#commencement"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Commencement</a>
+                    <a href="#studies"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Higher
+                        Studies</a>
+                    <a href="#career"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Career</a>
+                    <a href="#gears"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Gear</a>
+                    <a href="#gallery"
+                       class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         COMMENCE
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="commencement" class="relative bg-gray-950 py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="mb-14">
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Where it all began</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    Commencement <span class="text-amber-400 italic">— The Eye Opens</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row gap-12 items-start">
+                <div class="flex-1">
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        Photography has always been one of my <span
+                            class="text-white/70 font-medium">innate talents</span> — something that came naturally to
+                        me from a very young age.
+                        My journey <span class="text-white/70 font-medium">began in childhood,</span> not with expensive
+                        cameras or formal training, but with a simple <span class="text-white/70 font-medium">mobile phone.</span>
+                        I was fascinated by the ability to freeze a moment in time, to tell stories through visuals, and
+                        to see the world
+                        through a different lens. Even as a child, I found myself drawn to the small details — the way
+                        light fell across
+                        a surface, the symmetry in nature, or the emotions captured in a candid smile.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        My passion for photography began to take a more defined shape during my school years at Nalanda
+                        College,
+                        where I was <span class="text-white/70 font-medium">deeply inspired by</span> the
+                        <a href="https://www.facebook.com/Nalanda.College.Photographic.Art.Society" target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Nalanda College Photographic Art Society (NPAS)
+                        </a>.
+                        The work produced by the members, as well as the creative atmosphere they fostered, gave me a
+                        sense of direction.
+                        It opened my eyes to the artistic side of photography and helped me understand that it was more
+                        than just clicking
+                        a button—it was about composition, emotion, timing, and storytelling.
+                    </p>
+                    <p class="text-white/65 text-base leading-8">
+                        Beyond school, I found <span class="text-white/70 font-medium">further inspiration</span> from
+                        <span class="text-white/70 font-medium">both local and international photographers on social media platforms.</span>
+                        I would
+                        spend hours studying their work, learning different techniques, experimenting with styles, and
+                        absorbing knowledge
+                        from various online communities. Their creativity pushed me to keep improving and evolving as a
+                        photographer.
+                    </p>
+
+                    <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 transition-all duration-300">
+                            <i class="fa-solid fa-camera text-amber-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">Mobile Photography</p>
+                            <p class="text-white/40 text-[11px] mt-0.5">Where it started</p>
+                        </div>
+                        <!-- NPAS card — links to Facebook page -->
+                        <a href="https://www.facebook.com/Nalanda.College.Photographic.Art.Society" target="_blank"
+                           rel="noopener noreferrer"
+                           class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.06] transition-all duration-300">
+                            <i class="fa-solid fa-users text-amber-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">NPAS</p>
+                            <p class="text-white/40 text-[11px] mt-0.5">Inspired by</p>
+                        </a>
+                        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 transition-all duration-300">
+                            <i class="fa-solid fa-earth-asia text-amber-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">Global Inspiration</p>
+                            <p class="text-white/40 text-[11px] mt-0.5">Social media &amp; online</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:w-96 shrink-0">
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Early Days</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+                            <img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/481777870_1081899807314941_2653065348759696607_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=z-cbaj1qJFgQ7kNvwG8LF3S&_nc_oc=AdrohCCm_bRYR9WWWqy9cXeVlI8U_tlizbADQTZtihqYk94lHmgi3K1Rx4ncnIjZ-u-6Ww3anbM9rhCO_YkoZ1bV&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=DjOyxJ6PggbDhkcD2R3FiA&_nc_ss=7b2a8&oh=00_Af-unzhgJF0lkNaVqHmfjQpY3Hrygxft5xZkjSHZSEuiSA&oe=6A4721FA"
+                                 alt="Photography beginnings"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3">
+                                <p class="text-white/80 text-xs font-medium">Nalanda College Photographic Art
+                                    Society</p>
+                                <p class="text-white/50 text-[11px]">Where am I inspired from</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+                            <img src="https://lifemobile.lk/wp-content/uploads/2019/04/oppo20a57.jpg"
+                                 alt="Starting Gear"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-2">
+                                <p class="text-white/70 text-[11px]">Starting Gear</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+                            <img src="https://m.media-amazon.com/images/I/91cpz0N7KoL._AC_SX569_.jpg"
+                                 alt="Starting Gear"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-2">
+                                <p class="text-white/70 text-[11px]">Starting Gear</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick link button below image grid -->
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/Nalanda.College.Photographic.Art.Society" target="_blank"
+                           rel="noopener noreferrer"
+                           class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-[#1877F2]/40
+                    hover:bg-[#1877F2]/5 text-white/50 hover:text-[#1877F2] text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+                            <i class="fa-brands fa-facebook text-[12px]"></i>
+                            NPAS
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         HIGHER STUDIES
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="studies" class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="mb-14">
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Formal training</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    Higher <span class="text-amber-400 italic">Studies</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row gap-12 items-start">
+
+                <!-- Image grid -->
+                <div class="xl:w-96 shrink-0">
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Cameralk Academy</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEBBQcf8c7Azm8e599r28QZSE2FK0ki09E9tRCrxkB_r_bdPppefVrwA&s=10"
+                                 alt="Cameralk Academy"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3">
+                                <p class="text-white/80 text-xs font-medium">Cameralk Academy</p>
+                                <p class="text-white/50 text-[11px]">South Asia's premier camera institution</p>
+                            </div>
+                        </div>
+                        {#          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">#}
+                        {#            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400&q=80"#}
+                        {#                 alt="Studio Session" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>#}
+                        {#            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>#}
+                        {#            <div class="absolute bottom-0 left-0 right-0 p-2">#}
+                        {#              <p class="text-white/70 text-[11px]">Studio Sessions</p>#}
+                        {#            </div>#}
+                        {#          </div>#}
+                        {#          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">#}
+                        {#            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80"#}
+                        {#                 alt="Landscape Training" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>#}
+                        {#            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>#}
+                        {#            <div class="absolute bottom-0 left-0 right-0 p-2">#}
+                        {#              <p class="text-white/70 text-[11px]">Field Training</p>#}
+                        {#            </div>#}
+                        {#          </div>#}
+                    </div>
+
+                    <!-- Quick link buttons below image grid -->
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.cameralk.com/academy" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+                            <i class="fa-solid fa-globe text-[12px]"></i>
+                            CameraLk Academy
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+                        </a>
+                        <a href="https://www.cameralk.com" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+                            <i class="fa-solid fa-globe text-[12px]"></i>
+                            cameralk.com
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+                        </a>
+                    </div>
+
+                    <!-- Mentor card -->
+                    <div class="mt-4 bg-amber-400/5 border border-amber-400/20 rounded-2xl p-4 flex items-start gap-3">
+                        <img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/465601631_8516517001779653_22472538708346820_n.jpg?stp=dst-jpg_tt6&cstp=mx720x720&ctp=s720x720&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=-U3CNsVL868Q7kNvwHCkZCv&_nc_oc=Adr3yxVWWDF5uIiyz06kTgOSyzqa-2QdJibZbVv_DMSpbYRVGQr_I4wG9n_u6mpaklJRV1c5dxv45BC8YLlHPkzd&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=7yWX5LB3HJJs-iVwFXKvjQ&_nc_ss=7b2a8&oh=00_Af-bbmuJF4Ylw-AAmFt1ChwpcpNdT-J-Hehl8Y3JcL3V7A&oe=6A472332"
+                             alt="Mr. Mohan Hathnapitiya"
+                             class="w-25 h-25 rounded-xl object-cover border border-amber-400/30 shrink-0"/>
+                        <div>
+                            <p class="text-amber-400 text-xs font-semibold">Mentor</p>
+                            <a href="https://www.facebook.com/mohan.hathnapitiya" target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-white text-sm font-medium mt-0.5 hover:text-amber-400 transition-colors duration-200 block">
+                                Mr. Mohan Hathnapitiya
+                            </a>
+                            <p class="text-white/50 text-[11px] mt-1 leading-relaxed">
+                                Highly reputed photographer &amp; respected lecturer in Sri Lanka, whose guidance shaped
+                                my professional foundation.
+                            </p>
+                            <!-- Quick link button -->
+                            <a href="https://www.facebook.com/mohan.hathnapitiya" target="_blank"
+                               rel="noopener noreferrer"
+                               class="mt-2 inline-flex items-center gap-2 bg-white/[0.04] border border-white/10 hover:border-[#1877F2]/40
+                      hover:bg-[#1877F2]/5 text-white/50 hover:text-[#1877F2] text-[10px] font-medium rounded-xl py-1.5 px-3
+                      transition-all duration-300 group/btn">
+                                <i class="fa-brands fa-facebook text-[11px]"></i>
+                                mohan.hathnapitiya
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[8px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Story + specialisations -->
+                <div class="flex-1">
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        After completing my school education, I decided to pursue my passion for photography by
+                        enrolling in a professional certificate course at
+                        <a href="https://www.cameralk.com/academy" target="_blank" rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Cameralk Academy
+                        </a> the educational division of
+                        <a href="https://www.cameralk.com" target="_blank" rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Cameralk
+                        </a>,
+                        South Asia's largest and most renowned camera store. Cameralk Academy is known for its
+                        industry-standard
+                        training programs and is guided by some of the most experienced professionals in the field.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        During this course, I had the privilege of studying under
+                        <a href="https://www.facebook.com/mohan.hathnapitiya" target="_blank" rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Mr. Mohan Hathnapitiya
+                        </a>, a highly reputed photographer
+                        and respected lecturer in Sri Lanka. His extensive experience, artistic insight, and practical
+                        guidance played
+                        a significant role in shaping my skills and understanding of photography at a professional
+                        level.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        Under his mentorship, I gained a solid foundation in <span class="text-white/70 font-medium">both the technical and artistic aspects</span>
+                        of photography.
+                        I learned <span class="text-white/70 font-medium">how to operate and maintain various types of cameras, including DSLR and mirrorless systems,
+          and developed skills in manual exposure control, focusing, and composition.</span> I was also <span
+                            class="text-white/70 font-medium">trained to critically
+          "read" and analyze photographs—understanding lighting, framing, emotion, and visual storytelling.</span> In
+                        addition,
+                        I studied <span class="text-white/70 font-medium">photo editing techniques, learning to enhance images using professional software to bring out their
+          full creative potential.</span>
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        In addition to technical proficiency, the course <span class="text-white/70 font-medium">emphasized client communication and professionalism.</span>
+                        I learned <span class="text-white/70 font-medium">how to work with clients effectively—understanding their vision, offering creative input,
+          managing expectations, and delivering high-quality work on time.</span>
+                    </p>
+
+                    <!-- Specialisations grid -->
+                    <div class="mb-8">
+                        <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-4">Specialised Training —
+                            Photography Genres</p>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-mountain-sun text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Landscape Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Natural light, weather, and
+                                        perspective to capture scenic beauty</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-paw text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Wildlife Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Patience, timing, and
+                                        long-lens techniques for natural habitats</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-person-dress text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Model Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Studio lighting, posing
+                                        techniques, and creative direction</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-champagne-glasses text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Event Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Weddings, cultural events, and
+                                        concerts with accuracy</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-city text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Street Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Candidly documenting everyday
+                                        life and human interaction</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+                                <i class="fa-solid fa-utensils text-amber-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <p class="text-white text-sm font-medium">Food Photography</p>
+                                    <p class="text-white/45 text-xs mt-1 leading-relaxed">Styling and lighting for
+                                        vibrant, market-ready food visuals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 hover:border-amber-400/20 transition-all duration-300">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-star text-amber-400 mt-0.5 shrink-0"></i>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-1">Professional Outcome</p>
+                                <p class="text-white/55 text-sm leading-relaxed">
+                                    <a href="https://www.cameralk.com/academy" target="_blank" rel="noopener noreferrer"
+                                       class="text-amber-400/80 hover:text-amber-400 transition-colors duration-200">
+                                        Cameralk Academy
+                                    </a>, guided by
+                                    <a href="https://www.facebook.com/mohan.hathnapitiya" target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="text-amber-400/80 hover:text-amber-400 transition-colors duration-200">
+                                        Mr. Mohan Hathnapitiya's
+                                    </a> expertise, was a transformative experience that
+                                    helped me evolve from a hobbyist to a professional — laid the groundwork for my
+                                    continued growth in photography, and gave me the confidence, discipline, and
+                                    creative
+                                    direction needed to succeed in the industry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CAREER
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="career" class="relative bg-gray-950 py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="mb-14">
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Professional journey</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    Career <span class="text-amber-400 italic">&amp; Vision</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row gap-12 items-start">
+                <div class="flex-1">
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        My journey in photography <span class="text-white/70 font-medium">began during my</span> <span
+                            class="text-amber-400 font-medium">Advanced Level (A/L) school years</span> —
+                        a time when I was still discovering my creative voice. What started as a humble passion quickly
+                        transformed into
+                        a lifelong commitment to capturing the world through my lens. I <span
+                            class="text-white/70 font-medium">began with simple birthday shoots and small-scale
+          events organized by schools, community centers, and institutions.</span> These early helped me <span
+                            class="text-white/70 font-medium">develop a strong
+          foundation in working with people, understanding lighting in diverse environments, and cultivating an intuitive eye for detail.</span>
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-6">
+                        As I gained confidence and technical skills, I gradually advanced to more professional-level
+                        photography,
+                        including high-end <span class="text-white/70 font-medium">birthday shoots, private parties, corporate events, and fashion modeling portfolios.</span>
+                        Working with clients from different walks of life allowed me to refine my artistic vision while
+                        maintaining
+                        a strong focus on client satisfaction and storytelling through images.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        In parallel to my client work, I also cultivated a deep personal passion for artistic and
+                        exploratory photography.
+                        I ventured into <span class="text-white/70 font-medium">wildlife, landscape, and street photography, which allowed me to experience the world from new
+          perspectives.</span> Whether it was the raw intensity of animals in their natural habitat, the serene beauty
+                        of untouched
+                        landscapes, or the candid moments found in the chaos of urban life, each genre taught me
+                        something unique about
+                        patience, timing, and emotion.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        Recognizing the importance of building an audience and sharing my work with the world, I
+                        established a
+                        presence across multiple social media platforms. My <span class="text-white/70 font-medium">photography and videography content are consistently
+          showcased on YouTube, Facebook, Instagram, and TikTok,</span> where I not only display finished work but also
+                        share behind-the-scenes footage, editing techniques, and creative processes. These platforms
+                        have enabled
+                        me to connect with a wide audience, collaborate with fellow creatives, and stay updated with
+                        global trends
+                        in photography and content creation.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        In addition to content sharing, I also sell my photographs on
+                        <a href="https://www.shutterstock.com/g/nuwangarajapaksha" target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Shutterstock
+                        </a> and
+                        <a href="https://stock.adobe.com/lk/contributor/209350230/nuwangarajapaksha" target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+                            Adobe Stock
+                        </a>,
+                        where my work reaches a global audience of photography enthusiasts, designers, and creative
+                        professionals.
+                        This experience has deepened my understanding of visual storytelling, market trends, and the
+                        business aspects
+                        of digital art.
+                    </p>
+                    <p class="text-white/65 text-base leading-8 mb-8">
+                        Through <span class="text-white/70 font-medium">years of hands-on experience, self-education, and client interaction, I've built a multifaceted career
+          in photography that bridges the technical and artistic, the professional and the personal.</span> Today,
+                        I continue to explore new styles and push creative boundaries, driven by the same passion that
+                        first
+                        inspired me during my school years.
+                    </p>
+                </div>
+
+                <!-- Image grid + platform/stock cards right -->
+                <div class="xl:w-96 shrink-0">
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Portfolio Work</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+                            <img src="{% static 'images/photography/model/model01.png' %}"
+                                 alt="Photography career"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3">
+                                <p class="text-white/80 text-xs font-medium">Professional Shoots</p>
+                                <p class="text-white/50 text-[11px]">Events, fashion, wildlife &amp; landscapes</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+                            <img src="{% static 'images/photography/event/event01.png' %}"
+                                 alt="Event Photography"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-2">
+                                <p class="text-white/70 text-[11px]">Events</p>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+                            <img src="{% static 'images/photography/landscape/landscape01.png' %}"
+                                 alt="Nature"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-2">
+                                <p class="text-white/70 text-[11px]">Nature</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platform presence -->
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4 mt-8">Social Presence</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://www.youtube.com/@frames.by.nuwanga" target="_blank" rel="noopener noreferrer"
+                           class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <i class="fa-brands fa-youtube text-red-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">YouTube</p>
+                            <p class="text-white/40 text-[11px]">Tutorials &amp; BTS</p>
+                        </a>
+                        <a href="https://www.instagram.com/frames.by.nuwanga" target="_blank" rel="noopener noreferrer"
+                           class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <i class="fa-brands fa-instagram text-pink-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">Instagram</p>
+                            <p class="text-white/40 text-[11px]">Portfolio</p>
+                        </a>
+                        <a href="https://www.tiktok.com/@frames.by.nuwanga" target="_blank" rel="noopener noreferrer"
+                           class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <i class="fa-brands fa-tiktok text-cyan-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">TikTok</p>
+                            <p class="text-white/40 text-[11px]">Creative content</p>
+                        </a>
+                        <a href="https://www.facebook.com/frames.by.nuwanga" target="_blank" rel="noopener noreferrer"
+                           class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <i class="fa-brands fa-facebook text-blue-400 text-2xl mb-2 block"></i>
+                            <p class="text-white text-xs font-medium">Facebook</p>
+                            <p class="text-white/40 text-[11px]">Community</p>
+                        </a>
+                    </div>
+
+                    <!-- Stock platforms -->
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4 mt-8">Stock Marketplaces</p>
+                    <div class="flex flex-col gap-3">
+
+                        <a href="https://www.shutterstock.com/g/nuwangarajapaksha" target="_blank"
+                           rel="noopener noreferrer"
+                           class="group/card flex items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                        group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                        transition-all duration-300 ease-out">
+                                <img src="https://cdn.aptoide.com/imgs/f/3/2/f32cc23b47ec1b8a1fa56b0c52eff3f2_icon.png"
+                                     alt="Shutterstock" class="w-7 h-7 object-contain
+                   group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-white text-sm font-medium">Shutterstock</p>
+                                <p class="text-white/40 text-xs mt-0.5">Global stock photo marketplace</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                      transition-all duration-300 ease-out
+                      -translate-x-1 translate-y-1 opacity-0
+                      group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                        </a>
+
+                        <a href="https://stock.adobe.com/lk/contributor/209350230/nuwangarajapaksha" target="_blank"
+                           rel="noopener noreferrer"
+                           class="group/card flex items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                        group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                        transition-all duration-300 ease-out">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968408.png" alt="Adobe Stock"
+                                     class="w-7 h-7 object-contain
+                   group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-white text-sm font-medium">Adobe Stock</p>
+                                <p class="text-white/40 text-xs mt-0.5">Creative professionals worldwide</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                      transition-all duration-300 ease-out
+                      -translate-x-1 translate-y-1 opacity-0
+                      group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         GEAR
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="gears" class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="mb-14">
+                <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Tools of the craft</span>
+                <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                    My <span class="text-amber-400 italic">Gears</span>
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Camera card -->
+                <div class="group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbqboL0VY8R8PW6GMcWnUXvWpSs17NRHrGwJjzWzmyB4b6x1IegUebwKo&s=10"
+                             alt="Nikon D7200"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="text-[10px] px-2.5 py-0.5 bg-amber-400 text-gray-950 rounded-full font-semibold">Camera Body</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-camera text-amber-400 text-xs"></i>
+                            </div>
+                            <h3 class="text-white font-semibold text-base">Nikon D7200</h3>
+                        </div>
+                        <p class="text-white/40 text-xs mb-4">APSC Sensor · 24.2 MP</p>
+                        <ul class="space-y-2 text-sm text-white/55 flex-1">
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>24.2 Megapixel APSC-C
+                                sensor
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>ISO range 100 – 25600
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>51-point autofocus
+                                system
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>6 fps continuous
+                                shooting
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Weather-sealed body
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lens 1 card -->
+                <div class="group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgTQdK0KXRsO8OH9m1g4yttVSyqiD3f46dYhlqfEkYZCUzPzA6R-I5LUwz&s=10"
+                             alt="AF-P DX NIKKOR 18-55mm"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="text-[10px] px-2.5 py-0.5 bg-black/15 text-black/90 rounded-full font-medium backdrop-blur">Kit Lens</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-circle-dot text-amber-400 text-xs"></i>
+                            </div>
+                            <h3 class="text-white font-semibold text-base">AF-P DX NIKKOR 18-55mm</h3>
+                        </div>
+                        <p class="text-amber-400/80 text-xs mb-4">f/3.5–5.6G VR</p>
+                        <ul class="space-y-2 text-sm text-white/55 flex-1">
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Versatile everyday zoom
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Vibration Reduction
+                                (VR)
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Ideal for portraits
+                                &amp; landscapes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lens 2 card -->
+                <div class="group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://www.camerapoint.lk/public/uploads/all/qzSL88CWL12mmRAOCB2i8s4Ioe32YUpmxVsmhQJA.jpeg"
+                             alt="AF-P NIKKOR 70-300mm"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="text-[10px] px-2.5 py-0.5 bg-black/15 text-black/90 rounded-full font-medium backdrop-blur">Telephoto</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-circle-dot text-amber-400 text-xs"></i>
+                            </div>
+                            <h3 class="text-white font-semibold text-base">AF-P NIKKOR 70-300mm</h3>
+                        </div>
+                        <p class="text-amber-400/80 text-xs mb-4">f/4.5–5.6E ED VR</p>
+                        <ul class="space-y-2 text-sm text-white/55 flex-1">
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Wildlife &amp; sports
+                                telephoto reach
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>ED glass for sharp
+                                optics
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Advanced VR
+                                stabilization
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Photoshop card -->
+                <div class="group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-blue-950/40 flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Adobe_Photoshop_CC_2026_icon.svg/1280px-Adobe_Photoshop_CC_2026_icon.svg.png"
+                             alt="Adobe Photoshop"
+                             class="w-24 h-24 object-contain transition-transform duration-500 group-hover:scale-110"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/10 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="text-[10px] px-2.5 py-0.5 bg-white/15 text-white/90 rounded-full font-medium backdrop-blur">Editing Suite</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-pen-to-square text-amber-400 text-xs"></i>
+                            </div>
+                            <h3 class="text-white font-semibold text-base">Adobe Photoshop</h3>
+                        </div>
+                        <p class="text-white/40 text-xs mb-4">Pixel-level editing &amp; retouching</p>
+                        <ul class="space-y-2 text-sm text-white/55 flex-1">
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Advanced compositing
+                                &amp; retouching
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Layer-based editing
+                                workflow
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lightroom card -->
+                <div class="group relative bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-blue-950/40 flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/960px-Adobe_Photoshop_Lightroom_CC_logo.svg.png"
+                             alt="Adobe Lightroom"
+                             class="w-24 h-24 object-contain transition-transform duration-500 group-hover:scale-110"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/10 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="text-[10px] px-2.5 py-0.5 bg-white/15 text-white/90 rounded-full font-medium backdrop-blur">Editing Suite</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-pen-to-square text-amber-400 text-xs"></i>
+                            </div>
+                            <h3 class="text-white font-semibold text-base">Adobe Lightroom</h3>
+                        </div>
+                        <p class="text-white/40 text-xs mb-4">RAW processing &amp; colour grading</p>
+                        <ul class="space-y-2 text-sm text-white/55 flex-1">
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>RAW processing &amp;
+                                colour grading
+                            </li>
+                            <li class="flex gap-2"><span class="text-amber-400 shrink-0">▸</span>Batch editing for large
+                                shoots
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         GALLERY
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="gallery" class="relative bg-gray-950 py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+                <div>
+                    <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Selected work</span>
+                    <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+                        Photo <span class="text-amber-400 italic">Gallery</span>
+                    </h2>
+                    <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+                </div>
+            </div>
+
+            <!-- Category filter tabs -->
+            <div class="flex flex-wrap gap-2 mb-10" id="gallery-filters">
+                <button data-filter="all"
+                        class="gallery-filter-btn active text-xs px-5 py-2 rounded-full border border-amber-400 bg-amber-400 text-gray-950 font-semibold transition-all duration-200">
+                    All
+                </button>
+                <button data-filter="wildlife"
+                        class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">
+                    Wildlife
+                </button>
+                <button data-filter="landscape"
+                        class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">
+                    Landscape
+                </button>
+                <button data-filter="model"
+                        class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">
+                    Model
+                </button>
+                <button data-filter="event"
+                        class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">
+                    Event
+                </button>
+                {#      <button data-filter="street"#}
+                {#              class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">#}
+                {#        Street#}
+                {#      </button>#}
+                {#      <button data-filter="food"#}
+                {#              class="gallery-filter-btn text-xs px-5 py-2 rounded-full border border-white/15 text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">#}
+                {#        Food#}
+                {#      </button>#}
+            </div>
+
+            <!-- Masonry-style gallery grid -->
+            <div class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4" id="gallery-grid">
+                {% for cat in gallery_categories %}
+                    {% for photo in cat.photos %}
+                        <div class="gallery-item break-inside-avoid" data-category="{{ cat.slug }}"
+                             data-title="{{ photo.title }}" data-desc="{{ cat.label }}">
+                            <div class="relative rounded-2xl overflow-hidden group/gi cursor-pointer">
+                                <img src="{% static photo.src %}" alt="{{ photo.title }}"
+                                     class="w-full object-cover transition-transform duration-500 group-hover/gi:scale-110 block"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover/gi:translate-y-0 transition-transform duration-300">
+                                    <span class="text-[10px] px-2 py-0.5 bg-amber-400/20 border border-amber-400/40 text-amber-400 rounded-full">{{ cat.label }}</span>
+                                    <p class="text-white text-xs font-medium mt-1">{{ photo.title }}</p>
+                                </div>
+                                <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover/gi:opacity-100 transition-opacity duration-300">
+                                    <i class="fa-solid fa-expand text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         LIGHTBOX
+    ═══════════════════════════════════════════════════════════════ -->
+    <div id="lightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center"
+         style="background:rgba(3,7,18,0.96);">
+
+        <!-- Close button -->
+        <button id="lb-close"
+                class="absolute top-4 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-xmark text-white text-lg"></i>
+        </button>
+
+        <!-- Prev -->
+        <button id="lb-prev"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-amber-400/80 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-chevron-left text-white"></i>
+        </button>
+
+        <!-- Next -->
+        <button id="lb-next"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-amber-400/80 flex items-center justify-center transition-colors duration-200 z-10">
+            <i class="fa-solid fa-chevron-right text-white"></i>
+        </button>
+
+        <!-- Image container -->
+        <div class="flex flex-col items-center px-16 max-w-5xl w-full mx-auto">
+            <div class="relative w-full flex items-center justify-center">
+                <img id="lb-img" src="" alt=""
+                     class="max-h-[75vh] max-w-full rounded-2xl object-contain shadow-2xl transition-opacity duration-300"/>
+            </div>
+            <!-- Meta -->
+            <div class="mt-5 text-center">
+                <p id="lb-title" class="text-white font-semibold text-base font-[Playfair_Display]"></p>
+                <p id="lb-desc" class="text-white/50 text-xs mt-1 tracking-wide"></p>
+            </div>
+            <!-- Counter -->
+            <p id="lb-counter" class="text-white/30 text-xs mt-3"></p>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         JAVASCRIPT — Filter + Lightbox
+    ═══════════════════════════════════════════════════════════════ -->
+    <script>
+        (function () {
+            /* ── Gallery data ── */
+            const allItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+            /* ── Collect visible filtered items for lightbox navigation ── */
+            let filteredItems = [...allItems];
+
+            /* ── Filter tabs ── */
+            document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+
+                    document.querySelectorAll('.gallery-filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-amber-400', 'text-gray-950', 'border-amber-400', 'font-semibold');
+                        b.classList.add('border-white/15', 'text-white/60');
+                    });
+                    btn.classList.add('active', 'bg-amber-400', 'text-gray-950', 'border-amber-400', 'font-semibold');
+                    btn.classList.remove('border-white/15', 'text-white/60');
+
+                    allItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = '';
+                            item.style.animation = 'fadeIn 0.3s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    filteredItems = allItems.filter(i => filter === 'all' || i.dataset.category === filter);
+                });
+            });
+
+            /* ── Lightbox ── */
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lb-img');
+            const lbTitle = document.getElementById('lb-title');
+            const lbDesc = document.getElementById('lb-desc');
+            const lbCounter = document.getElementById('lb-counter');
+            let currentIdx = 0;
+
+            function openLightbox(idx) {
+                currentIdx = idx;
+                const item = filteredItems[idx];
+                const img = item.querySelector('img');
+                lbImg.src = img.src;
+                lbImg.alt = item.dataset.title;
+                lbTitle.textContent = item.dataset.title;
+                lbDesc.textContent = item.dataset.desc;
+                lbCounter.textContent = (idx + 1) + ' / ' + filteredItems.length;
+                lb.classList.remove('hidden');
+                lb.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lb.classList.add('hidden');
+                lb.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+
+            function navigate(dir) {
+                currentIdx = (currentIdx + dir + filteredItems.length) % filteredItems.length;
+                lbImg.style.opacity = '0';
+                setTimeout(() => {
+                    openLightbox(currentIdx);
+                    lbImg.style.opacity = '1';
+                }, 150);
+            }
+
+            /* Click on gallery items */
+            allItems.forEach((item, _) => {
+                item.querySelector('.group\\/gi').addEventListener('click', () => {
+                    const idx = filteredItems.indexOf(item);
+                    if (idx !== -1) openLightbox(idx);
+                });
+            });
+
+            document.getElementById('lb-close').addEventListener('click', closeLightbox);
+            document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+            document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+
+            /* Click outside image */
+            lb.addEventListener('click', e => {
+                if (e.target === lb) closeLightbox();
+            });
+
+            /* Keyboard navigation */
+            document.addEventListener('keydown', e => {
+                if (lb.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') navigate(1);
+                if (e.key === 'ArrowLeft') navigate(-1);
+            });
+        })();
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+{% endblock %}

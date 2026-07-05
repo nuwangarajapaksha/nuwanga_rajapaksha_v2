@@ -1,0 +1,618 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nuwanga Rajapaksha</title>
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}"/>
+
+    <script>
+        if (sessionStorage.getItem('announceBarDismissed')) {
+            document.write('<style>#announce-bar{display:none!important}</style>');
+        }
+    </script>
+    <!--
+    GOOGLE TRANSLATE STYLES
+    Hides the default Google Translate toolbar/banner completely
+    so only our custom dropdown is visible.
+  -->
+
+</head>
+
+<body class="bg-gray-950 antialiased">
+{% with active_nav=request.resolver_match.url_name %}
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         MOBILE DRAWER BACKDROP
+    ═══════════════════════════════════════════════════════════════ -->
+    <div id="drawer-backdrop"
+         class="fixed inset-0 bg-black/60 z-40 lg:hidden invisible opacity-0 transition-all duration-300 ease-in-out"
+         onclick="closeDrawer()"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         MOBILE DRAWER
+    ═══════════════════════════════════════════════════════════════ -->
+    <aside id="mobile-drawer"
+           class="fixed top-0 left-0 h-full w-72 bg-gray-950 border-r border-white/[0.08] z-50 flex flex-col lg:hidden overflow-y-auto -translate-x-full transition-transform duration-300 ease-in-out">
+
+        <!-- Top bar -->
+        <div class="flex items-center justify-between px-6 py-5 border-b border-white/[0.08]">
+            <a href="{% url 'index' %}" class="flex items-center gap-3">
+                <img src="{% static 'images/portfolio/profile-icon.png' %}" alt="Logo"
+                     class="h-9 w-9 rounded-full object-cover border border-amber-400/30"/>
+                <div class="leading-tight">
+                    <p class="font-[Playfair_Display] text-sm font-bold text-white">Nuwanga</p>
+                    <p class="font-[Playfair_Display] text-xs text-amber-400 italic">Rajapaksha</p>
+                </div>
+            </a>
+            <button onclick="closeDrawer()"
+                    class="w-9 h-9 flex items-center justify-center rounded-xl border border-white/10 text-white/50 hover:text-amber-400 hover:border-amber-400/40 transition-all duration-200">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="flex flex-col px-4 py-6 gap-1 flex-1">
+            <a href="{% url 'index' %}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl {% if active_nav == 'index' %}text-amber-400 bg-amber-400/5 border-amber-400/20{% else %}text-white/70 hover:text-amber-400 hover:bg-amber-400/5 border-transparent hover:border-amber-400/10{% endif %} transition-all duration-200 text-sm font-medium">
+                <i class="fa-solid fa-house {% if active_nav == 'index' %}text-amber-400{% else %}text-white/30{% endif %} w-4 text-xs"></i>
+                Home
+            </a>
+            <a href="{% url 'portfolio' %}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl {% if active_nav == 'portfolio' %}text-amber-400 bg-amber-400/5 border-amber-400/20{% else %}text-white/70 hover:text-amber-400 hover:bg-amber-400/5 border-transparent hover:border-amber-400/10{% endif %} transition-all duration-200 text-sm font-medium">
+                <i class="fa-solid fa-briefcase {% if active_nav == 'portfolio' %}text-amber-400{% else %}text-white/30{% endif %} w-4 text-xs"></i>
+                Portfolio
+            </a>
+            <a href="{% url 'programming' %}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl {% if active_nav == 'programming' %}text-amber-400 bg-amber-400/5 border-amber-400/20{% else %}text-white/70 hover:text-amber-400 hover:bg-amber-400/5 border-transparent hover:border-amber-400/10{% endif %} transition-all duration-200 text-sm font-medium">
+                <i class="fa-solid fa-code {% if active_nav == 'programming' %}text-amber-400{% else %}text-white/30{% endif %} w-4 text-xs"></i>
+                Programming
+            </a>
+            <a href="{% url 'photography' %}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl {% if active_nav == 'photography' %}text-amber-400 bg-amber-400/5 border-amber-400/20{% else %}text-white/70 hover:text-amber-400 hover:bg-amber-400/5 border-transparent hover:border-amber-400/10{% endif %} transition-all duration-200 text-sm font-medium">
+                <i class="fa-solid fa-camera {% if active_nav == 'photography' %}text-amber-400{% else %}text-white/30{% endif %} w-4 text-xs"></i>
+                Photography
+            </a>
+            <a href="{% url 'sports' %}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl {% if active_nav == 'sports' %}text-amber-400 bg-amber-400/5 border-amber-400/20{% else %}text-white/70 hover:text-amber-400 hover:bg-amber-400/5 border-transparent hover:border-amber-400/10{% endif %} transition-all duration-200 text-sm font-medium">
+                <i class="fa-solid fa-dumbbell {% if active_nav == 'sports' %}text-amber-400{% else %}text-white/30{% endif %} w-4 text-xs"></i>
+                Sports
+            </a>
+            <div class="my-4 h-px bg-white/[0.08]"></div>
+
+            <div class="px-4">
+                <!-- Header row — label + currently active language -->
+                <div class="flex items-center justify-between mb-3">
+                    <p class="text-[10px] text-white/25 uppercase tracking-[0.3em]">Language</p>
+                    <!-- Shows active language name -->
+                    <div id="mobile-active-lang"
+                         class="flex items-center gap-1.5 bg-amber-400/10 border border-amber-400/20 rounded-lg px-2 py-1">
+                        <span id="mobile-active-flag" class="fi fi-gb lang-trigger-fi"></span>
+                        <span id="mobile-active-label" class="text-[10px] font-semibold text-amber-400">English</span>
+                    </div>
+                </div>
+
+                <!-- Compact flag grid — 4 columns -->
+                <div id="mobile-lang-grid"
+                     class="grid grid-cols-4 gap-1.5">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="my-4 h-px bg-white/[0.08]"></div>
+            <p class="px-4 text-[10px] text-white/25 uppercase tracking-[0.3em] mb-3">Follow</p>
+            <div class="flex flex-wrap gap-2 px-4">
+                <a href="https://www.linkedin.com/in/nuwangarajapaksha/" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-blue-400 hover:border-blue-400/40 hover:bg-blue-400/5 transition-all duration-200 text-xs">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/nuwangarajapakshaofficial" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-sky-400 hover:border-sky-400/40 hover:bg-sky-400/5 transition-all duration-200 text-xs">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/nuwanga.rajapaksha/" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-pink-400 hover:border-pink-400/40 hover:bg-pink-400/5 transition-all duration-200 text-xs">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/nuwangatr" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-200 text-xs">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/nuwangarajapaksha" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-gray-300 hover:border-gray-300/40 hover:bg-gray-300/5 transition-all duration-200 text-xs">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://nuwangarajapaksha.blogspot.com/" target="_blank" rel="noopener noreferrer"
+                   class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-orange-400 hover:border-orange-400/40 hover:bg-orange-400/5 transition-all duration-200 text-xs">
+                    <i class="fab fa-blogger-b"></i>
+                </a>
+            </div>
+        </nav>
+
+        <div class="px-6 py-4 border-t border-white/[0.08]">
+            <p class="text-[11px] text-white/20 text-center">© 2026 Nuwanga Rajapaksha</p>
+        </div>
+    </aside>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         ANNOUNCEMENT BAR
+    ═══════════════════════════════════════════════════════════════ -->
+    <div id="announce-bar"
+         class="relative bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 py-2 px-4 text-center
+            overflow-hidden transition-all duration-500 ease-in-out"
+         style="max-height: 60px; opacity: 1;">
+        <p class="text-gray-950 text-xs font-semibold tracking-wide">
+            <i class="fa-solid fa-star text-gray-950/50 mr-2 text-[10px]"></i>
+            Welcome to Nuwanga Rajapaksha
+            <i class="fa-solid fa-star text-gray-950/50 ml-2 text-[10px]"></i>
+        </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SITE HEADER
+    ═══════════════════════════════════════════════════════════════ -->
+    <header id="site-header" class="sticky top-0 z-30 bg-gray-950/80 backdrop-blur-xl border-b border-white/[0.06]">
+
+        <!-- Dot-grid texture -->
+        <div class="absolute inset-0 opacity-[0.018] pointer-events-none"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+        <!-- Bottom amber accent line -->
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+        <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-16 flex items-center justify-between gap-6">
+
+            <!-- ── Logo ── -->
+            <a href="{% url 'index' %}" class="flex items-center gap-3 shrink-0 group">
+                <div class="relative">
+                    <img src="{% static 'images/portfolio/profile-icon.png' %}" alt="Logo"
+                         class="h-9 w-9 rounded-full object-cover border border-amber-400/20 group-hover:border-amber-400/60 transition-colors duration-300"/>
+                </div>
+                <div class="hidden sm:block leading-tight">
+                    <p class="font-[Playfair_Display] text-sm font-bold text-white leading-none">Nuwanga</p>
+                    <p class="font-[Playfair_Display] text-xs text-amber-400 italic leading-none mt-0.5">Rajapaksha</p>
+                </div>
+            </a>
+
+            <!-- ── Desktop nav ── -->
+            <nav class="hidden lg:flex items-center gap-1 flex-1 justify-center">
+
+                <a href="{% url 'index' %}"
+                   class="relative px-4 py-2 text-sm font-medium {% if active_nav == 'index' %}text-white{% else %}text-white/70 hover:text-white{% endif %} transition-colors duration-200 group">
+                    Home
+                    <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 {% if active_nav == 'index' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} origin-left transition-transform duration-250 ease-in"></span>
+                </a>
+                <a href="{% url 'portfolio' %}"
+                   class="relative px-4 py-2 text-sm font-medium {% if active_nav == 'portfolio' %}text-white{% else %}text-white/70 hover:text-white{% endif %} transition-colors duration-200 group">
+                    Portfolio
+                    <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 {% if active_nav == 'portfolio' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} origin-left transition-transform duration-250 ease-in"></span>
+                </a>
+                <a href="{% url 'programming' %}"
+                   class="relative px-4 py-2 text-sm font-medium {% if active_nav == 'programming' %}text-white{% else %}text-white/70 hover:text-white{% endif %} transition-colors duration-200 group">
+                    Programming
+                    <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 {% if active_nav == 'programming' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} origin-left transition-transform duration-250 ease-in"></span>
+                </a>
+                <a href="{% url 'photography' %}"
+                   class="relative px-4 py-2 text-sm font-medium {% if active_nav == 'photography' %}text-white{% else %}text-white/70 hover:text-white{% endif %} transition-colors duration-200 group">
+                    Photography
+                    <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 {% if active_nav == 'photography' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} origin-left transition-transform duration-250 ease-in"></span>
+                </a>
+                <a href="{% url 'sports' %}"
+                   class="relative px-4 py-2 text-sm font-medium {% if active_nav == 'sports' %}text-white{% else %}text-white/70 hover:text-white{% endif %} transition-colors duration-200 group">
+                    Sports
+                    <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 {% if active_nav == 'sports' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} origin-left transition-transform duration-250 ease-in"></span>
+                </a>
+
+                <!-- Content dropdown -->
+                {#      <div class="relative group/dd">#}
+                {#        <button class="relative flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors duration-200">#}
+                {#          Content#}
+                {#          <i class="fa-solid fa-chevron-down text-[9px] text-white/30 group-hover/dd:text-amber-400 group-hover/dd:rotate-180 transition-all duration-200"></i>#}
+                {#          <span class="absolute inset-x-0 -bottom-px h-0.5 bg-amber-400 scale-x-0 group-hover/dd:scale-x-100 origin-left transition-transform duration-250 ease-in"></span>#}
+                {#        </button>#}
+                {##}
+                {#        <!-- Dropdown panel -->#}
+                {#        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-gray-950/98 border border-white/10 rounded-2xl p-2 opacity-0 invisible group-hover/dd:opacity-100 group-hover/dd:visible group-hover/dd:translate-y-0 translate-y-1 transition-all duration-300 backdrop-blur-xl shadow-2xl shadow-black/60 z-50">#}
+                {#          <!-- Arrow nub -->#}
+                {#          <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gray-950 border-t border-l border-white/10 rotate-45"></div>#}
+                {##}
+                {#          <a href="https://www.youtube.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"#}
+                {#             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-amber-400/5 border border-transparent hover:border-amber-400/20 transition-all duration-200 group/item">#}
+                {#            <div class="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">#}
+                {#              <i class="fa-solid fa-microchip text-amber-400 text-xs"></i>#}
+                {#            </div>#}
+                {#            <div class="flex-1">#}
+                {#              <p class="text-white text-xs font-semibold group-hover/item:text-amber-400 transition-colors">Tech with Nuwanga</p>#}
+                {#              <p class="text-white/35 text-[10px]">Software &amp; Technology</p>#}
+                {#            </div>#}
+                {#            <i class="fa-solid fa-arrow-up-right-from-square text-white/20 text-[9px] group-hover/item:text-amber-400/60 transition-colors"></i>#}
+                {#          </a>#}
+                {##}
+                {#          <a href="#" target="_blank" rel="noopener noreferrer"#}
+                {#             class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-violet-400/5 border border-transparent hover:border-violet-400/20 transition-all duration-200 group/item mt-1">#}
+                {#            <div class="w-8 h-8 rounded-lg bg-violet-400/10 border border-violet-400/20 flex items-center justify-center shrink-0">#}
+                {#              <i class="fa-solid fa-camera-retro text-violet-400 text-xs"></i>#}
+                {#            </div>#}
+                {#            <div class="flex-1">#}
+                {#              <p class="text-white text-xs font-semibold group-hover/item:text-violet-400 transition-colors">Frames by Nuwanga</p>#}
+                {#              <p class="text-white/35 text-[10px]">Photography &amp; Visual Arts</p>#}
+                {#            </div>#}
+                {#            <i class="fa-solid fa-arrow-up-right-from-square text-white/20 text-[9px] group-hover/item:text-violet-400/60 transition-colors"></i>#}
+                {#          </a>#}
+                {#        </div>#}
+                {#      </div>#}
+
+            </nav>
+
+            <!-- ── Desktop right ── -->
+            <div class="hidden lg:flex items-center gap-3 shrink-0">
+
+                <!-- All social icons -->
+                <div class="flex items-center gap-1.5">
+                    <a href="https://www.linkedin.com/in/nuwangarajapaksha/" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-blue-400 transition-colors duration-200 text-xs">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/nuwangarajapakshaofficial" target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-sky-400 transition-colors duration-200 text-xs">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nuwanga.rajapaksha/" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-pink-400 transition-colors duration-200 text-xs">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/nuwangatr" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-white transition-colors duration-200 text-xs">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-red-500 transition-colors duration-200 text-xs">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-cyan-400 transition-colors duration-200 text-xs">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://github.com/nuwangarajapaksha" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-gray-300 transition-colors duration-200 text-xs">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://nuwangarajapaksha.blogspot.com/" target="_blank" rel="noopener noreferrer"
+                       class="w-7 h-7 flex items-center justify-center text-white/35 hover:text-orange-400 transition-colors duration-200 text-xs">
+                        <i class="fab fa-blogger-b"></i>
+                    </a>
+                </div>
+
+                <!-- Divider -->
+                <span class="h-5 w-px bg-white/15 mx-1"></span>
+
+                <!-- Language changer -->
+                <div class="relative group/lang">
+
+                    <!-- Trigger button — fi icon + code -->
+                    <button id="lang-trigger"
+                            class="flex items-center gap-1.5 text-white/50 hover:text-amber-400 transition-colors duration-200 cursor-pointer select-none min-w-[80px]">
+                        <!-- Flag icon — class swapped by JS -->
+                        <span id="lang-trigger-flag" class="fi fi-gb lang-trigger-fi shrink-0"></span>
+                        <!-- Label text e.g. "English", "French" — updated by JS -->
+                        <span id="lang-trigger-code" class="text-xs font-medium">English</span>
+                        <i class="fa-solid fa-chevron-down text-[9px] text-white/30 group-hover/lang:text-amber-400 group-hover/lang:rotate-180 transition-all duration-200 ml-auto"></i>
+                    </button>
+
+                    <!-- Dropdown panel -->
+                    <div class="absolute top-full right-0 mt-3 w-60 bg-gray-950/98 border border-white/10 rounded-2xl p-2
+                    opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible
+                    group-hover/lang:translate-y-0 translate-y-1
+                    transition-all duration-300 backdrop-blur-xl shadow-2xl shadow-black/60 z-50">
+
+                        <!-- Arrow nub -->
+                        <div class="absolute -top-1.5 right-4 w-3 h-3 bg-gray-950 border-t border-l border-white/10 rotate-45"></div>
+
+                        <p class="px-3 py-1.5 text-[10px] text-white/25 uppercase tracking-[0.2em] mb-1">Choose
+                            Language</p>
+
+                        <!-- Buttons injected by JS -->
+                        <div id="desktop-lang-list"></div>
+
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <span class="h-5 w-px bg-white/15 mx-1"></span>
+
+                <!-- Cart -->
+                <a href="#"
+                   class="group flex items-center gap-1.5 text-white/50 hover:text-amber-400 transition-colors duration-200">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+                         class="w-5 h-5">
+                        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-xs font-medium">0</span>
+                </a>
+
+            </div>
+
+            <!-- ── Mobile right ── -->
+            <div class="flex lg:hidden items-center gap-2">
+                <!-- Mobile cart -->
+                <a href="#"
+                   class="flex items-center gap-1 text-white/50 hover:text-amber-400 transition-colors duration-200">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+                         class="w-5 h-5">
+                        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-xs font-medium">0</span>
+                </a>
+                <!-- Hamburger -->
+                <button onclick="openDrawer()"
+                        class="w-9 h-9 flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/60 hover:text-amber-400 hover:border-amber-400/30 transition-all duration-200">
+                    <i class="fa-solid fa-bars text-sm"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PAGE CONTENT
+    ═══════════════════════════════════════════════════════════════ -->
+    {% block wrapper %}
+    {% endblock %}
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════════════ -->
+    <footer id="footer" class="relative bg-gray-950 text-slate-300 overflow-hidden">
+
+        <!-- Dot-grid texture -->
+        <div class="absolute inset-0 opacity-[0.02] pointer-events-none"
+             style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+        <!-- Top amber accent line -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent"></div>
+
+        <!-- Ambient glow -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-56 bg-amber-400/[0.04] rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- ── Main grid ── -->
+        <div class="relative z-10 max-w-7xl mx-auto px-8 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12">
+
+            <!-- Col 1 · Brand -->
+            <div>
+                <a href="{% url 'index' %}" class="inline-flex items-center gap-3 mb-5 group">
+                    <img src="{% static 'images/portfolio/profile-icon.png' %}" alt="Logo"
+                         class="w-10 h-10 rounded-full object-cover border border-amber-400/20 group-hover:border-amber-400/50 transition-colors duration-300"/>
+                    <p class="font-[Playfair_Display] text-xl font-bold text-white">
+                        Nuwanga <span class="text-amber-400 italic">Rajapaksha</span>
+                    </p>
+                </a>
+
+                <p class="text-xs text-white/50 text-justify leading-relaxed mb-6">
+                    Software Engineer with a creative edge — building scalable solutions, capturing the world through a
+                    lens, crafting compelling visuals, and pushing limits every single day.
+                </p>
+
+                <!-- Content brand mini cards -->
+                <div class="flex flex-col gap-2">
+                    <a href="https://www.youtube.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:border-amber-400/30 hover:bg-amber-400/5 transition-all duration-200 group/b">
+                        <div class="w-7 h-7 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
+                            {#            <i class="fa-solid fa-microchip text-amber-400 text-[10px]"></i>#}
+                            <img src="{% static 'images/portfolio/tech-with-nuwanga-logo.png' %}"
+                                 class="w-full h-full object-cover" alt="Frames by Nuwanga"/>
+                        </div>
+                        <div>
+                            <p class="text-white text-[11px] font-semibold group-hover/b:text-amber-400 transition-colors">
+                                Tech with Nuwanga</p>
+                            <p class="text-white/30 text-[10px]">Software &amp; Technology Content</p>
+                        </div>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:border-violet-400/30 hover:bg-violet-400/5 transition-all duration-200 group/b">
+                        <div class="w-7 h-7 rounded-lg bg-violet-400/10 border border-violet-400/20 flex items-center justify-center shrink-0">
+                            {#            <i class="fa-solid fa-camera-retro text-violet-400 text-[10px]"></i>#}
+                            <img src="{% static 'images/portfolio/frames-by-nuwanga-logo.png' %}"
+                                 class="w-full h-full object-cover" alt="Frames by Nuwanga"/>
+                        </div>
+                        <div>
+                            <p class="text-white text-[11px] font-semibold group-hover/b:text-violet-400 transition-colors">
+                                Frames by Nuwanga</p>
+                            <p class="text-white/30 text-[10px]">Photography &amp; Visual Arts</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2 · Navigation + Socials -->
+            <div>
+                <p class="text-[10px] font-semibold tracking-[0.3em] uppercase text-amber-400 mb-5">Navigation</p>
+                <ul class="flex flex-col gap-2 mb-8">
+                    <li>
+                        <a href="{% url 'index' %}"
+                           class="flex items-center gap-2 text-sm {% if active_nav == 'index' %}text-amber-400{% else %}text-white/50 hover:text-amber-400{% endif %} transition-colors duration-200 group/nav">
+                            <span class="{% if active_nav == 'index' %}w-6 bg-amber-400{% else %}w-4 bg-white/20 group-hover/nav:w-6 group-hover/nav:bg-amber-400{% endif %} h-px transition-all duration-300 block shrink-0"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'portfolio' %}"
+                           class="flex items-center gap-2 text-sm {% if active_nav == 'portfolio' %}text-amber-400{% else %}text-white/50 hover:text-amber-400{% endif %} transition-colors duration-200 group/nav">
+                            <span class="{% if active_nav == 'portfolio' %}w-6 bg-amber-400{% else %}w-4 bg-white/20 group-hover/nav:w-6 group-hover/nav:bg-amber-400{% endif %} h-px transition-all duration-300 block shrink-0"></span>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'programming' %}"
+                           class="flex items-center gap-2 text-sm {% if active_nav == 'programming' %}text-amber-400{% else %}text-white/50 hover:text-amber-400{% endif %} transition-colors duration-200 group/nav">
+                            <span class="{% if active_nav == 'programming' %}w-6 bg-amber-400{% else %}w-4 bg-white/20 group-hover/nav:w-6 group-hover/nav:bg-amber-400{% endif %} h-px transition-all duration-300 block shrink-0"></span>
+                            Programming
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'photography' %}"
+                           class="flex items-center gap-2 text-sm {% if active_nav == 'photography' %}text-amber-400{% else %}text-white/50 hover:text-amber-400{% endif %} transition-colors duration-200 group/nav">
+                            <span class="{% if active_nav == 'photography' %}w-6 bg-amber-400{% else %}w-4 bg-white/20 group-hover/nav:w-6 group-hover/nav:bg-amber-400{% endif %} h-px transition-all duration-300 block shrink-0"></span>
+                            Photography
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'sports' %}"
+                           class="flex items-center gap-2 text-sm {% if active_nav == 'sports' %}text-amber-400{% else %}text-white/50 hover:text-amber-400{% endif %} transition-colors duration-200 group/nav">
+                            <span class="{% if active_nav == 'sports' %}w-6 bg-amber-400{% else %}w-4 bg-white/20 group-hover/nav:w-6 group-hover/nav:bg-amber-400{% endif %} h-px transition-all duration-300 block shrink-0"></span>
+                            Sports
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="text-[10px] font-semibold tracking-[0.3em] uppercase text-amber-400 mb-4">Follow Me</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="https://www.linkedin.com/in/nuwangarajapaksha/" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-blue-400 hover:border-blue-400/40 hover:bg-blue-400/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/nuwangarajapakshaofficial" target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-sky-400 hover:border-sky-400/40 hover:bg-sky-400/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nuwanga.rajapaksha/" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-pink-400 hover:border-pink-400/40 hover:bg-pink-400/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/nuwangatr" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-200 text-xs">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-red-500 hover:border-red-500/40 hover:bg-red-500/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@tech.with.nuwanga" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-cyan-400 hover:border-cyan-400/40 hover:bg-cyan-400/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://github.com/nuwangarajapaksha" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-gray-300 hover:border-gray-300/40 hover:bg-gray-300/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://nuwangarajapaksha.blogspot.com/" target="_blank" rel="noopener noreferrer"
+                       class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/40 hover:text-orange-400 hover:border-orange-400/40 hover:bg-orange-400/5 transition-all duration-200 text-xs">
+                        <i class="fab fa-blogger-b"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 3 · Contact info + Map -->
+            <div>
+                <p class="text-[10px] font-semibold tracking-[0.3em] uppercase text-amber-400 mb-5">Contact Info</p>
+
+                <ul class="flex flex-col gap-4 mb-6">
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-location-dot text-amber-400 text-xs"></i>
+                        </div>
+                        <span class="text-sm text-white/50 leading-relaxed">
+            No. 292, Bathalahenawaththa, Gonawala,<br/>Kelaniya 11630, Western Province, Sri Lanka
+          </span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
+                        </div>
+                        <a href="tel:+94713848592"
+                           class="text-sm text-white/50 hover:text-amber-400 transition-colors duration-200">
+                            +94 713 848 592
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-envelope text-amber-400 text-xs"></i>
+                        </div>
+                        <a href="mailto:nuwangarajapaksha@gmail.com"
+                           class="text-sm text-white/50 hover:text-amber-400 transition-colors duration-200 break-all">
+                            nuwangarajapaksha@gmail.com
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Map -->
+                <div class="rounded-2xl overflow-hidden border border-white/[0.08] h-36">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.3783895816923!2d79.9308611!3d6.964611099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTcnNTIuNiJOIDc5wrA1NSc1MS4xIkU!5e0!3m2!1sen!2slk!4v1778154155944!5m2!1sen!2slk"
+                            width="100%" height="100%"
+                            {#          style="border:0; filter:grayscale(100%) invert(85%) contrast(80%);"#}
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Nuwanga Rajapaksha location">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Col 4 · Contact form -->
+            <div id="contact">
+                <p class="text-[10px] font-semibold tracking-[0.3em] uppercase text-amber-400 mb-5">Send a Message</p>
+
+                <form id="contact-form" class="flex flex-col gap-3">
+                    {% csrf_token %}
+
+                    <!-- Honeypot: hidden from real visitors, often filled in by simple bots -->
+                    <input type="text" name="honeypot" class="hidden" autocomplete="off" tabindex="-1">
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <input type="text" name="name" placeholder="Your name" aria-label="Your name" required
+                               class="bg-white/[0.04] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-amber-400 focus:bg-white/[0.06] transition-colors duration-200 w-full"/>
+                        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required
+                               class="bg-white/[0.04] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-amber-400 focus:bg-white/[0.06] transition-colors duration-200 w-full"/>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required
+                           class="bg-white/[0.04] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-amber-400 focus:bg-white/[0.06] transition-colors duration-200 w-full"/>
+                    <textarea rows="4" name="message" placeholder="Your message…" aria-label="Message" required
+                              class="bg-white/[0.04] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-amber-400 focus:bg-white/[0.06] transition-colors duration-200 w-full resize-y"></textarea>
+
+                    <p id="contact-status" class="text-sm hidden"></p>
+
+                    <button type="submit" id="contact-submit-btn"
+                            class="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 active:scale-95 text-gray-950 font-semibold text-sm px-6 py-2.5 rounded-xl self-start transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <span id="contact-btn-text">Send Message</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ── Bottom bar ── -->
+        <div class="relative z-10 border-t border-white/[0.06] mx-8">
+            <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-xs text-white/25">
+                    &copy; 2026 <span class="text-white/40">Nuwanga Rajapaksha</span>. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <p class="text-[11px] text-white/25">Available for freelance &amp; collaborations</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════════════════════════════ -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+{% endwith %}
+</body>
+</html>

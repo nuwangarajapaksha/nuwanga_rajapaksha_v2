@@ -1,0 +1,587 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block wrapper %}
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO / BREADCRUMB SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
+
+  <div class="absolute inset-0 bg-[url('/static/images/programming/programming-main.png')] bg-cover bg-center opacity-20"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/80 to-gray-950"></div>
+
+  <!-- Decorative amber line -->
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+  <!-- Geometric accent rings -->
+  <div class="absolute right-8 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-amber-400/10 hidden lg:block"></div>
+  <div class="absolute right-16 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-amber-400/10 hidden lg:block"></div>
+  <!-- Code-themed decorative element -->
+  <div class="absolute left-8 bottom-8 text-white/5 font-mono text-xs leading-relaxed hidden lg:block select-none">
+    <div>public class Developer {</div>
+    <div>&nbsp;&nbsp;String passion = "programming";</div>
+    <div>&nbsp;&nbsp;String[] skills = {"Java", "React", "Cloud"};</div>
+    <div>}</div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-24 w-full">
+
+    <!-- Breadcrumb nav -->
+    <nav class="flex items-center gap-2 text-xs text-white/40 mb-8 tracking-widest uppercase">
+      <a href="{% url 'index' %}" class="hover:text-amber-400 transition-colors duration-200">Home</a>
+{#      <span class="text-amber-400/60">/</span>#}
+{#      <a href="{% url 'portfolio' %}" class="hover:text-amber-400 transition-colors duration-200">Portfolio</a>#}
+      <span class="text-amber-400/60">/</span>
+      <span class="text-amber-400">Programming</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+      <!-- Left: Title block -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-px bg-amber-400 block"></span>
+          <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">My Programming Story</span>
+        </div>
+        <h1 class="font-[Playfair_Display] text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
+          Code &amp; <span class="text-amber-400 italic">Craft</span>
+        </h1>
+        <p class="mt-4 text-white/50 text-sm md:text-base max-w-xl leading-relaxed">
+          From my first lines of HTML at Nalanda College to architecting microservices in Singapore —
+          a journey driven by curiosity, discipline, and an unrelenting love for building things that matter.
+        </p>
+      </div>
+
+      <!-- Right: Quick-jump nav pills -->
+      <div class="flex flex-wrap gap-2 lg:flex-col lg:items-end">
+        <a href="#commencement"   class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Commencement</a>
+        <a href="#studies"    class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Higher Studies</a>
+        <a href="#career"     class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Career</a>
+        <a href="#techstack"  class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Tech Stack</a>
+        <a href="#projects"   class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Projects</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COMMENCE — ORIGIN STORY
+═══════════════════════════════════════════════════════════════ -->
+<section id="commencement" class="relative bg-gray-950 py-24 overflow-hidden">
+
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Section header -->
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Where it all began</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Commencement <span class="text-amber-400 italic">— The Spark</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <div class="flex flex-col xl:flex-row gap-12 items-start">
+
+      <!-- Story text -->
+      <div class="flex-1">
+        <p class="text-white/65 text-base leading-8 mb-6">
+          My passion for programming began during my school years at
+          <a href="https://nalandacollege.lk/" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium inline-flex items-center gap-1 hover:text-amber-300 transition-colors duration-200 group">
+            Nalanda College, Colombo 10
+          </a>,
+          where I was first introduced to the fascinating world of computers. I studied ICT for both my Ordinary Level (O/L)
+          and Advanced Level (A/L) examinations, achieving good marks in both. These studies gave me a strong foundation in
+          various <span class="text-white/70 font-medium">ICT concepts such as HTML, CSS, JavaScript, Python, MySQL, computer systems, software applications,
+            networking, pseudo-code, algorithms, and the history of ICT.</span>
+        </p>
+        <p class="text-white/65 text-base leading-8 mb-6">
+          Through this learning, I developed a deep understanding of how websites and web applications are structured and
+          styled, how logic and interactivity are implemented, how databases and networks operate, and how different
+          components of a computer system function together. I also learned the fundamentals of programming logic,
+          problem-solving using algorithms, and how to plan solutions using pseudocode.
+        </p>
+        <p class="text-white/65 text-base leading-8">
+          What truly ignited my enthusiasm was my active role in the
+          <a href="https://www.facebook.com/ComputerSocietyOfNalandaCollege" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium inline-flex items-center gap-1 hover:text-amber-300 transition-colors duration-200 group">
+            Computer Society of Nalanda College (CSNC)
+          </a>,
+          where I organized tech events, participated in <span class="text-white/70 font-medium">coding competitions,</span> and mentored peers. This experience not only
+          developed my technical skills but also helped me grow as a <span class="text-white/70 font-medium">leader and team player,</span> giving me the confidence and
+          drive to pursue a professional career in software engineering.
+        </p>
+
+        <!-- Key highlights strip -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+          <!-- Nalanda College card — links to official site -->
+          <a href="https://nalandacollege.lk/" target="_blank" rel="noopener noreferrer"
+             class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.06] transition-all duration-300 group/card">
+            <i class="fa-solid fa-school text-amber-400 text-2xl mb-2 block"></i>
+            <p class="text-white text-xs font-medium">Nalanda College</p>
+            <p class="text-white/40 text-[11px] mt-0.5">Colombo 10</p>
+          </a>
+
+          <!-- Computer Society card — links to Facebook page -->
+          <a href="https://www.facebook.com/ComputerSocietyOfNalandaCollege" target="_blank" rel="noopener noreferrer"
+             class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 hover:bg-white/[0.06] transition-all duration-300 group/card">
+            <i class="fa-solid fa-laptop text-amber-400 text-2xl mb-2 block"></i>
+            <p class="text-white text-xs font-medium">CSNC</p>
+            <p class="text-white/40 text-[11px] mt-0.5">Former Editor</p>
+          </a>
+
+          <!-- ICT Studies card — no external link -->
+          <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 transition-all duration-300">
+            <i class="fa-solid fa-code text-amber-400 text-2xl mb-2 block"></i>
+            <p class="text-white text-xs font-medium">ICT Studies</p>
+            <p class="text-white/40 text-[11px] mt-0.5">O/L &amp; A/L</p>
+          </div>
+
+          <!-- Coding Comps card — no external link -->
+          <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-center hover:border-amber-400/30 transition-all duration-300">
+            <i class="fa-solid fa-trophy text-amber-400 text-2xl mb-2 block"></i>
+            <p class="text-white text-xs font-medium">Coding Comps</p>
+            <p class="text-white/40 text-[11px] mt-0.5">Participant</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Image grid -->
+      <div class="xl:w-96 shrink-0">
+        <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Nalanda College &amp; Early Days</p>
+        <div class="grid grid-cols-2 gap-3">
+
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+            <img
+              src="https://bmkltsly13vb.compat.objectstorage.ap-singapore-1.oraclecloud.com/cdn.sg.dailymirror.lk/assets/uploads/image_07d4853a3e.jpg"
+              alt="Nalanda College"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-3">
+              <p class="text-white/80 text-xs font-medium">Nalanda College, Colombo 10</p>
+              <p class="text-white/50 text-[11px]">Where the journey began</p>
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/4] group/img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PD4VGeKcGFM2XQMJ2StcqGe1VPyY9gOY4A-OOjRQGAUtSSHlIaa4QzpA&s=10"
+              alt="Nalanda College Logo"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">Nalanda College</p>
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/4] group/img">
+            <img
+              src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/638069421_1296127279285836_4667738292213949650_n.jpg?stp=dst-jpg_tt6&cstp=mx800x800&ctp=s800x800&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YyEb3h7MNygQ7kNvwEmd6Jn&_nc_oc=Adr5GrR-268I1WBrungqntjMOBuFI0Zb8cAWhV5WsQmRArNf-NbXv4VEWoVb_jbY2U-ALcaGRgzVa5VBuEncbM7m&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=oUQTWF5t3V34ySY882hCkQ&_nc_ss=7b2a8&oh=00_Af_DXOqu-_Xb15f1ZM-oWxsUcmNwsBVkqGHAqc0EyMypeQ&oe=6A47027C"
+              alt="Computer Society"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">Computer Society of Nalanda College</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick link buttons below image grid -->
+        <div class="flex gap-3 mt-4">
+          <a href="https://nalandacollege.lk/" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            nalandacollege.lk
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+          <a href="https://www.facebook.com/ComputerSocietyOfNalandaCollege" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-[#1877F2]/40
+                    hover:bg-[#1877F2]/5 text-white/50 hover:text-[#1877F2] text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-brands fa-facebook text-[12px]"></i>
+            CSNC
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HIGHER STUDIES
+═══════════════════════════════════════════════════════════════ -->
+<section id="studies" class="relative py-24 overflow-hidden">
+
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Academic journey</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Higher <span class="text-amber-400 italic">Studies</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <div class="flex flex-col xl:flex-row gap-12 items-start">
+
+      <!-- Image grid left side -->
+      <div class="xl:w-96 shrink-0">
+        <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">BCU &amp; Java Institute</p>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+            <img
+              src="https://img.bcu.ac.uk/_bcuimages/birmingham-city-unviersity-city-centre-campus-parkside-and-curzon-buildings-web-132967477767661564.jpg"
+              alt="Birmingham City University"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-3">
+              <p class="text-white/80 text-xs font-medium">Birmingham City University, UK</p>
+              <p class="text-white/50 text-[11px]">BSc (Hons) Software Engineering · First Class</p>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/4] group/img">
+            <img
+              src="https://img.bcu.ac.uk/_bcuimages/bcu-campus-1-132451530310934342.jpg"
+              alt="Campus"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">Tech Labs</p>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/4] group/img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVP1Af5i4mBYmkPh1nBXY4lBpexmaNhz-AaDnzmTSXv1tz56HAO1GxApj&s=10"
+              alt="BCU Logo"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">BCU Logo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick link buttons below image grid -->
+        <div class="flex gap-3 mt-4">
+          <a href="https://www.bcu.ac.uk/" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            bcu.ac.uk
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+          <a href="https://www.javainstitute.edu.lk/" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            javainstitute.edu.lk
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Story + qualifications -->
+      <div class="flex-1">
+        <p class="text-white/65 text-base leading-8 mb-6">
+          I earned a <span class="text-amber-400 font-medium">Bachelor of Science with Honours in Software Engineering</span> from
+          <a href="https://www.bcu.ac.uk/" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+            Birmingham City University, UK
+          </a>, through its affiliated delivery at the
+          <a href="https://www.javainstitute.edu.lk/" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+            Java Institute for Advanced Technology, Sri Lanka
+          </a>. This internationally recognized degree equipped me with both theoretical
+          knowledge and practical skills across a wide range of subjects, including <span class="text-white/70 font-medium">Object-Oriented Programming Concepts,
+          Object-Oriented Design Patterns, Data Structures and Algorithms, Object-Oriented System Analysis and Design,
+          Cyber Law, Web Development, Software Development, Computer Hardware, Networking, Database Management Systems,
+          Electronics for Software Engineering, and Handheld Device Programming.</span>
+        </p>
+        <p class="text-white/65 text-base leading-8 mb-6">
+          I also worked extensively with languages and tools such as <span class="text-white/70 font-medium">Java, Java EE, Java Swing, PHP, HTML, CSS, JavaScript,
+            Android, Hibernate, JPA, JUnit, MySQL, and Firebase.</span> Through practical assignments, lab sessions, group projects,
+            and real-world simulations, I was able to apply what I learned in the classroom to build functional applications
+            and solve complex problems, which significantly enhanced my technical and analytical skills. As part of my
+            university coursework, I also developed several <span class="text-white/70 font-medium">fully functional e-commerce applications, m-commerce applications,
+            and desktop applications</span> that demonstrated my ability to apply theoretical knowledge to real-world software solutions.
+        </p>
+
+        <!-- SQA Qualification progression -->
+        <div class="mt-8 mb-8">
+          <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-4">SQA Qualification Progression</p>
+          <div class="relative pl-6 border-l border-amber-400/30 flex flex-col gap-5">
+
+            <div class="relative">
+              <div class="absolute -left-[25px] w-4 h-4 rounded-full bg-amber-400 ring-4 ring-amber-400/30 top-0.5 flex items-center justify-center -ml-0.5">
+                <i class="fa-solid fa-graduation-cap text-gray-950 text-[8px]"></i>
+              </div>
+              <span class="text-[11px] text-amber-400 font-medium">BSc (Hons) First Class ·
+                <a href="https://www.bcu.ac.uk/" target="_blank" rel="noopener noreferrer"
+                   class="hover:text-amber-300 transition-colors duration-200">
+                  Birmingham City University, UK
+                </a>
+              </span>
+              <p class="text-white text-sm font-medium mt-0.5">Bachelor of Science with Honours in Software Engineering</p>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-[25px] w-3 h-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20 top-1"></div>
+              <span class="text-[11px] text-amber-400/70 font-medium">SQAF Level 9 ·
+                <a href="https://www.sqa.org.uk/sqa/70972.html" target="_blank" rel="noopener noreferrer"
+                   class="hover:text-amber-400 transition-colors duration-200">
+                  Scottish Qualifications Authority
+                </a>
+              </span>
+              <p class="text-white text-sm font-medium mt-0.5">PCJT Software Engineer III</p>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-[25px] w-3 h-3 rounded-full bg-amber-400/70 ring-4 ring-amber-400/10 top-1"></div>
+              <span class="text-[11px] text-amber-400/70 font-medium">SQAF Level 8 ·
+                <a href="https://www.sqa.org.uk/sqa/70972.html" target="_blank" rel="noopener noreferrer"
+                   class="hover:text-amber-400 transition-colors duration-200">
+                  Scottish Qualifications Authority
+                </a>
+              </span>
+              <p class="text-white text-sm font-medium mt-0.5">Professional Higher Diploma in Software Engineering</p>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-[25px] w-3 h-3 rounded-full bg-amber-400/50 ring-4 ring-amber-400/10 top-1"></div>
+              <span class="text-[11px] text-amber-400/70 font-medium">SQAF Level 7 ·
+                <a href="https://www.sqa.org.uk/sqa/70972.html" target="_blank" rel="noopener noreferrer"
+                   class="hover:text-amber-400 transition-colors duration-200">
+                  Scottish Qualifications Authority
+                </a>
+              </span>
+              <p class="text-white text-sm font-medium mt-0.5">Professional Diploma in Software Engineering</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Subject highlights -->
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 hover:border-amber-400/20 transition-all duration-300">
+          <p class="text-white/40 text-[10px] uppercase tracking-[0.25em] mb-3">Key Subjects Covered</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">OOP Concepts</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Design Patterns</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Data Structures &amp; Algorithms</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">System Analysis &amp; Design</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Web Development</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Software Development</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Android Development</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Computer Hardware</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Networking</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">DBMS</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Electronics</span>
+            <span class="text-[11px] px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-white/50">Cyber Law</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CAREER
+═══════════════════════════════════════════════════════════════ -->
+<section id="career" class="relative bg-gray-950 py-24 overflow-hidden">
+
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Professional chapter</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Career <span class="text-amber-400 italic">&amp; Growth</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <div class="flex flex-col xl:flex-row gap-12 items-start">
+
+      <!-- Story text -->
+      <div class="flex-1">
+        <p class="text-white/65 text-base leading-8 mb-6">
+          Professionally, I have gained two years of experience as a full-stack developer at
+          <a href="https://www.xdoto.io/" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+            XdotO Concepts Pte Limited
+          </a> (International Plaza, Singapore),
+          having joined as <span class="text-white/70 font-medium">an intern and quickly advanced to a Software Engineer role,</span>
+          developing robust skills in <span class="text-white/70 font-medium">both backend and frontend technologies.</span>
+          During my time there, I contributed to several key projects, including <span class="text-white/70 font-medium">Melioraa (an Industry 4.0 Machine Monitoring
+          System), Dialog Power App (an Alarms and Notification Mobile Application), and Morex (a Process Monitoring System).</span>
+        </p>
+        <p class="text-white/65 text-base leading-8 mb-6">
+          I designed and developed scalable web applications using <span class="text-white/70 font-medium">Java, Spring Boot, ReactJS, VueJS, PHP, GO, HTML,
+            CSS, JavaScript, Bootstrap, Material-UI, Grafana, JUnit, MySQL, Hibernate, JPA, Axios, JSON, and Jasper Reports.</span>
+            I built and maintained <span class="text-white/70 font-medium">RESTful APIs,</span> worked with <span class="text-white/70 font-medium">microservices architecture,</span> and implemented <span class="text-white/70 font-medium">micro-frontend solutions.</span>
+            My responsibilities also included <span class="text-white/70 font-medium">Dockerizing applications, managing CI/CD pipelines, and handling deployments with AWS.</span>
+            I worked in <span class="text-white/70 font-medium">Agile teams, used Jira for tracking, Git(GitHub, GitLab) for version control, and Postman/Swagger
+            for API testing and documentation.</span> I also developed <span class="text-white/70 font-medium">leadership skills</span> by leading small teams, handling planning,
+            delegation, and reviews. This role enhanced my communication, problem-solving, and collaboration capabilities.
+        </p>
+        <p class="text-white/65 text-base leading-8">
+          In addition to my full-time role, I have passionately pursued
+          <a href="https://www.fiverr.com/nuwangatr/" target="_blank" rel="noopener noreferrer"
+             class="text-amber-400 font-medium hover:text-amber-300 transition-colors duration-200">
+            freelance projects
+          </a>
+          that allowed me to explore and apply a wide range of technologies beyond the scope of my main job. Driven by
+          curiosity and a love for building meaningful solutions, I took on several freelance assignments where I
+          independently learned and implemented <span class="text-white/70 font-medium">Python, Django, FastAPI, and MongoDB.</span> These projects not only sharpened
+          my technical skills but also deepened my <span class="text-white/70 font-medium">problem-solving abilities, strengthened my self-discipline, and fueled
+          my continuous learning mindset—turning my passion into tangible results.</span>
+        </p>
+
+        <!-- Freelance note card -->
+        <div class="mt-8 bg-amber-400/5 border border-amber-400/20 rounded-2xl p-5">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-lightbulb text-amber-400 mt-0.5 shrink-0"></i>
+            <div>
+              <p class="text-white text-sm font-medium mb-1">Self-Directed Learning</p>
+              <p class="text-white/55 text-sm leading-relaxed">
+                Driven by curiosity, I independently explored Python, Django, FastAPI, and MongoDB through freelance
+                assignments — turning passion into tangible results outside of office hours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key projects worked on -->
+        <div class="mt-8">
+          <p class="text-white/40 text-xs uppercase tracking-[0.25em] mb-4">Key Projects at XdotO</p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+              <i class="fa-solid fa-industry text-amber-400 text-lg mb-2 block"></i>
+              <p class="text-white text-xs font-medium">Melioraa</p>
+              <p class="text-white/40 text-[11px] mt-1 leading-relaxed">Industry 4.0 Machine Monitoring System</p>
+            </div>
+            <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+              <i class="fa-solid fa-mobile-screen text-amber-400 text-lg mb-2 block"></i>
+              <p class="text-white text-xs font-medium">Dialog Power App</p>
+              <p class="text-white/40 text-[11px] mt-1 leading-relaxed">Alarms &amp; Notification Mobile Application</p>
+            </div>
+            <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-4 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+              <i class="fa-solid fa-gauge-high text-amber-400 text-lg mb-2 block"></i>
+              <p class="text-white text-xs font-medium">Melioraa PMS</p>
+              <p class="text-white/40 text-[11px] mt-1 leading-relaxed">Process Monitoring System</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image grid right side -->
+      <div class="xl:w-96 shrink-0">
+        <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">XdotO Concepts — Singapore</p>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img col-span-2">
+            <img
+              src="https://static.wixstatic.com/media/5382ef_8e7679e573114d5b8ec30aaa51ffc890~mv2.jpg/v1/fit/w_2500,h_1330,al_c/5382ef_8e7679e573114d5b8ec30aaa51ffc890~mv2.jpg"
+              alt="Office Singapore"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-3">
+              <p class="text-white/80 text-xs font-medium">XdotO Concepts Pte Limited</p>
+              <p class="text-white/50 text-[11px]">International Plaza, Singapore</p>
+            </div>
+            <div class="absolute top-3 left-3">
+              <span class="text-[10px] px-2.5 py-0.5 bg-emerald-400/20 border border-emerald-400/30 text-emerald-400 rounded-full font-medium">Current Role</span>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC32JhMXA3n2tnhlhRp01wT6Ji3AdXhcHhE0d-W46QULo_y_GeBaprOkA&s=10"
+              alt="XdotO Logo"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">XdotO Logo</p>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] group/img">
+            <img
+              src="https://cdn.prod.website-files.com/606a802fcaa89bc357508cad/62291b5f923ec472a68d77ea_Blog%20-%201%20(2).png"
+              alt="Fiverr"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2">
+              <p class="text-white/70 text-[11px]">Fiverr</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick link buttons below image grid -->
+        <div class="flex gap-3 mt-4">
+          <a href="https://www.xdoto.io/" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            xdoto.io
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+          <a href="https://www.fiverr.com/nuwangatr/" target="_blank" rel="noopener noreferrer"
+             class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            fiverr.com
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TECH STACK
+═══════════════════════════════════════════════════════════════ -->
+{% include 'tech_stack.html' %}
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════════════════════ -->
+{% include 'projects.html' %}
+
+{% endblock %}

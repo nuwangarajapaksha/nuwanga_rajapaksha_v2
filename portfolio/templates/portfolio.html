@@ -1,0 +1,741 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block wrapper %}
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO / BREADCRUMB SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
+
+  <!-- Layered BG -->
+  <div class="absolute inset-0 bg-[url('/static/images/portfolio/portfolio-main.png')] bg-cover bg-center opacity-20"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/80 to-gray-950"></div>
+
+  <!-- Decorative amber line -->
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+  <!-- Geometric accent rings -->
+  <div class="absolute right-8 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-amber-400/10 hidden lg:block"></div>
+  <div class="absolute right-16 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-amber-400/10 hidden lg:block"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-24 w-full">
+
+    <!-- Breadcrumb nav -->
+    <nav class="flex items-center gap-2 text-xs text-white/40 mb-8 tracking-widest uppercase">
+      <a href="{% url 'index' %}" class="hover:text-amber-400 transition-colors duration-200">Home</a>
+      <span class="text-amber-400/60">/</span>
+      <span class="text-amber-400">Portfolio</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+      <!-- Left: Title block -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-px bg-amber-400 block"></span>
+          <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">My Portfolio</span>
+        </div>
+        <h1 class="font-[Playfair_Display] text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
+          Work &amp; <span class="text-amber-400 italic">Journey</span>
+        </h1>
+        <p class="mt-4 text-white/50 text-sm md:text-base max-w-xl leading-relaxed">
+          A curated collection of my professional experience, academic background, technical expertise,
+          and passion projects — everything that defines who I am as a developer and creator.
+        </p>
+      </div>
+
+      <!-- Right: Quick-jump nav pills -->
+      <div class="flex flex-wrap gap-2 lg:flex-col lg:items-end">
+        <a href="#summary" class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Summary</a>
+        <a href="#experience" class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Experience</a>
+        <a href="#education"  class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Education</a>
+        <a href="#techstack"  class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Tech Stack</a>
+        <a href="#skills"  class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Skills</a>
+        <a href="#projects"   class="text-xs px-4 py-2 border border-white/15 text-white/60 rounded-full hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200">Projects</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     RESUME DOWNLOAD STRIP
+═══════════════════════════════════════════════════════════════ -->
+<section class="bg-amber-400 py-6">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <p class="font-semibold text-gray-950 text-base md:text-lg">
+        Want to know more about my professional background?
+      </p>
+      <p class="text-gray-950/70 text-sm mt-0.5">
+        Download my full résumé — updated May 2026.
+      </p>
+    </div>
+    <a href="{% static 'documents/Nuwanga_Rajapaksha_Resume.pdf' %}"
+   target="_blank"
+       class="shrink-0 inline-flex items-center gap-2 bg-gray-950 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-800 active:scale-95 transition-all duration-200">
+      <i class="fa-solid fa-file-arrow-down"></i>
+      Download Résumé
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROFESSIONAL SUMMARY
+═══════════════════════════════════════════════════════════════ -->
+<section id="summary" class="relative bg-gray-950 py-24 overflow-hidden">
+
+  <!-- Dot-grid texture, same as Experience section -->
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Section header — identical pattern to Experience/Education -->
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Who I am</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Professional <span class="text-amber-400 italic">Summary</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <!-- Summary card — same styling as job/education cards -->
+    <div class="bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+      <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-3xl">
+        Innovative and dedicated Software Engineer with 2 years of experience in full-stack development.
+        Demonstrated ability to devise innovative solutions to challenges and a commitment to continuous learning.
+      </p>
+
+      <!-- Badges — same style as your date-range pills, not a new chip style -->
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span class="text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">2+ Years Experience</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">Full-Stack Development</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">Continuous Learner</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WORK EXPERIENCE
+═══════════════════════════════════════════════════════════════ -->
+<section id="experience" class="relative bg-gray-950 py-24 overflow-hidden">
+
+  <!-- Dot-grid texture -->
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Section header -->
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Where I've been</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Work <span class="text-amber-400 italic">Experience</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <!-- Timeline wrapper -->
+    <div class="relative">
+
+      <!-- Vertical timeline line (xl+) -->
+      <div class="absolute left-[calc(260px+2rem)] top-0 bottom-0 w-px bg-gradient-to-b from-amber-400/40 via-amber-400/20 to-transparent hidden xl:block"></div>
+
+      <div class="flex flex-col gap-12">
+
+        <!-- ── JOB CARD 1 ── -->
+        <div class="flex flex-col xl:flex-row gap-6 xl:gap-12">
+
+          <!-- Company meta -->
+          <div class="xl:w-64 shrink-0 flex xl:flex-col gap-4 xl:text-right items-start xl:items-end">
+            <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+               class="w-24 h-24 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0 xl:order-last hover:border-amber-400/30 hover:bg-amber-400/10 transition-all">
+              <img src="{% static 'images/common/xdoto-logo.png' %}" class="w-16 h-16 object-contain p-1"/>
+            </a>
+            <div>
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+                 class="text-white font-semibold text-base hover:text-amber-400 transition-colors duration-200">
+                XdotO Concepts Pte Limited
+              </a>
+              <p class="text-white/40 text-xs mt-0.5">International Plaza, Singapore.</p>
+              <span class="inline-block mt-2 text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">
+                January 2024 – Present
+              </span>
+            </div>
+          </div>
+
+          <!-- Timeline dot -->
+          <div class="hidden xl:flex items-start pt-1 shrink-0">
+            <div class="w-3 h-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20 mt-1.5"></div>
+          </div>
+
+          <!-- Content card -->
+          <div class="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="text-white text-lg font-semibold">Software Engineer</h3>
+                <p class="text-white/40 text-xs mt-0.5">Full-time · Remote</p>
+              </div>
+              <span class="text-xs px-3 py-1 bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 rounded-full">Current</span>
+            </div>
+            <ul class="space-y-2 text-sm text-white/60 leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Collaborated with cross-functional teams to plan and manage projects effectively in Agile environments, contributing to 100% on-time project delivery.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Developed microservice functionalities and RESTful APIs using Java, Spring Boot, and Hibernate, achieving a 25% reduction in data processing time.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Designed and implemented ReactJS micro frontend components, integrating them with backend APIs, resulting in a 30% boost in user interface responsiveness.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Architected MySQL database systems to enhance performance, leading to a 20% increase in application speed for generating reports.</li>
+            </ul>
+            <!-- Quick link button -->
+            <div class="mt-5 pt-4 border-t border-white/[0.07]">
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener noreferrer"
+                 class="w-full flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                        hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                        transition-all duration-300 group/btn">
+                <i class="fa-solid fa-globe text-[12px]"></i>
+                xdoto.io
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── JOB CARD 2 ── -->
+        <div class="flex flex-col xl:flex-row gap-6 xl:gap-12">
+
+          <div class="xl:w-64 shrink-0 flex xl:flex-col gap-4 xl:text-right items-start xl:items-end">
+            <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+               class="w-24 h-24 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0 xl:order-last hover:border-amber-400/30 hover:bg-amber-400/10 transition-all">
+              <img src="{% static 'images/common/xdoto-logo.png' %}" class="w-16 h-16 object-contain p-1"/>
+            </a>
+            <div>
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+                 class="text-white font-semibold text-base hover:text-amber-400 transition-colors duration-200">
+                XdotO Concepts Pte Limited
+              </a>
+              <p class="text-white/40 text-xs mt-0.5">International Plaza, Singapore.</p>
+              <span class="inline-block mt-2 text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">
+                March 2023 – January 2024
+              </span>
+            </div>
+          </div>
+
+          <div class="hidden xl:flex items-start pt-1 shrink-0">
+            <div class="w-3 h-3 rounded-full bg-amber-400/60 ring-4 ring-amber-400/10 mt-1.5"></div>
+          </div>
+
+          <div class="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+            <div class="mb-4">
+              <h3 class="text-white text-lg font-semibold">Associate Software Engineer</h3>
+              <p class="text-white/40 text-xs mt-0.5">Full-time · Remote</p>
+            </div>
+            <ul class="space-y-2 text-sm text-white/60 leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Designed microservice features and RESTful APIs using Java, Spring Boot, and Hibernate, ensuring an 80% system uptime guarantee.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Built micro frontend components of ReactJS, contributing to a 45% improvement in user experience metrics.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Innovated and deployed PHP, JavaScript, and Vue.js-based web applications on Linux servers with a 10% uptime, ensuring reliable and accessible solutions.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Created comprehensive reports using MySQL views and stored procedures, leading to a 95% accuracy in data analysis.</li>
+            </ul>
+            <!-- Quick link button -->
+            <div class="mt-5 pt-4 border-t border-white/[0.07]">
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener noreferrer"
+                 class="w-full flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                        hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                        transition-all duration-300 group/btn">
+                <i class="fa-solid fa-globe text-[12px]"></i>
+                xdoto.io
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── JOB CARD 3 ── -->
+        <div class="flex flex-col xl:flex-row gap-6 xl:gap-12">
+
+          <div class="xl:w-64 shrink-0 flex xl:flex-col gap-4 xl:text-right items-start xl:items-end">
+            <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+               class="w-24 h-24 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0 xl:order-last hover:border-amber-400/30 hover:bg-amber-400/10 transition-all">
+              <img src="{% static 'images/common/xdoto-logo.png' %}" class="w-16 h-16 object-contain p-1"/>
+            </a>
+            <div>
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener"
+                 class="text-white font-semibold text-base hover:text-amber-400 transition-colors duration-200">
+                XdotO Concepts Pte Limited
+              </a>
+              <p class="text-white/40 text-xs mt-0.5">International Plaza, Singapore.</p>
+              <span class="inline-block mt-2 text-xs px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">
+                September 2022 – March 2023
+              </span>
+            </div>
+          </div>
+
+          <div class="hidden xl:flex items-start pt-1 shrink-0">
+            <div class="w-3 h-3 rounded-full bg-amber-400/60 ring-4 ring-amber-400/10 mt-1.5"></div>
+          </div>
+
+          <div class="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300">
+            <div class="mb-4">
+              <h3 class="text-white text-lg font-semibold">Intern Software Engineer</h3>
+              <p class="text-white/40 text-xs mt-0.5">Internship · Remote</p>
+            </div>
+            <ul class="space-y-2 text-sm text-white/60 leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Developed and tested RESTful APIs with Java and Spring Boot, ensuring robust and efficient backend operations with a 90% success rate.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Built ReactJS components and functionalities for attractive applications, resulting in a 50% enhancement in user interface performance.</li>
+              <li class="flex gap-2"><span class="text-amber-400 mt-0.5 shrink-0">▸</span>Optimized database performance by fine-tuning MySQL queries, achieving a 10% reduction in response times.</li>
+            </ul>
+            <!-- Quick link button -->
+            <div class="mt-5 pt-4 border-t border-white/[0.07]">
+              <a href="https://www.xdoto.io/" target="_blank" rel="noopener noreferrer"
+                 class="w-full flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                        hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                        transition-all duration-300 group/btn">
+                <i class="fa-solid fa-globe text-[12px]"></i>
+                xdoto.io
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════════════════════════════ -->
+<section id="education" class="relative py-24 overflow-hidden">
+
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">Academic path</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Education &amp; <span class="text-amber-400 italic">Qualifications</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- ── EDU CARD 1: BCU ── -->
+      <div class="relative group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden flex flex-col">
+  <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/5 rounded-bl-[80px]"></div>
+
+  <div class="flex gap-5 items-start">
+    <div class="w-16 h-16 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+      <i class="fa-solid fa-graduation-cap text-amber-400 text-2xl"></i>
+    </div>
+    <div class="flex-1">
+      <span class="inline-block text-xs px-3 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 mb-2">Jan 2020 – Jun 2023</span>
+      <h3 class="text-white font-semibold text-base leading-snug">Bachelor of Science with Honours in Software Engineering</h3>
+      <a href="https://www.bcu.ac.uk/" target="_blank" rel="noopener"
+         class="text-amber-400/80 text-sm font-medium mt-1 inline-block hover:text-amber-400 transition-colors">
+        Birmingham City University
+      </a>
+      <p class="text-white/40 text-xs mt-0.5">Birmingham, United Kingdom. · First Class Honours</p>
+      <p class="text-white/40 text-xs mt-2">Affiliated through the
+        <a href="https://www.javainstitute.edu.lk/" target="_blank" rel="noopener noreferrer"
+           class="text-amber-400/70 hover:text-amber-400 transition-colors duration-200">
+          Java Institute for Advanced Technology, Sri Lanka
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Image Strip ── -->
+  <div class="mt-6 pt-5 border-t border-white/[0.07]">
+    <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-3">Campus Highlights</p>
+    <div class="grid grid-cols-3 gap-2.5">
+      <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVP1Af5i4mBYmkPh1nBXY4lBpexmaNhz-AaDnzmTSXv1tz56HAO1GxApj&s=10" alt="BCU Logo"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">BCU Logo</p></div>
+      </div>
+      <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+        <img src="https://img.bcu.ac.uk/_bcuimages/birmingham-city-unviersity-city-centre-campus-parkside-and-curzon-buildings-web-132967477767661564.jpg" alt="Campus"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">Campus</p></div>
+      </div>
+      <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+        <img src="https://img.bcu.ac.uk/_bcuimages/bcu-campus-1-132451530310934342.jpg" alt="Campus"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">Campus</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick link buttons -->
+  <div class="mt-4 flex gap-3">
+    <a href="https://www.bcu.ac.uk/" target="_blank" rel="noopener noreferrer"
+       class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+              hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+              transition-all duration-300 group/btn">
+      <i class="fa-solid fa-globe text-[12px]"></i>
+      bcu.ac.uk
+      <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+    </a>
+    <a href="https://www.javainstitute.edu.lk/" target="_blank" rel="noopener noreferrer"
+       class="flex-1 flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+              hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+              transition-all duration-300 group/btn">
+      <i class="fa-solid fa-globe text-[12px]"></i>
+      javainstitute.edu.lk
+      <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+    </a>
+  </div>
+
+  <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+      <!-- ── EDU CARD 2: SQA ── -->
+      <div class="relative group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/5 rounded-bl-[80px]"></div>
+
+        <div class="flex gap-5 items-start">
+          <div class="w-16 h-16 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+            <i class="fa-solid fa-award text-amber-400 text-2xl"></i>
+          </div>
+          <div class="flex-1">
+            <span class="inline-block text-xs px-3 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 mb-2">Jan 2020 – Jan 2023</span>
+            <h3 class="text-white font-semibold text-base leading-snug">SQAF Levels 7, 8, and 9 in Software Engineering</h3>
+            <a href="https://www.sqa.org.uk/sqa/70972.html" target="_blank" rel="noopener"
+               class="text-amber-400/80 text-sm font-medium mt-1 inline-block hover:text-amber-400 transition-colors">
+              SQA: Scottish Qualifications Authority
+            </a>
+            <p class="text-white/40 text-xs mt-0.5">Scotland.</p>
+            <p class="text-white/40 text-xs mt-2">Affiliated through the Java Institute for Advanced Technology, Sri Lanka</p>
+          </div>
+        </div>
+
+        <!-- ── Image Strip ── -->
+        <div class="mt-6 pt-5 border-t border-white/[0.07]">
+          <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-3">Campus Highlights</p>
+          <div class="grid grid-cols-3 gap-2.5">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://images.squarespace-cdn.com/content/v1/68c7eca7931b6b09c77b4d3e/1757932769189-6D8JNXZKSQNGPX1Q1JVK/SQA_logo_INT_RGB.jpg" alt="SQA Logo"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">SQA Logo</p></div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://www.cda-group.co.uk/assets/Managed/ProjectGalleries/26-sqa-edinburgh/863a9b0672/07-20111121-SQA-016__ScaleWidthWzE2MDBd.jpg" alt="SQA"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">SQA</p></div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://www.cda-group.co.uk/assets/Managed/ProjectGalleries/26-sqa-edinburgh/be9a4dae01/01-20111121-SQA-002__ScaleWidthWzE2MDBd.jpg" alt="SQA"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">SQA</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick link button -->
+        <div class="mt-4">
+          <a href="https://www.sqa.org.uk/sqa/70972.html" target="_blank" rel="noopener noreferrer"
+             class="w-full flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            sqa.org.uk
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+        </div>
+
+        <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+
+      <!-- ── EDU CARD 3: Nalanda ── -->
+      <div class="relative group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/5 rounded-bl-[80px]"></div>
+
+        <div class="flex gap-5 items-start">
+          <div class="w-16 h-16 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+            <i class="fa-solid fa-graduation-cap text-amber-400 text-2xl"></i>
+          </div>
+          <div class="flex-1">
+            <span class="inline-block text-xs px-3 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 mb-2">2008 – 2019</span>
+            <h3 class="text-white font-semibold text-base leading-snug">School (Primary - Secondary)</h3>
+            <a href="https://nalandacollege.lk/" target="_blank" rel="noopener"
+               class="text-amber-400/80 text-sm font-medium mt-1 inline-block hover:text-amber-400 transition-colors">
+              Nalanda College
+            </a>
+            <p class="text-white/40 text-xs mt-0.5">Colombo 10, Sri Lanka.</p>
+          </div>
+        </div>
+
+        <!-- ── Image Strip ── -->
+        <div class="mt-6 pt-5 border-t border-white/[0.07]">
+          <p class="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-3">School Highlights</p>
+          <div class="grid grid-cols-3 gap-2.5">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PD4VGeKcGFM2XQMJ2StcqGe1VPyY9gOY4A-OOjRQGAUtSSHlIaa4QzpA&s=10" alt="Nalanda College Logo"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">Nalanda College Logo</p></div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://bmkltsly13vb.compat.objectstorage.ap-singapore-1.oraclecloud.com/cdn.sg.dailymirror.lk/assets/uploads/image_07d4853a3e.jpg" alt="Nalanda College"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">Nalanda College</p></div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden aspect-[4/4] group/img">
+              <img src="https://www.nalandacommerce.lk/assets/nc_background.png" alt="Nalanda College"
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-2"><p class="text-white/70 text-[10px] leading-tight">Nalanda College</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick link buttons -->
+          <div class="mt-4">
+          <a href="https://nalandacollege.lk/" target="_blank" rel="noopener noreferrer"
+             class="w-full flex items-center justify-center gap-2 bg-white/[0.04] border border-white/10 hover:border-amber-400/40
+                    hover:bg-amber-400/5 text-white/50 hover:text-amber-400 text-[11px] font-medium rounded-xl py-2.5 px-3
+                    transition-all duration-300 group/btn">
+            <i class="fa-solid fa-globe text-[12px]"></i>
+            nalandacollege.lk
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-0 group-hover/btn:opacity-100 transition-opacity"></i>
+          </a>
+        </div>
+
+        <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+
+      <!-- ── Certifications (full-width row) ── -->
+      <div class="md:col-span-2 bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-5">
+          <i class="fa-solid fa-certificate text-amber-400"></i>
+          <h3 class="text-white font-semibold text-sm uppercase tracking-widest">Certifications &amp; Short Courses</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-python text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Python Machine Learning: From Beginner to Pro</p>
+              <p class="text-white/40 text-[11px]">Udemy · Apr 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-aws text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">AWS Essentials: A Complete Beginner's Guide</p>
+              <p class="text-white/40 text-[11px]">Udemy · Apr 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-chart-line text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Hands On Python Data Science - Data Science Bootcamp</p>
+              <p class="text-white/40 text-[11px]">Udemy · Apr 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-diagram-project text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Introducing MLOps: From Model Development to Deployment</p>
+              <p class="text-white/40 text-[11px]">Udemy · Apr 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-python text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Python for Beginners</p>
+              <p class="text-white/40 text-[11px]">Udemy · Apr 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-bolt text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">AWS Lambda</p>
+              <p class="text-white/40 text-[11px]">Great Learning · Dec 2024</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-shield-halved text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Introduction to Cybersecurity</p>
+              <p class="text-white/40 text-[11px]">Cisco · Dec 2024</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-java text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-xs font-medium">Complete Java Programming Bootcamp: Learn to Code in Java</p>
+              <p class="text-white/40 text-[11px]">Udemy · Dec 2024</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TECH STACK
+═══════════════════════════════════════════════════════════════ -->
+{% include 'tech_stack.html' %}
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SKILLS & LANGUAGES
+═══════════════════════════════════════════════════════════════ -->
+<section id="skills" class="relative bg-gray-950 py-24 overflow-hidden">
+
+  <!-- Dot-grid texture, consistent with Summary/Experience -->
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:radial-gradient(circle,#f59e0b 1px,transparent 1px);background-size:32px 32px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Section header — identical pattern to other sections -->
+    <div class="mb-14">
+      <span class="text-amber-400 text-xs tracking-[0.35em] uppercase font-medium">What I bring</span>
+      <h2 class="mt-2 font-[Playfair_Display] text-4xl md:text-5xl font-bold text-white">
+        Skills &amp; <span class="text-amber-400 italic">Languages</span>
+      </h2>
+      <div class="w-24 h-px bg-gradient-to-r from-amber-400 to-transparent mt-4"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- ── SOFT SKILLS CARD ── -->
+      <div class="relative group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/5 rounded-bl-[80px]"></div>
+
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+            <i class="fa-solid fa-brain text-amber-400 text-lg"></i>
+          </div>
+          <h3 class="text-white font-semibold text-sm uppercase tracking-widest">Soft Skills</h3>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-lightbulb text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-sm font-medium">Critical Thinking</p>
+              <p class="text-white/40 text-[11px]">Breaking down complex problems into solvable parts</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-arrows-spin text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-sm font-medium">Continuous Learning</p>
+              <p class="text-white/40 text-[11px]">Staying current with evolving tools and practices</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-200">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-people-group text-amber-400 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-white text-sm font-medium">Leadership</p>
+              <p class="text-white/40 text-[11px]">Guiding teams and owning project outcomes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+
+      <!-- ── LANGUAGES CARD ── -->
+      <div class="relative group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/5 rounded-bl-[80px]"></div>
+
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+            <i class="fa-solid fa-language text-amber-400 text-lg"></i>
+          </div>
+          <h3 class="text-white font-semibold text-sm uppercase tracking-widest">Languages</h3>
+        </div>
+
+        <div class="space-y-5">
+          <!-- English -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-white text-sm font-medium">English</p>
+              <span class="text-xs px-3 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">Fluent</span>
+            </div>
+            <div class="flex gap-1.5">
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-white/10"></span>
+            </div>
+          </div>
+
+          <!-- Sinhala -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-white text-sm font-medium">Sinhala</p>
+              <span class="text-xs px-3 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400">Native</span>
+            </div>
+            <div class="flex gap-1.5">
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+              <span class="h-1.5 flex-1 rounded-full bg-amber-400"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════════════════════ -->
+{% include 'projects.html' %}
+
+{% endblock %}
