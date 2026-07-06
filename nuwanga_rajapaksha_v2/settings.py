@@ -132,7 +132,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles"   # production only, harmless locally
 
 TAILWIND_APP_NAME = 'theme'
 
-load_dotenv()
+# load_dotenv()
+load_dotenv(BASE_DIR / ".env")
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
