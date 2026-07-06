@@ -3,8 +3,12 @@
 
 {% block title %}Photography | Frames by Nuwanga — Portfolio, Gear & Gallery{% endblock %}
 {% block meta_title %}Photography | Frames by Nuwanga — Portfolio, Gear & Gallery{% endblock %}
-{% block meta_description %}Discover Nuwanga Rajapaksha's photography journey — trained at Cameralk Academy under Mohan Hathnapitiya, specialising in wildlife, landscape, model and event photography. View his gear, career and full photo gallery on Frames by Nuwanga.{% endblock %}
-{% block meta_keywords %}Frames by Nuwanga, Nuwanga Rajapaksha photography, Sri Lankan photographer, Cameralk Academy, Mohan Hathnapitiya, wildlife photography Sri Lanka, landscape photographer, event photographer Sri Lanka, Shutterstock contributor, Adobe Stock contributor{% endblock %}
+{% block meta_description %}Discover Nuwanga Rajapaksha's photography journey — trained at Cameralk Academy under Mohan
+    Hathnapitiya, specialising in wildlife, landscape, model and event photography. View his gear, career and full photo
+    gallery on Frames by Nuwanga.{% endblock %}
+{% block meta_keywords %}Frames by Nuwanga, Nuwanga Rajapaksha photography, Sri Lankan photographer, Cameralk Academy,
+    Mohan Hathnapitiya, wildlife photography Sri Lanka, landscape photographer, event photographer Sri Lanka,
+    Shutterstock contributor, Adobe Stock contributor{% endblock %}
 
 {% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com/photography/{% endblock %}
 {% block og_url %}https://nuwangarajapaksha.pythonanywhere.com/photography/{% endblock %}
@@ -12,14 +16,18 @@
 
 {% block og_type %}profile{% endblock %}
 {% block og_title %}Photography | Frames by Nuwanga{% endblock %}
-{% block og_description %}Wildlife, landscape, model and event photography — trained at Cameralk Academy, showcased across Frames by Nuwanga.{% endblock %}
-{% block og_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/photography/photography-main.png' %}{% endblock %}
+{% block og_description %}Wildlife, landscape, model and event photography — trained at Cameralk Academy, showcased
+    across Frames by Nuwanga.{% endblock %}
+{% block og_image %}https://nuwangarajapaksha.pythonanywhere.com
+    {% static 'images/photography/photography-main.png' %}{% endblock %}
 {% block twitter_title %}Photography | Frames by Nuwanga{% endblock %}
-{% block twitter_description %}Wildlife, landscape, model and event photography — trained at Cameralk Academy, showcased across Frames by Nuwanga.{% endblock %}
-{% block twitter_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/photography/photography-main.png' %}{% endblock %}
+{% block twitter_description %}Wildlife, landscape, model and event photography — trained at Cameralk Academy, showcased
+    across Frames by Nuwanga.{% endblock %}
+{% block twitter_image %}https://nuwangarajapaksha.pythonanywhere.com
+    {% static 'images/photography/photography-main.png' %}{% endblock %}
 
 {% block structured_data %}
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -50,7 +58,10 @@
     ═══════════════════════════════════════════════════════════════ -->
     <section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
 
-        <div class="absolute inset-0 bg-[url('/static/images/photography/photography-main.png')] bg-cover bg-center opacity-25"></div>
+        <div
+                class="absolute inset-0 bg-cover bg-center opacity-25"
+                style="background-image: url('{% static 'images/photography/photography-main.png' %}');">
+        </div>
         <div class="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/75 to-gray-950"></div>
 
         <!-- Decorative amber line -->

@@ -47,7 +47,10 @@
 <section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
 
   <!-- Layered BG -->
-  <div class="absolute inset-0 bg-[url('/static/images/portfolio/portfolio-main.png')] bg-cover bg-center opacity-20"></div>
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-20"
+    style="background-image: url('{% static 'images/portfolio/portfolio-main.png' %}');">
+</div>
   <div class="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/80 to-gray-950"></div>
 
   <!-- Decorative amber line -->

@@ -3,20 +3,24 @@
 
 {% block title %}Sports | Nuwanga Rajapaksha — Gym, Strength & Fitness Journey{% endblock %}
 {% block meta_title %}Sports | Nuwanga Rajapaksha — Gym, Strength & Fitness Journey{% endblock %}
-{% block meta_description %}Nuwanga Rajapaksha's fitness journey — gym training, strength and conditioning, and the discipline behind his approach to physical and mental wellbeing.{% endblock %}
-{% block meta_keywords %}Nuwanga Rajapaksha sports, gym enthusiast Sri Lanka, strength training, fitness journey, bodybuilding Sri Lanka{% endblock %}
+{% block meta_description %}Nuwanga Rajapaksha's fitness journey — gym training, strength and conditioning, and the
+    discipline behind his approach to physical and mental wellbeing.{% endblock %}
+{% block meta_keywords %}Nuwanga Rajapaksha sports, gym enthusiast Sri Lanka, strength training, fitness journey,
+    bodybuilding Sri Lanka{% endblock %}
 
 {% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
 {% block og_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
 {% block twitter_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
 
 {% block og_title %}Sports | Nuwanga Rajapaksha — Gym & Fitness{% endblock %}
-{% block og_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness journey.{% endblock %}
+{% block og_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness
+    journey.{% endblock %}
 {% block twitter_title %}Sports | Nuwanga Rajapaksha — Gym & Fitness{% endblock %}
-{% block twitter_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness journey.{% endblock %}
+{% block twitter_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness
+    journey.{% endblock %}
 
 {% block structured_data %}
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,7 +51,10 @@
     ═══════════════════════════════════════════════════════════════ -->
     <section class="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
 
-        <div class="absolute inset-0 bg-[url('/static/images/sports/sports-main.png')] bg-cover bg-center opacity-25"></div>
+        <div
+                class="absolute inset-0 bg-cover bg-center opacity-25"
+                style="background-image: url('{% static 'images/sports/sports-main.png' %}');">
+        </div>
         <div class="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/75 to-gray-950"></div>
         <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
 
