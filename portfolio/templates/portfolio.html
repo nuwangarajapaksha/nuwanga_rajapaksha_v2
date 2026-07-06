@@ -1,5 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Portfolio | Nuwanga Rajapaksha — Work Experience, Education & Projects{% endblock %}
+{% block meta_title %}Portfolio | Nuwanga Rajapaksha — Work Experience, Education & Projects{% endblock %}
+{% block meta_description %}Explore Nuwanga Rajapaksha's professional portfolio — Software Engineer experience at XdotO Concepts, a BSc in Software Engineering from Birmingham City University, full tech stack, skills, certifications and personal projects.{% endblock %}
+{% block meta_keywords %}Nuwanga Rajapaksha portfolio, Software Engineer resume, XdotO Concepts, Birmingham City University Software Engineering, Java Institute Sri Lanka, full-stack developer Sri Lanka, Java Spring Boot ReactJS developer{% endblock %}
+
+{% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com/portfolio/{% endblock %}
+{% block og_url %}https://nuwangarajapaksha.pythonanywhere.com/portfolio/{% endblock %}
+{% block twitter_url %}https://nuwangarajapaksha.pythonanywhere.com/portfolio/{% endblock %}
+
+{% block og_title %}Portfolio | Nuwanga Rajapaksha — Work Experience, Education & Projects{% endblock %}
+{% block og_description %}Software Engineer experience, education and projects — a full look at Nuwanga Rajapaksha's professional journey.{% endblock %}
+{% block twitter_title %}Portfolio | Nuwanga Rajapaksha{% endblock %}
+{% block twitter_description %}Software Engineer experience, education and projects — a full look at Nuwanga Rajapaksha's professional journey.{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://nuwangarajapaksha.pythonanywhere.com/portfolio/#profilepage",
+      "url": "https://nuwangarajapaksha.pythonanywhere.com/portfolio/",
+      "name": "Nuwanga Rajapaksha — Portfolio",
+      "about": { "@id": "https://www.nuwangarajapaksha.com/#person" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nuwangarajapaksha.pythonanywhere.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://nuwangarajapaksha.pythonanywhere.com/portfolio/" }
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block wrapper %}
 
 <!-- ═══════════════════════════════════════════════════════════════

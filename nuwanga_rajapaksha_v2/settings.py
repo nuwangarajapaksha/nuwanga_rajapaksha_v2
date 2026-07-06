@@ -122,10 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'theme/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # <-- Your CSS/JS/images path
+    BASE_DIR / "theme/static",  # <-- Your CSS/JS/images path
 ]
 
 TAILWIND_APP_NAME = 'theme'

@@ -84,7 +84,7 @@
     <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
 
     <!-- Preconnects for performance (helps Core Web Vitals, an SEO ranking factor) -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
@@ -102,71 +102,6 @@
     Hides the default Google Translate toolbar/banner completely
     so only our custom dropdown is visible.
   -->
-
-    <!-- ═══════════════════════════════════════════════════════════════
-         JSON-LD STRUCTURED DATA (schema.org)
-         Default: Person + Website. Override/extend per-page via
-          in child templates if needed.
-    ═══════════════════════════════════════════════════════════════ -->
-    {% block structured_data %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://www.nuwangarajapaksha.com/#person",
-          "name": "Nuwanga Rajapaksha",
-          "alternateName": "Minimuthu Rajapaksha Pathirannahalage Nuwanga Tharuksha Rajapaksha",
-          "url": "https://nuwangarajapaksha.pythonanywhere.com",
-          "image": "https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}",
-          "jobTitle": ["Software Engineer", "Photographer", "Content Creator", "Graphic Designer", "Video Editor"],
-          "description": "Software Engineer with a creative edge — building scalable solutions, capturing the world through a lens, crafting compelling visuals, and pushing limits every single day.",
-          "email": "mailto:nuwangarajapaksha@gmail.com",
-          "telephone": "+94713848592",
-          "nationality": "Sri Lankan",
-          "alumniOf": [
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "Birmingham City University"
-            },
-            {
-              "@type": "School",
-              "name": "Nalanda College Colombo"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "No. 292, Bathalahenawaththa, Gonawala",
-            "addressLocality": "Kelaniya",
-            "postalCode": "11630",
-            "addressRegion": "Western Province",
-            "addressCountry": "LK"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/nuwangarajapaksha/",
-            "https://www.facebook.com/nuwangarajapakshaofficial",
-            "https://www.instagram.com/nuwanga.rajapaksha/",
-            "https://x.com/nuwangatr",
-            "https://github.com/nuwangarajapaksha",
-            "https://nuwangarajapaksha.blogspot.com/",
-            "https://www.youtube.com/@tech.with.nuwanga",
-            "https://www.tiktok.com/@tech.with.nuwanga"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.nuwangarajapaksha.com/#website",
-          "url": "https://www.nuwangarajapaksha.com/",
-          "name": "Nuwanga Rajapaksha",
-          "publisher": { "@id": "https://www.nuwangarajapaksha.com/#person" },
-          "inLanguage": "en-US"
-        }
-      ]
-    }
-    </script>
-    {% endblock %}
-
 </head>
 
 <body class="bg-gray-950 antialiased">
@@ -188,7 +123,7 @@
         <!-- Top bar -->
         <div class="flex items-center justify-between px-6 py-5 border-b border-white/[0.08]">
             <a href="{% url 'index' %}" class="flex items-center gap-3">
-                <img src="{% static 'images/portfolio/profile-icon.png' %}" alt="Logo"
+                <img src="{% static 'images/common/profile-icon.png' %}" alt="Logo"
                      class="h-9 w-9 rounded-full object-cover border border-amber-400/30"/>
                 <div class="leading-tight">
                     <p class="font-[Playfair_Display] text-sm font-bold text-white">Nuwanga</p>
@@ -316,7 +251,7 @@
             <!-- ── Logo ── -->
             <a href="{% url 'index' %}" class="flex items-center gap-3 shrink-0 group">
                 <div class="relative">
-                    <img src="{% static 'images/portfolio/profile-icon.png' %}" alt="Logo"
+                    <img src="{% static 'images/common/profile-icon.png' %}" alt="Logo"
                          class="h-9 w-9 rounded-full object-cover border border-amber-400/20 group-hover:border-amber-400/60 transition-colors duration-300"/>
                 </div>
                 <div class="hidden sm:block leading-tight">
@@ -714,8 +649,72 @@
     <!-- ═══════════════════════════════════════════════════════════════
          SCRIPTS
     ═══════════════════════════════════════════════════════════════ -->
-    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         JSON-LD STRUCTURED DATA (schema.org)
+         Default: Person + Website. Override/extend per-page via
+          in child templates if needed.
+    ═══════════════════════════════════════════════════════════════ -->
+    {% block structured_data %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.nuwangarajapaksha.com/#person",
+          "name": "Nuwanga Rajapaksha",
+          "alternateName": "Minimuthu Rajapaksha Pathirannahalage Nuwanga Tharuksha Rajapaksha",
+          "url": "https://nuwangarajapaksha.pythonanywhere.com",
+          "image": "https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}",
+          "jobTitle": ["Software Engineer", "Photographer", "Content Creator", "Graphic Designer", "Video Editor"],
+          "description": "Software Engineer with a creative edge — building scalable solutions, capturing the world through a lens, crafting compelling visuals, and pushing limits every single day.",
+          "email": "mailto:nuwangarajapaksha@gmail.com",
+          "telephone": "+94713848592",
+          "nationality": "Sri Lankan",
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Birmingham City University"
+            },
+            {
+              "@type": "School",
+              "name": "Nalanda College Colombo"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "No. 292, Bathalahenawaththa, Gonawala",
+            "addressLocality": "Kelaniya",
+            "postalCode": "11630",
+            "addressRegion": "Western Province",
+            "addressCountry": "LK"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/nuwangarajapaksha/",
+            "https://www.facebook.com/nuwangarajapakshaofficial",
+            "https://www.instagram.com/nuwanga.rajapaksha/",
+            "https://x.com/nuwangatr",
+            "https://github.com/nuwangarajapaksha",
+            "https://nuwangarajapaksha.blogspot.com/",
+            "https://www.youtube.com/@tech.with.nuwanga",
+            "https://www.tiktok.com/@tech.with.nuwanga"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.nuwangarajapaksha.com/#website",
+          "url": "https://www.nuwangarajapaksha.com/",
+          "name": "Nuwanga Rajapaksha",
+          "publisher": { "@id": "https://www.nuwangarajapaksha.com/#person" },
+          "inLanguage": "en-US"
+        }
+      ]
+    }
+    </script>
+    {% endblock %}
 
 {% endwith %}
 </body>

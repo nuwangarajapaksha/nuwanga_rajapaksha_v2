@@ -1,5 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Sports | Nuwanga Rajapaksha — Gym, Strength & Fitness Journey{% endblock %}
+{% block meta_title %}Sports | Nuwanga Rajapaksha — Gym, Strength & Fitness Journey{% endblock %}
+{% block meta_description %}Nuwanga Rajapaksha's fitness journey — gym training, strength and conditioning, and the discipline behind his approach to physical and mental wellbeing.{% endblock %}
+{% block meta_keywords %}Nuwanga Rajapaksha sports, gym enthusiast Sri Lanka, strength training, fitness journey, bodybuilding Sri Lanka{% endblock %}
+
+{% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
+{% block og_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
+{% block twitter_url %}https://nuwangarajapaksha.pythonanywhere.com/sports/{% endblock %}
+
+{% block og_title %}Sports | Nuwanga Rajapaksha — Gym & Fitness{% endblock %}
+{% block og_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness journey.{% endblock %}
+{% block twitter_title %}Sports | Nuwanga Rajapaksha — Gym & Fitness{% endblock %}
+{% block twitter_description %}Discipline, consistency and mental strength — Nuwanga Rajapaksha's gym and fitness journey.{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nuwangarajapaksha.pythonanywhere.com/sports/#collectionpage",
+      "url": "https://nuwangarajapaksha.pythonanywhere.com/sports/",
+      "name": "Sports — Nuwanga Rajapaksha",
+      "about": { "@id": "https://www.nuwangarajapaksha.com/#person" },
+      "description": "Gym, strength training and fitness journey of Nuwanga Rajapaksha."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nuwangarajapaksha.pythonanywhere.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Sports", "item": "https://nuwangarajapaksha.pythonanywhere.com/sports/" }
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block wrapper %}
 
     <!-- ═══════════════════════════════════════════════════════════════
