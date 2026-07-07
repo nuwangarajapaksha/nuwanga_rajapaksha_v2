@@ -1,193 +1,118 @@
-# Nuwanga Rajapaksha Portfolio v2 - Django Project
+# Nuwanga Rajapaksha Portfolio v2
 
-Welcome to my personal portfolio project built with Django. This project showcases my skills, projects, and experience in software development.
-
-## 🚀 Features
-
-- ✅ Clean, modular Django architecture  
-- ✅ Dynamic project showcase and resume details  
-- ✅ Logging implemented with `concurrent-log-handler` for robust log management  
-- ✅ Easy deployment and virtual environment setup instructions  
-- ✅ Ready-to-extend for blog, contact form, and additional features  
+A modern, responsive personal portfolio website built with **Django 6** and **Tailwind CSS**. This project showcases my software engineering experience, programming projects, photography portfolio, sports achievements, and provides a fully functional contact form with email support.
 
 ---
 
-## 🛠️ Getting Started
+# 🚀 Features
 
-Follow these steps to get the project up and running on your local machine.
+- Modern responsive UI
+- Built with Django 6.x
+- Tailwind CSS integration
+- Modular Django application architecture
+- Portfolio showcase
+- Programming portfolio
+- Photography gallery
+- Sports portfolio
+- Contact form with Gmail SMTP support
+- Environment variable support using python-dotenv
+- Console logging configuration
+- SEO optimized
+- Sitemap.xml
+- Robots.txt
+- Ready for deployment (PythonAnywhere)
 
-### 1. Clone the Repository
+---
+
+---
+
+# 🚀 Local Development Setup
+
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/nuwangarajapaksha/nuwanga_rajapaksha_v2.git
 cd nuwanga_rajapaksha_v2
 ```
 
+---
 
-### 2. Remove Existing Virtual Environment (Windows PowerShell)
+## 2. Create Virtual Environment
 
-If you have an existing virtual environment and want to start fresh:
-
-```bash
-rmdir /s /q venv
-```
-
-### 3. Create a New Virtual Environment
-
-Set up a new isolated Python environment:
+### Windows
 
 ```bash
 python -m venv venv
 ```
 
-### 4. Activate the Virtual Environment
-
-On Windows PowerShell:
+### Linux / macOS
 
 ```bash
+python3 -m venv venv
+```
+
+---
+
+## 3. Activate Virtual Environment
+
+### Windows PowerShell
+
+```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-On Windows cmd:
+### Windows CMD
 
-```bash
-python -m venv venv
+```cmd
+venv\Scripts\activate
 ```
 
-On Unix or macOS terminal:
+### Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-### 5. Upgrade pip and Install Dependencies
+---
 
-Make sure pip is up to date, then install Django and logging dependency:
+## 4. Upgrade pip
 
 ```bash
-pip install --upgrade pip
-pip install django
-pip install concurrent-log-handler
-pip install requests python-dotenv
+python -m pip install --upgrade pip
 ```
 
-Or install all dependencies using the requirements file:
+---
+
+## 5. Install Dependencies
+
+If the project contains a requirements file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Run Database Migrations
-
-Apply Django migrations before starting the server:
+Otherwise install manually:
 
 ```bash
-python manage.py migrate
+pip install django
+pip install django-tailwind
+pip install python-dotenv
+pip install requests
 ```
 
-### 7. Create a Superuser (Optional)
+---
 
-To access Django admin panel, create a superuser:
+# 🎨 Tailwind CSS Setup
+
+## Install django-tailwind
 
 ```bash
-python manage.py createsuperuser
-```
-
-### 8. Run the Development Server
-
-Start the Django development server:
-
-```bash
-python manage.py runserver
-```
-
-The portfolio site will be accessible at `http://127.0.0.1:8000/`.
-
-### 9. Freeze Current Dependencies (Optional)
-
-Save your current environment packages to `requirements.txt`:
-
-```bash
-pip freeze > requirements.txt
+pip install django-tailwind
 ```
 
 ---
 
-
-# Django + Tailwind CSS Setup Guide
-
-This guide explains how to integrate Tailwind CSS into a Django project using `django-tailwind`.
-
----
-
-## 🚀 Prerequisites
-
-* Python installed
-* Django project created
-* Virtual environment activated
-
----
-
-## 📦 Step 1: Install Dependencies
-
-```bash
-python -m pip install django-tailwind
-```
-
----
-
-## ⚙️ Step 2: Configure Django
-
-Add Tailwind to your `INSTALLED_APPS` in `settings.py`:
-
-```python
-INSTALLED_APPS = [
-    ...
-    'tailwind',
-]
-```
-
----
-
-## 🏗️ Step 3: Initialize Tailwind App
-
-Run the following command:
-
-```bash
-python manage.py tailwind init
-```
-
-When prompted:
-
-```
-Enter Tailwind app name [theme]: theme
-```
-
-Choose template:
-
-```
-1 - Tailwind v4 Standalone
-```
-
----
-
-## 🧩 Step 4: Register Tailwind App
-
-After creation, update `settings.py`:
-
-```python
-INSTALLED_APPS = [
-    ...
-    'tailwind',
-    'theme',
-]
-
-TAILWIND_APP_NAME = 'theme'
-```
-
----
-
-## 📥 Step 5: Install Tailwind
+## Install Tailwind Dependencies
 
 ```bash
 python manage.py tailwind install
@@ -195,9 +120,9 @@ python manage.py tailwind install
 
 ---
 
-## ▶️ Step 6: Start Tailwind
+## Start Tailwind Development Server
 
-Run Tailwind in a separate terminal:
+Open a second terminal:
 
 ```bash
 python manage.py tailwind start
@@ -205,34 +130,7 @@ python manage.py tailwind start
 
 ---
 
-## 🌐 Step 7: Run Django Server
-
-```bash
-python manage.py runserver
-```
-
----
-
-## 🎨 Step 8: Use Tailwind in Templates
-
-In your base HTML file:
-
-```html
-{% load static %}
-<link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
-```
-
-Example usage:
-
-```html
-<h1 class="text-3xl font-bold text-blue-500">
-  Hello Tailwind!
-</h1>
-```
-
----
-
-## 🏗️ Build for Production
+## Build Tailwind for Production
 
 ```bash
 python manage.py tailwind build
@@ -240,71 +138,431 @@ python manage.py tailwind build
 
 ---
 
-## ⚠️ Common Errors
+# 🗄 Database Setup
 
-### ❌ ModuleNotFoundError: No module named 'theme'
+Create database tables:
 
-* Make sure you ran `tailwind init` first
-* Then add `'theme'` to `INSTALLED_APPS`
-
-### ❌ Invalid app name
-
-* Use only: `theme`
-* Do NOT use `theme/` or special characters
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
 ---
 
-## 💡 Tips
+Create an administrator account:
 
-* Keep Tailwind running during development
-* Use `python -m pip` instead of `pip` to avoid warnings
-* Restart server if styles are not applied
-
----
-
-## ✅ Done!
-
-Your Django project is now powered by Tailwind CSS 🚀
-
-
-
-
-## 🧑‍💻 Author
-
-**Nuwanga Rajapaksha**  
-Full-Stack Software Engineer  
-[LinkedIn](https://linkedin.com/in/nuwangarajapaksha) | [GitHub](https://github.com/nuwangarajapaksha)
+```bash
+python manage.py createsuperuser
+```
 
 ---
 
-## Notes
+Run the development server:
 
-- Logging is handled with `concurrent-log-handler` to support robust and concurrent-safe log file rotation.  
-- The architecture is modular, making it easy to extend the project with blogs, contact forms, or other features.  
-- For deployment on different operating systems or production, consider additional setup such as environment variables, database setup, and static files collection.
+```bash
+python manage.py runserver
+```
+
+Website:
+
+```
+http://127.0.0.1:8000/
+```
+
+Admin Panel:
+
+```
+http://127.0.0.1:8000/admin/
+```
 
 ---
 
-## License
+# ⚙ Environment Variables
 
-Would you like me to also create a matching `LICENSE` file for MIT? Let me know!
+Create a `.env` file in the project root.
 
+Example:
 
-# Add this to nuwanga_rajapaksha_v1/wsgi.py
+```env
+GMAIL_ADDRESS=your_email@gmail.com
+GMAIL_APP_PASSWORD=your_16_character_app_password
+```
 
-https://www.pythonanywhere.com/user/nuwangarajapaksha/files/var/www/nuwangarajapaksha_pythonanywhere_com_wsgi.py?edit
+The project automatically loads environment variables using **python-dotenv**.
 
+Email configuration is read from:
+
+- GMAIL_ADDRESS
+- GMAIL_APP_PASSWORD
+
+---
+
+# 📧 Gmail App Password
+
+The contact form uses Gmail SMTP.
+
+Instead of your Gmail password, generate a **Google App Password**.
+
+Google Account
+
+↓
+
+Security
+
+↓
+
+2-Step Verification
+
+↓
+
+App Passwords
+
+Generate a 16-character password and place it inside:
+
+```env
+GMAIL_APP_PASSWORD=xxxxxxxxxxxxxxxx
+```
+
+---
+
+# 📧 Contact Form
+
+The contact form sends emails through Gmail SMTP.
+
+Current configuration:
+
+```python
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = GMAIL_ADDRESS
+EMAIL_HOST_PASSWORD = GMAIL_APP_PASSWORD
+DEFAULT_FROM_EMAIL = GMAIL_ADDRESS
+CONTACT_FORM_RECEIVER = GMAIL_ADDRESS
+```
+
+---
+
+# 📝 Logging
+
+Logging is configured using Python's built-in logging module.
+
+Current configuration:
+
+- Console logging
+- INFO level
+- Timestamped log messages
+- Suitable for local development and debugging
+
+Example output:
+
+```
+[07/Jul/2026 20:15:42] INFO contact.views - CONTACT FORM: Email sent successfully
+```
+
+---
+
+# 📦 Static Files
+
+Current project configuration:
+
+```python
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "theme" / "static",
+]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+```
+
+Collect static files for deployment:
+
+```bash
+python manage.py collectstatic
+```
+
+---
+
+# 🌍 Deployment (PythonAnywhere)
+
+## Upload Project
+
+```bash
+git clone https://github.com/nuwangarajapaksha/nuwanga_rajapaksha_v2.git
+```
+
+---
+
+## Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate:
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Configure Static Files
+
+PythonAnywhere
+
+Static URL
+
+```
+/static/
+```
+
+Static Directory
+
+```
+/home/username/nuwanga_rajapaksha_v2/theme/static
+```
+
+---
+
+## Collect Static Files
+
+```bash
+python manage.py collectstatic
+```
+
+---
+
+## Configure WSGI
+
+```python
 import os
 import sys
 
-# Add your project directory to the sys.path
-project_home = '/home/nuwangarajapaksha/nuwanga_rajapaksha_v1'
+project_home = "/home/username/nuwanga_rajapaksha_v2"
+
 if project_home not in sys.path:
     sys.path.insert(0, project_home)
 
-# Set environment variable for Django settings module
-os.environ['DJANGO_SETTINGS_MODULE'] = 'nuwanga_rajapaksha_v1.settings'
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE",
+    "nuwanga_rajapaksha_v2.settings"
+)
 
-# Import Django application
 from django.core.wsgi import get_wsgi_application
+
 application = get_wsgi_application()
+```
+
+---
+
+## Reload Web App
+
+After deployment:
+
+```
+PythonAnywhere Dashboard
+
+↓
+
+Web
+
+↓
+
+Reload
+```
+
+---
+
+# 🔍 SEO
+
+Included:
+
+- Meta Tags
+- Open Graph Tags
+- Twitter Cards
+- Canonical URLs
+- Sitemap.xml
+- Robots.txt
+- Favicon
+- Responsive Metadata
+
+---
+
+# 🛠 Useful Commands
+
+Run server
+
+```bash
+python manage.py runserver
+```
+
+Run Tailwind
+
+```bash
+python manage.py tailwind start
+```
+
+Build Tailwind
+
+```bash
+python manage.py tailwind build
+```
+
+Create migrations
+
+```bash
+python manage.py makemigrations
+```
+
+Apply migrations
+
+```bash
+python manage.py migrate
+```
+
+Create superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+Collect static files
+
+```bash
+python manage.py collectstatic
+```
+
+---
+
+# 🐞 Troubleshooting
+
+## Tailwind styles are not updating
+
+Run:
+
+```bash
+python manage.py tailwind start
+```
+
+or
+
+```bash
+python manage.py tailwind build
+```
+
+---
+
+## Static files not loading
+
+Run:
+
+```bash
+python manage.py collectstatic
+```
+
+Verify:
+
+```python
+STATIC_URL = "/static/"
+```
+
+and
+
+```python
+STATICFILES_DIRS = [
+    BASE_DIR / "theme" / "static",
+]
+```
+
+---
+
+## Contact form is not sending emails
+
+Verify:
+
+- Gmail App Password
+- GMAIL_ADDRESS
+- GMAIL_APP_PASSWORD
+- Gmail 2-Step Verification enabled
+
+---
+
+## ModuleNotFoundError
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## WSGI Import Error
+
+Check:
+
+- Project path
+- Virtual environment
+- Python version
+- DJANGO_SETTINGS_MODULE
+
+---
+
+# 📚 Technologies Used
+
+- Django 6
+- Python 3
+- Tailwind CSS
+- HTML5
+- CSS3
+- JavaScript
+- SQLite3
+- python-dotenv
+- Gmail SMTP
+
+---
+
+# 👨‍💻 Author
+
+**Nuwanga Rajapaksha**
+
+Software Engineer
+
+GitHub
+
+https://github.com/nuwangarajapaksha
+
+LinkedIn
+
+https://linkedin.com/in/nuwangarajapaksha
+
+Portfolio
+
+https://www.nuwangarajapaksha.com
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Contributions, suggestions, issues, and feature requests are always welcome.

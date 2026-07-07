@@ -12,18 +12,23 @@
     ═══════════════════════════════════════════════════════════════ -->
     <title>{% block title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}</title>
 
-    <meta name="title" content="{% block meta_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
-    <meta name="description" content="{% block meta_description %}Nuwanga Rajapaksha is a Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer from Kelaniya. Explore his portfolio, programming projects, photography work and sports content.{% endblock %}"/>
-    <meta name="keywords" content="{% block meta_keywords %}Nuwanga Rajapaksha, Software Engineer Sri Lanka, Tech with Nuwanga, Frames by Nuwanga, Photographer Sri Lanka, Content Creator, Web Developer Sri Lanka, Graphic Designer, Video Editor, Kelaniya{% endblock %}"/>
+    <meta name="title"
+          content="{% block meta_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
+    <meta name="description"
+          content="{% block meta_description %}Nuwanga Rajapaksha is a Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer from Kelaniya. Explore his portfolio, programming projects, photography work and sports content.{% endblock %}"/>
+    <meta name="keywords"
+          content="{% block meta_keywords %}Nuwanga Rajapaksha, Software Engineer Sri Lanka, Tech with Nuwanga, Frames by Nuwanga, Photographer Sri Lanka, Content Creator, Web Developer Sri Lanka, Graphic Designer, Video Editor, Kelaniya{% endblock %}"/>
     <meta name="author" content="Nuwanga Rajapaksha"/>
-    <meta name="robots" content="{% block meta_robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock %}"/>
+    <meta name="robots"
+          content="{% block meta_robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock %}"/>
     <meta name="googlebot" content="index, follow"/>
     <meta name="language" content="English"/>
     <meta name="revisit-after" content="7 days"/>
     <meta name="rating" content="general"/>
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="{% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
+    <link rel="canonical"
+          href="{% block canonical_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
 
     <!-- Geo tags (Kelaniya, Western Province, Sri Lanka) -->
     <meta name="geo.region" content="LK-2"/>
@@ -32,9 +37,9 @@
     <meta name="ICBM" content="6.964611, 79.930861"/>
 
     <!-- Favicons -->
-{#    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/common/profile-icon.ico' %}"/>#}
-{#    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/common/profile-icon.ico' %}"/>#}
-{#    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/common/profile-icon.ico' %}"/>#}
+    {#    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/common/profile-icon.ico' %}"/>#}
+    {#    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/common/profile-icon.ico' %}"/>#}
+    {#    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/common/profile-icon.ico' %}"/>#}
     <link rel="shortcut icon" href="{% static 'images/common/profile-icon.ico' %}"/>
     <link rel="icon" href="{% static 'images/common/profile-icon.ico' %}" type="image/x-icon">
 
@@ -47,10 +52,14 @@
          OPEN GRAPH / FACEBOOK
     ═══════════════════════════════════════════════════════════════ -->
     <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
-    <meta property="og:url" content="{% block og_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
-    <meta property="og:title" content="{% block og_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
-    <meta property="og:description" content="{% block og_description %}Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer. Explore portfolio, programming projects, photography and sports content.{% endblock %}"/>
-    <meta property="og:image" content="{% block og_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}{% endblock %}"/>
+    <meta property="og:url"
+          content="{% block og_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
+    <meta property="og:title"
+          content="{% block og_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
+    <meta property="og:description"
+          content="{% block og_description %}Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer. Explore portfolio, programming projects, photography and sports content.{% endblock %}"/>
+    <meta property="og:image"
+          content="{% block og_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}{% endblock %}"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
     <meta property="og:image:alt" content="Nuwanga Rajapaksha"/>
@@ -63,10 +72,14 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@nuwangatr"/>
     <meta name="twitter:creator" content="@nuwangatr"/>
-    <meta name="twitter:url" content="{% block twitter_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
-    <meta name="twitter:title" content="{% block twitter_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
-    <meta name="twitter:description" content="{% block twitter_description %}Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer.{% endblock %}"/>
-    <meta name="twitter:image" content="{% block twitter_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}{% endblock %}"/>
+    <meta name="twitter:url"
+          content="{% block twitter_url %}https://nuwangarajapaksha.pythonanywhere.com{{ request.path }}{% endblock %}"/>
+    <meta name="twitter:title"
+          content="{% block twitter_title %}Nuwanga Rajapaksha | Software Engineer, Photographer & Content Creator{% endblock %}"/>
+    <meta name="twitter:description"
+          content="{% block twitter_description %}Sri Lankan Software Engineer, Photographer, Content Creator and Graphic Designer.{% endblock %}"/>
+    <meta name="twitter:image"
+          content="{% block twitter_image %}https://nuwangarajapaksha.pythonanywhere.com{% static 'images/common/profile-pic.png' %}{% endblock %}"/>
     <meta name="twitter:image:alt" content="Nuwanga Rajapaksha"/>
 
     <!-- ═══════════════════════════════════════════════════════════════
@@ -74,8 +87,8 @@
          Add your real verification codes from each provider below.
     ═══════════════════════════════════════════════════════════════ -->
     {% block search_verification %}
-    <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"/> -->
-    <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE"/> -->
+        <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"/> -->
+        <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE"/> -->
     {% endblock %}
 
     <!-- ═══════════════════════════════════════════════════════════════
@@ -220,6 +233,37 @@
                     <i class="fab fa-blogger-b"></i>
                 </a>
             </div>
+        <div class="my-4 h-px bg-white/[0.08]"></div>
+            <p class="px-4 text-[10px] text-white/25 uppercase tracking-[0.3em] mb-3">Buy My Work</p>
+            <div class="flex flex-col gap-2 px-4">
+                <a href="https://www.shutterstock.com/g/nuwangarajapaksha" target="_blank" rel="noopener noreferrer"
+                   class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 hover:border-amber-400/30 hover:bg-amber-400/5 transition-all duration-200">
+                    <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+                        <img src="https://cdn.aptoide.com/imgs/f/3/2/f32cc23b47ec1b8a1fa56b0c52eff3f2_icon.png"
+                             alt="Shutterstock" class="w-6 h-6 object-contain"/>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-white text-sm font-medium">Shutterstock</p>
+                        <p class="text-white/40 text-[10px] mt-0.5">Global stock photo marketplace</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0 group-hover/card:text-amber-400 transition-colors duration-200"></i>
+                </a>
+
+                <a href="https://stock.adobe.com/lk/contributor/209350230/nuwangarajapaksha" target="_blank" rel="noopener noreferrer"
+                   class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 hover:border-amber-400/30 hover:bg-amber-400/5 transition-all duration-200">
+                    <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968408.png"
+                             alt="Adobe Stock" class="w-6 h-6 object-contain"/>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-white text-sm font-medium">Adobe Stock</p>
+                        <p class="text-white/40 text-[10px] mt-0.5">Creative professionals worldwide</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0 group-hover/card:text-amber-400 transition-colors duration-200"></i>
+                </a>
+            </div>
+
+        </nav>
         </nav>
 
         <div class="px-6 py-4 border-t border-white/[0.08]">
@@ -376,31 +420,141 @@
                 <!-- Divider -->
                 <span class="h-5 w-px bg-white/15 mx-1"></span>
 
-                <!-- Cart -->
-                <a href="#"
-                   class="group flex items-center gap-1.5 text-white/50 hover:text-amber-400 transition-colors duration-200">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
-                         class="w-5 h-5">
-                        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                              stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span class="text-xs font-medium">0</span>
-                </a>
+                <!-- Shop / stock profiles dropdown -->
+                <div class="relative group/stock">
+
+                    <button id="stock-trigger-desktop" type="button"
+        class="group flex items-center gap-1.5 text-white/50 hover:text-amber-400 transition-colors duration-200 cursor-pointer select-none">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+         class="w-5 h-5">
+        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <i class="fa-solid fa-chevron-down text-[9px] text-white/30 group-hover/stock:text-amber-400 group-hover/stock:rotate-180 transition-all duration-200 ml-auto"></i>
+</button>
+
+                    <div id="stock-dropdown-desktop"
+                         class="absolute top-full right-0 mt-3 w-72 bg-gray-950/98 border border-white/10 rounded-2xl p-3
+    opacity-0 invisible group-hover/stock:opacity-100 group-hover/stock:visible
+    group-hover/stock:translate-y-0 translate-y-1
+    transition-all duration-300 backdrop-blur-xl shadow-2xl shadow-black/60 z-50">
+
+                        <div class="absolute -top-1.5 right-4 w-3 h-3 bg-gray-950 border-t border-l border-white/10 rotate-45"></div>
+
+                        <p class="px-2 py-1.5 text-[10px] text-white/25 uppercase tracking-[0.2em] mb-1">Buy My Work</p>
+
+                        <div class="flex flex-col gap-2">
+                            <a href="https://www.shutterstock.com/g/nuwangarajapaksha" target="_blank"
+                               rel="noopener noreferrer"
+                               class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl p-3 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                            group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                            transition-all duration-300 ease-out">
+                                    <img src="https://cdn.aptoide.com/imgs/f/3/2/f32cc23b47ec1b8a1fa56b0c52eff3f2_icon.png"
+                                         alt="Shutterstock"
+                                         class="w-6 h-6 object-contain group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-white text-sm font-medium">Shutterstock</p>
+                                    <p class="text-white/40 text-xs mt-0.5">Global stock photo marketplace</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                          transition-all duration-300 ease-out
+                          -translate-x-1 translate-y-1 opacity-0
+                          group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                            </a>
+
+                            <a href="https://stock.adobe.com/lk/contributor/209350230/nuwangarajapaksha" target="_blank"
+                               rel="noopener noreferrer"
+                               class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl p-3 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                            group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                            transition-all duration-300 ease-out">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968408.png" alt="Adobe Stock"
+                                         class="w-6 h-6 object-contain group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-white text-sm font-medium">Adobe Stock</p>
+                                    <p class="text-white/40 text-xs mt-0.5">Creative professionals worldwide</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                          transition-all duration-300 ease-out
+                          -translate-x-1 translate-y-1 opacity-0
+                          group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <!-- ── Mobile right ── -->
             <div class="flex lg:hidden items-center gap-2">
-                <!-- Mobile cart -->
-                <a href="#"
-                   class="flex items-center gap-1 text-white/50 hover:text-amber-400 transition-colors duration-200">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
-                         class="w-5 h-5">
-                        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                              stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span class="text-xs font-medium">0</span>
-                </a>
+                <!-- Mobile shop / stock dropdown -->
+                <div class="relative group/stock">
+
+                    <button id="stock-trigger-desktop" type="button"
+        class="group flex items-center gap-1.5 text-white/50 hover:text-amber-400 transition-colors duration-200 cursor-pointer select-none">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+         class="w-5 h-5">
+        <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+
+                    <div id="stock-dropdown-desktop"
+                         class="absolute top-full right-0 mt-3 w-72 bg-gray-950/98 border border-white/10 rounded-2xl p-3
+    opacity-0 invisible group-hover/stock:opacity-100 group-hover/stock:visible
+    group-hover/stock:translate-y-0 translate-y-1
+    transition-all duration-300 backdrop-blur-xl shadow-2xl shadow-black/60 z-50">
+
+                        <div class="absolute -top-1.5 right-4 w-3 h-3 bg-gray-950 border-t border-l border-white/10 rotate-45"></div>
+
+                        <p class="px-2 py-1.5 text-[10px] text-white/25 uppercase tracking-[0.2em] mb-1">Buy My Work</p>
+
+                        <div class="flex flex-col gap-2">
+                            <a href="https://www.shutterstock.com/g/nuwangarajapaksha" target="_blank"
+                               rel="noopener noreferrer"
+                               class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl p-3 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                            group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                            transition-all duration-300 ease-out">
+                                    <img src="https://cdn.aptoide.com/imgs/f/3/2/f32cc23b47ec1b8a1fa56b0c52eff3f2_icon.png"
+                                         alt="Shutterstock"
+                                         class="w-6 h-6 object-contain group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-white text-sm font-medium">Shutterstock</p>
+                                    <p class="text-white/40 text-xs mt-0.5">Global stock photo marketplace</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                          transition-all duration-300 ease-out
+                          -translate-x-1 translate-y-1 opacity-0
+                          group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                            </a>
+
+                            <a href="https://stock.adobe.com/lk/contributor/209350230/nuwangarajapaksha" target="_blank"
+                               rel="noopener noreferrer"
+                               class="group/card flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl p-3 hover:border-amber-400/30 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center shrink-0
+                            group-hover/card:bg-amber-400/20 group-hover/card:border-amber-400/20 group-hover/card:scale-105
+                            transition-all duration-300 ease-out">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968408.png" alt="Adobe Stock"
+                                         class="w-6 h-6 object-contain group-hover/card:scale-110 transition-transform duration-300 ease-out"/>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-white text-sm font-medium">Adobe Stock</p>
+                                    <p class="text-white/40 text-xs mt-0.5">Creative professionals worldwide</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-white/30 text-xs shrink-0
+                          transition-all duration-300 ease-out
+                          -translate-x-1 translate-y-1 opacity-0
+                          group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 group-hover/card:text-amber-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Hamburger -->
                 <button onclick="openDrawer()"
                         class="w-9 h-9 flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/60 hover:text-amber-400 hover:border-amber-400/30 transition-all duration-200">
@@ -666,7 +820,7 @@
           in child templates if needed.
     ═══════════════════════════════════════════════════════════════ -->
     {% block structured_data %}
-    <script type="application/ld+json">
+        <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [

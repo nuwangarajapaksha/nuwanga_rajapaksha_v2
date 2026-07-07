@@ -120,4 +120,9 @@ body {
     box-shadow: 0 0 0 1px rgb(251 191 36 / 0.15);
   }
 
-
+/*#stock-dropdown-desktop.force-open,*/
+/*        #stock-dropdown-mobile.force-open {*/
+/*            opacity: 1 !important;*/
+/*            visibility: visible !important;*/
+/*            transform: translateY(0) !important;*/
+/*        }*/

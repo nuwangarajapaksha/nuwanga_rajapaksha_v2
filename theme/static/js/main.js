@@ -370,3 +370,16 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   }
 });
 
+function toggleStockDropdown(suffix, event) {
+    if (event) event.stopPropagation();
+    var dd = document.getElementById('stock-dropdown-' + suffix);
+    if (dd) dd.classList.toggle('force-open');
+}
+
+document.addEventListener('click', function (event) {
+    var dd = document.getElementById('stock-dropdown-mobile');
+    var trigger = document.getElementById('stock-trigger-mobile');
+    if (dd && trigger && !dd.contains(event.target) && !trigger.contains(event.target)) {
+        dd.classList.remove('force-open');
+    }
+});
