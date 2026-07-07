@@ -26,7 +26,7 @@ A modern, responsive personal portfolio website built with **Django 6** and **Ta
 
 ---
 
-# 🚀 Local Development Setup
+# 🚀 Development Setup
 
 ## 1. Clone Repository
 
@@ -75,42 +75,18 @@ source venv/bin/activate
 
 ---
 
-## 4. Upgrade pip
+## 4. Install Project Dependencies
 
 ```bash
 python -m pip install --upgrade pip
-```
-
----
-
-## 5. Install Dependencies
-
-If the project contains a requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
-Otherwise install manually:
-
-```bash
 pip install django
 pip install django-tailwind
 pip install python-dotenv
-pip install requests
 ```
 
 ---
 
 # 🎨 Tailwind CSS Setup
-
-## Install django-tailwind
-
-```bash
-pip install django-tailwind
-```
-
----
 
 ## Install Tailwind Dependencies
 
@@ -138,26 +114,8 @@ python manage.py tailwind build
 
 ---
 
-# 🗄 Database Setup
 
-Create database tables:
-
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
----
-
-Create an administrator account:
-
-```bash
-python manage.py createsuperuser
-```
-
----
-
-Run the development server:
+##  Run the development server:
 
 ```bash
 python manage.py runserver
@@ -167,12 +125,6 @@ Website:
 
 ```
 http://127.0.0.1:8000/
-```
-
-Admin Panel:
-
-```
-http://127.0.0.1:8000/admin/
 ```
 
 ---
@@ -277,45 +229,9 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 ```
 
-Collect static files for deployment:
-
-```bash
-python manage.py collectstatic
-```
-
 ---
 
 # 🌍 Deployment (PythonAnywhere)
-
-## Upload Project
-
-```bash
-git clone https://github.com/nuwangarajapaksha/nuwanga_rajapaksha_v2.git
-```
-
----
-
-## Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate:
-
-```bash
-source venv/bin/activate
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## Configure Static Files
 
@@ -335,24 +251,16 @@ Static Directory
 
 ---
 
-## Collect Static Files
-
-```bash
-python manage.py collectstatic
-```
-
----
-
 ## Configure WSGI
 
 ```python
 import os
 import sys
 
-project_home = "/home/username/nuwanga_rajapaksha_v2"
+path = "/home/nuwangarajapaksha/nuwanga_rajapaksha_v2"
 
-if project_home not in sys.path:
-    sys.path.insert(0, project_home)
+if path not in sys.path:
+    sys.path.insert(0, path)
 
 os.environ.setdefault(
     "DJANGO_SETTINGS_MODULE",
@@ -360,7 +268,6 @@ os.environ.setdefault(
 )
 
 from django.core.wsgi import get_wsgi_application
-
 application = get_wsgi_application()
 ```
 
@@ -399,94 +306,6 @@ Included:
 
 ---
 
-# 🛠 Useful Commands
-
-Run server
-
-```bash
-python manage.py runserver
-```
-
-Run Tailwind
-
-```bash
-python manage.py tailwind start
-```
-
-Build Tailwind
-
-```bash
-python manage.py tailwind build
-```
-
-Create migrations
-
-```bash
-python manage.py makemigrations
-```
-
-Apply migrations
-
-```bash
-python manage.py migrate
-```
-
-Create superuser
-
-```bash
-python manage.py createsuperuser
-```
-
-Collect static files
-
-```bash
-python manage.py collectstatic
-```
-
----
-
-# 🐞 Troubleshooting
-
-## Tailwind styles are not updating
-
-Run:
-
-```bash
-python manage.py tailwind start
-```
-
-or
-
-```bash
-python manage.py tailwind build
-```
-
----
-
-## Static files not loading
-
-Run:
-
-```bash
-python manage.py collectstatic
-```
-
-Verify:
-
-```python
-STATIC_URL = "/static/"
-```
-
-and
-
-```python
-STATICFILES_DIRS = [
-    BASE_DIR / "theme" / "static",
-]
-```
-
----
-
 ## Contact form is not sending emails
 
 Verify:
@@ -498,26 +317,8 @@ Verify:
 
 ---
 
-## ModuleNotFoundError
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## WSGI Import Error
 
-Check:
-
-- Project path
-- Virtual environment
-- Python version
-- DJANGO_SETTINGS_MODULE
-
----
 
 # 📚 Technologies Used
 
@@ -535,34 +336,23 @@ Check:
 
 # 👨‍💻 Author
 
-**Nuwanga Rajapaksha**
+**Nuwanga Rajapaksha**  
+Software Engineer  
+[LinkedIn](https://linkedin.com/in/nuwangarajapaksha) | [GitHub](https://github.com/nuwangarajapaksha)
 
-Software Engineer
-
-GitHub
-
-https://github.com/nuwangarajapaksha
-
-LinkedIn
-
-https://linkedin.com/in/nuwangarajapaksha
-
-Portfolio
-
-https://www.nuwangarajapaksha.com
+Portfolio:  
+https://nuwangarajapaksha.pythonanywhere.com/
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
-
+This project is licensed under the MIT License.  
 See the LICENSE file for details.
 
 ---
 
 # ⭐ Support
 
-If you found this project useful, please consider giving it a ⭐ on GitHub.
-
+If you found this project useful, please consider giving it a ⭐ on GitHub.  
 Contributions, suggestions, issues, and feature requests are always welcome.
