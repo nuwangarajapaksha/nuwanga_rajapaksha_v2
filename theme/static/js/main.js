@@ -328,7 +328,6 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const payload = {
     name: form.name.value,
     email: form.email.value,
-    subject: form.subject.value,
     message: form.message.value,
     honeypot: form.honeypot.value,
   };
